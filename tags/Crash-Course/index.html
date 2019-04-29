@@ -6,13 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>x1aoke&#39;s Blog</title>
+  <title>Tag: Crash Course | x1aoke&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="BNU CS undergraduate/Deep learning newbie/Face recognition newbie">
 <meta name="keywords" content="deep learning">
 <meta property="og:type" content="website">
 <meta property="og:title" content="x1aoke&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Crash-Course/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
 <meta property="og:description" content="BNU CS undergraduate/Deep learning newbie/Face recognition newbie">
 <meta property="og:locale" content="default">
@@ -160,104 +160,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Git Crash Course" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/04/29/Git Crash Course/" class="archive-article-date">
+  	<time datetime="2019-04-29T05:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/29/Git Crash Course/">Git Crash Course</a>
+      <a class="archive-article-title" href="/2019/04/29/Git Crash Course/">Git Crash Course</a>
     </h1>
   
 
-        
-        <a href="/2019/04/29/Git Crash Course/" class="archive-article-date">
-  	<time datetime="2019-04-29T05:56:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Git-Crash-Course"><a href="#Git-Crash-Course" class="headerlink" title="Git Crash Course"></a><strong>Git Crash Course</strong></h1><p>Author: @x1aokeHuang</p>
-<p>Date: Apr. 28th 2019</p>
-<h2 id="Introduction-to-Git"><a href="#Introduction-to-Git" class="headerlink" title="Introduction to Git"></a>Introduction to Git</h2><ul>
-<li>Git is a fast, simple and popular distributed version control system (VCS).</li>
-<li>This is how it was born, somehow sounds very chivalrous:<ol>
-<li>Linus build the open-source <strong>Linux</strong>, but its version control is so bad that Linus had to receive all the source code via e-mails from volunteers all over the world! </li>
-<li>Then in 2002 a commercial company called BitMover offered their VCS software BitKeeper to Linux community.</li>
-<li>For some members in the community wanted to crack the protocol of BitKeepers, BitMover had to get back the free license.</li>
-<li>Linus spent <strong>2 weeks</strong> writing a CVS from nothing using C programming language. After a month, the source code of Linux was managed by the newly created Git. Git ends up with a huge success in VCS software.</li>
-</ol>
-</li>
-</ul>
-<h2 id="Centralization-vs-Distribution"><a href="#Centralization-vs-Distribution" class="headerlink" title="Centralization vs. Distribution"></a>Centralization vs. Distribution</h2><ul>
-<li><p>Centralization: </p>
-<p>version repository is in the <strong>central server</strong>. Users has to fetch files from the server, and commit to it after modifying the files.</p>
-</li>
-<li><p>Distribution:</p>
-<p>Each users own a full copy of the files. In reality, we commit files to a so called “central server” to make file-exchanging convenient. </p>
-</li>
-</ul>
-<h2 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h2><ul>
-<li>Depends on the platform you use</li>
-</ul>
-<h2 id="Build-Repository"><a href="#Build-Repository" class="headerlink" title="Build Repository"></a>Build Repository</h2><ul>
-<li><p>Initialize a repo:</p>
-<p>Open git bash!</p>
-<p>Firstly, build a empty directory:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir learngit</span><br><span class="line">$ <span class="built_in">cd</span> learngit</span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/Users/michael/learngit</span><br></pre></td></tr></table></figure>
-<p>Then use <code>git init</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> /Users/michael/learngit/.git/</span><br></pre></td></tr></table></figure>
-<p>PS: <strong>Don’t</strong> modify the files in <code>.git</code></p>
-</li>
-<li><p>Add files to repo:</p>
-<p>make a file under current path like “readme.txt”.</p>
-<ol>
-<li><p>Use <code>git add</code> to add file(s):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use <code>git commit</code> commit file(s) to repo:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"wrote a readme file"</span></span><br><span class="line">[master (root-commit) eaadf4e] wrote a readme file</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>PS:</p>
-<ol>
-<li>You can <code>add</code> several files at a time before you <code>commit</code>.</li>
-<li>Encoding setting: <strong>UTF-8 without BOM.</strong></li>
-</ol>
-</li>
-</ul>
-<h2 id="Git-A-Time-Travel-Machine"><a href="#Git-A-Time-Travel-Machine" class="headerlink" title="Git: A Time Travel Machine"></a>Git: A Time Travel Machine</h2><h3 id="Modify-Files"><a href="#Modify-Files" class="headerlink" title="Modify Files:"></a>Modify Files:</h3><ul>
-<li><p>Change <code>readme.txt</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Run <code>git status</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
-<p>It shows current status of the repo, telling us that <code>readme.txt</code> has been modified but not been commit yet.</p>
-</li>
-<li><p>Run <code>git diff</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git diff readme.txt </span><br><span class="line">diff --git a/readme.txt b/readme.txt</span><br><span class="line">index 46d49bf..9247db6 100644</span><br><span class="line">--- a/readme.txt</span><br><span class="line">+++ b/readme.txt</span><br><span class="line">@@ -1,2 +1,2 @@</span><br><span class="line">-Git is a version control system.</span><br><span class="line">+Git is a distributed version control system.</span><br><span class="line"> Git is free software.</span><br></pre></td></tr></table></figure>
-<p><code>git diff</code> means difference, and its format is from Unix <code>diff</code>.</p>
-<p>After knowing what has been changed, we can commit file at ease.</p>
-</li>
-<li><p>Then we add file, <code>git status</code> to make sure the file we want to commit, finally we commit and final check:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">"add distributed"</span></span><br><span class="line">[master e475afc] add distributed</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h4><ol>
-<li><code>git status</code> shows current status of the repo.</li>
-<li>if <code>git status</code> shows there is a change in files, use <code>git diff</code> to see what’s going on.</li>
-</ol>
-</li>
-</ul>
-<h3 id="Version-Rolling-Back"><a href="#Version-Rolling-Back" class="headerlink" title="Version Rolling Back:"></a>Version Rolling Back:</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -273,7 +203,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -286,485 +216,17 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/29/Git Crash Course/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-2019-04-29-标准正态分布的反常积分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/29/2019-04-29-标准正态分布的反常积分/">标准正态分布的反常积分</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/29/2019-04-29-标准正态分布的反常积分/" class="archive-article-date">
-  	<time datetime="2019-04-29T05:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="标准正态分布的反常积分"><a href="#标准正态分布的反常积分" class="headerlink" title="标准正态分布的反常积分"></a>标准正态分布的反常积分</h1><hr>
-<p>背景：求标准正态分布的方差：</p>
-<p>原问题为：</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t</script><p>通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t</script><hr>
-<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$</p>
-<script type="math/tex; mode=display">
-Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}</script><script type="math/tex; mode=display">
-then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y</script><script type="math/tex; mode=display">
-then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y</script><script type="math/tex; mode=display">
-then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y</script><hr>
-<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:</p>
-<script type="math/tex; mode=display">
-so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
-where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta \end{vmatrix}</script><script type="math/tex; mode=display">
-so,abs(jacobian) = r</script><script type="math/tex; mode=display">
-so,dxdy = r\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
-so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}</script><script type="math/tex; mode=display">
-then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r</script><script type="math/tex; mode=display">
-then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1</script><script type="math/tex; mode=display">
-so, I = 1</script><hr>
-<p>总结：反常积分。通过极坐标变化为二重积分求解。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">概率</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">正态分布</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">积分</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTeX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数学//" class="article-tag-list-link color3">数学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/29/2019-04-29-标准正态分布的反常积分/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-常用LaTeX符号" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/29/常用LaTeX符号/">常用LaTeX符号</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/29/常用LaTeX符号/" class="archive-article-date">
-  	<time datetime="2019-04-29T05:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="常用LaTeX符号"><a href="#常用LaTeX符号" class="headerlink" title="常用LaTeX符号"></a>常用LaTeX符号</h1><ul>
-<li>梯度 $\nabla$  \nabla</li>
-<li>向量 $\vec x$  \vec x</li>
-<li>积分 ${\begin{matrix} \int<em>{-N}^{N} e^x dx\end{matrix}}$  \begin{matrix}  \int</em>{-N}^{N} e^x dx \end{matrix}</li>
-<li>二重积分 <script type="math/tex">\iint</script> \iint</li>
-<li>pi $\pi$ $\Pi$</li>
-<li>gamma $\gamma$ $\Gamma$</li>
-<li>beta $\beta$ $\Beta$</li>
-<li>alpha $\alpha$ $\Alpha$</li>
-<li>微元 $\mathrm{d}x$ \mathrm{d}x </li>
-<li>矩阵 $\begin{bmatrix} 0 &amp; \cdots &amp; 0 \ \vdots &amp; \ddots &amp; \vdots \ 0 &amp; \cdots &amp; 0 \end{bmatrix}$ \begin{bmatrix} 0 &amp; \cdots &amp; 0 \ \vdots &amp; \ddots &amp; \vdots \ 0 &amp; \cdots &amp; 0 \end{bmatrix}</li>
-<li>行列式 $\begin{vmatrix} x &amp; y \ z &amp; v \end{vmatrix}$ \begin{vmatrix} x &amp; y \ z &amp; v \end{vmatrix}</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTeX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">符号</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/LaTeX//" class="article-tag-list-link color1">LaTeX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/29/常用LaTeX符号/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo+Yilia建站踩坑实录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/29/Hexo+Yilia建站踩坑实录/">Hexo+Yilia建站踩坑实录</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/29/Hexo+Yilia建站踩坑实录/" class="archive-article-date">
-  	<time datetime="2019-04-29T03:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hexo-Yilia建站踩坑实录"><a href="#Hexo-Yilia建站踩坑实录" class="headerlink" title="Hexo+Yilia建站踩坑实录"></a>Hexo+Yilia建站踩坑实录</h1><p>按照安装Git+Node.js+hexo，网上教程很多，没有过多踩坑，还顺手学了git。</p>
-<p>当我想更换hexo的主题时，问题出现了。按照hexo主题Yilia中的tutorial，修改<code>./_config.json</code>文件，但blog主页没有变化。</p>
-<p>之后google了一下我遇到的问题，原来修改主题配置需要修改<code>./themes/yilia/_config.json</code>文件。修改完成后，使用hexo生成页面，修改成功！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Yilia</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Blog//" class="article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/29/Hexo+Yilia建站踩坑实录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hello-Blog-World" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/Hello-Blog-World/">Hello Blog World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/28/Hello-Blog-World/" class="archive-article-date">
-  	<time datetime="2019-04-28T13:36:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hello-Blog-World"><a href="#Hello-Blog-World" class="headerlink" title="Hello Blog World!"></a><strong>Hello Blog World!</strong></h1><ul>
-<li><p>For the first time I build my own blog !</p>
-<p>Let’s <strong>write</strong> something!</p>
-</li>
-<li><p>Add a hyper-link:</p>
-<p><a href="https://mxnet.apache.org/" target="_blank" rel="noopener">MXNet: A Scalable Deep Learning Framework</a></p>
-</li>
-<li><p>Use a Block:</p>
-<p>My best function in C++ is <code>lower_bound</code>.</p>
-</li>
-<li><p>Try a piece of code:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World"</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Tips:</strong> 行内公式属于LaTeX扩展语法，并非Markdown的通用标准，需要在Typora的“文件”-“偏好设置”中，勾选“内联公式”一项，Typora才会予以解析。</p>
-</li>
-</ul>
-<h1 id="Optimizer-Momentum"><a href="#Optimizer-Momentum" class="headerlink" title="Optimizer: Momentum"></a>Optimizer: Momentum</h1><ul>
-<li><p><strong>EMA</strong> (Exponential-weighted moving average):</p>
-<script type="math/tex; mode=display">
-y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}</script><p>This is a way to “remember” a period-time of the arguments:</p>
-</li>
-<li><p><strong>Momentum</strong></p>
-<p>$\vec{v}$ is velocity:</p>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{\eta}*{\nabla}{f_\beta}{(\vec x)}</script><p>also can be written as :</p>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{(1-\gamma)}*{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}</script><p>​        then we update the arguments $\vec x$ :</p>
-<script type="math/tex; mode=display">
-\vec x := \vec x - \vec v</script><h1 id="To-Do-List"><a href="#To-Do-List" class="headerlink" title="To Do List"></a>To Do List</h1><ul>
-<li>Maybe get used to <strong>writing a post or report</strong> everyday.</li>
-<li>Now I have to learn to <strong>write a doc for my malaria project</strong>!</li>
-<li><del>Still don’t know what to do.</del></li>
-</ul>
-<h1 id="Intern"><a href="#Intern" class="headerlink" title="Intern"></a>Intern</h1><ul>
-<li>Join <strong>MEGVII</strong> at July.</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hello world</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/new-start//" class="article-tag-list-link color5">new start</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/28/Hello-Blog-World/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -786,10 +248,10 @@ y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}</script><p>This is a way to “rem
     <script>
 	var yiliaConfig = {
 		mathjax: [object Object],
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
