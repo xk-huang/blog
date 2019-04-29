@@ -340,27 +340,22 @@
       
         <h1 id="标准正态分布的反常积分"><a href="#标准正态分布的反常积分" class="headerlink" title="标准正态分布的反常积分"></a>标准正态分布的反常积分</h1><hr>
 <p>背景：求标准正态分布的方差：</p>
-<p>原问题为：</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t</script><p>通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t</script><hr>
-<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$</p>
-<script type="math/tex; mode=display">
-Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}</script><script type="math/tex; mode=display">
-then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y</script><script type="math/tex; mode=display">
-then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y</script><script type="math/tex; mode=display">
-then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y</script><hr>
-<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:</p>
-<script type="math/tex; mode=display">
-so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
-where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta \end{vmatrix}</script><script type="math/tex; mode=display">
-so,abs(jacobian) = r</script><script type="math/tex; mode=display">
-so,dxdy = r\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
-so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}</script><script type="math/tex; mode=display">
-then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r</script><script type="math/tex; mode=display">
-then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1</script><script type="math/tex; mode=display">
-so, I = 1</script><hr>
+<p>原问题为：<br>$$<br>\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t<br>$$<br>通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：<br>$$<br>\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t<br>$$</p>
+<hr>
+<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$<br>$$<br>Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}<br>$$</p>
+<p>$$<br>then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y<br>$$</p>
+<p>$$<br>then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y<br>$$</p>
+<p>$$<br>then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y<br>$$</p>
+<hr>
+<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:<br>$$<br>so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta<br>$$</p>
+<p>$$<br>where,jacobian = \begin{vmatrix}\cos\theta &amp; \sin\theta \ -r\sin\theta &amp; r\cos\theta \end{vmatrix}<br>$$</p>
+<p>$$<br>so,abs(jacobian) = r<br>$$</p>
+<p>$$<br>so,dxdy = r\mathrm{d}r\mathrm{d}\theta<br>$$</p>
+<p>$$<br>so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}<br>$$</p>
+<p>$$<br>then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r<br>$$</p>
+<p>$$<br>then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1<br>$$</p>
+<p>$$<br>so, I = 1<br>$$</p>
+<hr>
 <p>总结：反常积分。通过极坐标变化为二重积分求解。</p>
 
       
@@ -465,8 +460,8 @@ so, I = 1</script><hr>
         <h1 id="常用LaTeX符号"><a href="#常用LaTeX符号" class="headerlink" title="常用LaTeX符号"></a>常用LaTeX符号</h1><ul>
 <li>梯度 $\nabla$  \nabla</li>
 <li>向量 $\vec x$  \vec x</li>
-<li>积分 ${\begin{matrix} \int<em>{-N}^{N} e^x dx\end{matrix}}$  \begin{matrix}  \int</em>{-N}^{N} e^x dx \end{matrix}</li>
-<li>二重积分 <script type="math/tex">\iint</script> \iint</li>
+<li>积分 ${\begin{matrix} \int_{-N}^{N} e^x dx\end{matrix}}$  \begin{matrix}  \int_{-N}^{N} e^x dx \end{matrix}</li>
+<li>二重积分 $$\iint$$ \iint</li>
 <li>pi $\pi$ $\Pi$</li>
 <li>gamma $\gamma$ $\Gamma$</li>
 <li>beta $\beta$ $\Beta$</li>
@@ -679,20 +674,15 @@ so, I = 1</script><hr>
 </li>
 </ul>
 <h1 id="Optimizer-Momentum"><a href="#Optimizer-Momentum" class="headerlink" title="Optimizer: Momentum"></a>Optimizer: Momentum</h1><ul>
-<li><p><strong>EMA</strong> (Exponential-weighted moving average):</p>
-<script type="math/tex; mode=display">
-y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}</script><p>This is a way to “remember” a period-time of the arguments:</p>
+<li><p><strong>EMA</strong> (Exponential-weighted moving average):<br>$$<br>y^{(t)}:= {\rho}<em>y^{(t-1)} + {(1-\rho)}</em>x^{t}<br>$$<br>This is a way to “remember” a period-time of the arguments:</p>
 </li>
 <li><p><strong>Momentum</strong></p>
-<p>$\vec{v}$ is velocity:</p>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{\eta}*{\nabla}{f_\beta}{(\vec x)}</script><p>also can be written as :</p>
+<p>$\vec{v}$ is velocity:<br>$$<br>{\vec{v}} := {\gamma}<em>{\vec{v}}+{\eta}</em>{\nabla}{f_\beta}{(\vec x)}<br>$$<br>also can be written as :</p>
 </li>
 </ul>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{(1-\gamma)}*{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}</script><p>​        then we update the arguments $\vec x$ :</p>
-<script type="math/tex; mode=display">
-\vec x := \vec x - \vec v</script><h1 id="To-Do-List"><a href="#To-Do-List" class="headerlink" title="To Do List"></a>To Do List</h1><ul>
+<p>$$<br>{\vec{v}} := {\gamma}<em>{\vec{v}}+{(1-\gamma)}</em>{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}<br>$$</p>
+<p>​        then we update the arguments $\vec x$ :<br>$$<br>\vec x := \vec x - \vec v<br>$$</p>
+<h1 id="To-Do-List"><a href="#To-Do-List" class="headerlink" title="To Do List"></a>To Do List</h1><ul>
 <li>Maybe get used to <strong>writing a post or report</strong> everyday.</li>
 <li>Now I have to learn to <strong>write a doc for my malaria project</strong>!</li>
 <li><del>Still don’t know what to do.</del></li>
@@ -857,15 +847,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hello world</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Crash Course</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hello world</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -972,7 +962,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">BNU CS undergraduate,Deep learning newbie,Face recognition newbie</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">BNU CS undergraduate&lt;br&gt;Deep learning newbie&lt;br&gt;Face recognition newbie</div>
   	  	
     	</section>
     

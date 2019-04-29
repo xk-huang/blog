@@ -196,20 +196,15 @@
 </li>
 </ul>
 <h1 id="Optimizer-Momentum"><a href="#Optimizer-Momentum" class="headerlink" title="Optimizer: Momentum"></a>Optimizer: Momentum</h1><ul>
-<li><p><strong>EMA</strong> (Exponential-weighted moving average):</p>
-<script type="math/tex; mode=display">
-y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}</script><p>This is a way to “remember” a period-time of the arguments:</p>
+<li><p><strong>EMA</strong> (Exponential-weighted moving average):<br>$$<br>y^{(t)}:= {\rho}<em>y^{(t-1)} + {(1-\rho)}</em>x^{t}<br>$$<br>This is a way to “remember” a period-time of the arguments:</p>
 </li>
 <li><p><strong>Momentum</strong></p>
-<p>$\vec{v}$ is velocity:</p>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{\eta}*{\nabla}{f_\beta}{(\vec x)}</script><p>also can be written as :</p>
+<p>$\vec{v}$ is velocity:<br>$$<br>{\vec{v}} := {\gamma}<em>{\vec{v}}+{\eta}</em>{\nabla}{f_\beta}{(\vec x)}<br>$$<br>also can be written as :</p>
 </li>
 </ul>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{(1-\gamma)}*{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}</script><p>​        then we update the arguments $\vec x$ :</p>
-<script type="math/tex; mode=display">
-\vec x := \vec x - \vec v</script><h1 id="To-Do-List"><a href="#To-Do-List" class="headerlink" title="To Do List"></a>To Do List</h1><ul>
+<p>$$<br>{\vec{v}} := {\gamma}<em>{\vec{v}}+{(1-\gamma)}</em>{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}<br>$$</p>
+<p>​        then we update the arguments $\vec x$ :<br>$$<br>\vec x := \vec x - \vec v<br>$$</p>
+<h1 id="To-Do-List"><a href="#To-Do-List" class="headerlink" title="To Do List"></a>To Do List</h1><ul>
 <li>Maybe get used to <strong>writing a post or report</strong> everyday.</li>
 <li>Now I have to learn to <strong>write a doc for my malaria project</strong>!</li>
 <li><del>Still don’t know what to do.</del></li>
@@ -464,15 +459,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hello world</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Crash Course</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hello world</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -579,7 +574,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">BNU CS undergraduate,Deep learning newbie,Face recognition newbie</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">BNU CS undergraduate&lt;br&gt;Deep learning newbie&lt;br&gt;Face recognition newbie</div>
   	  	
     	</section>
     
