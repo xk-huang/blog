@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过对社交网络（微博）的数据分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一下内容是对学习过程中的要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.Series 2. 对字符类型的处理对于o">
+<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.Seri">
 <meta name="keywords" content="pandas,学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pandas学习记录">
 <meta property="og:url" content="http://yoursite.com/2019/05/21/pandas学习记录/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过对社交网络（微博）的数据分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一下内容是对学习过程中的要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.Series 2. 对字符类型的处理对于o">
+<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.Seri">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-01T13:00:44.476Z">
+<meta property="og:updated_time" content="2019-05-01T13:09:30.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pandas学习记录">
-<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过对社交网络（微博）的数据分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一下内容是对学习过程中的要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.Series 2. 对字符类型的处理对于o">
+<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.Seri">
 
 
 
@@ -367,7 +367,7 @@
       
 
       
-        <p>五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过对社交网络（微博）的数据分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一下内容是对学习过程中的要点的记录。</p>
+        <p>五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。</p>
 <h1 id="1-按列更改值时"><a href="#1-按列更改值时" class="headerlink" title="1. 按列更改值时"></a>1. 按列更改值时</h1><p>按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用<strong>df.B[statement] = pandas.Series</strong></p>
 <h1 id="2-对字符类型的处理"><a href="#2-对字符类型的处理" class="headerlink" title="2. 对字符类型的处理"></a>2. 对字符类型的处理</h1><p>对于object对象，我们可以使用<strong>df.B.str.*</strong>类方法完成对字符数据的处理。</p>
 <h1 id="3-对NaN值（缺失值）的处理"><a href="#3-对NaN值（缺失值）的处理" class="headerlink" title="3. 对NaN值（缺失值）的处理"></a>3. 对NaN值（缺失值）的处理</h1><p>由布尔矩阵<strong>df.B.isnull()</strong>得出的布尔表达式筛选即可</p>
