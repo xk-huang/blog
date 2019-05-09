@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Git,Crash Course,">
+  <meta name="keywords" content="数学,概率,正态分布,方差,积分,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Author: @x1aokeHuang Date: Apr. 28th 2019 Introduction to Git Git is a fast, simple and popular distributed version control system (VCS). This is how it was born, somehow sounds very chivalrous: Linus">
-<meta name="keywords" content="Git,Crash Course">
+<meta name="description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
+<meta name="keywords" content="数学,概率,正态分布,方差,积分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Crash Course">
-<meta property="og:url" content="http://yoursite.com/2019/04/29/Git Crash Course/index.html">
+<meta property="og:title" content="标准正态分布的方差">
+<meta property="og:url" content="http://yoursite.com/2019/04/29/标准正态分布的方差/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="Author: @x1aokeHuang Date: Apr. 28th 2019 Introduction to Git Git is a fast, simple and popular distributed version control system (VCS). This is how it was born, somehow sounds very chivalrous: Linus">
+<meta property="og:description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-29T08:35:52.607Z">
+<meta property="og:updated_time" content="2019-05-09T11:33:57.950Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Crash Course">
-<meta name="twitter:description" content="Author: @x1aokeHuang Date: Apr. 28th 2019 Introduction to Git Git is a fast, simple and popular distributed version control system (VCS). This is how it was born, somehow sounds very chivalrous: Linus">
+<meta name="twitter:title" content="标准正态分布的方差">
+<meta name="twitter:description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/29/Git Crash Course/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/29/标准正态分布的方差/">
 
 
 
 
 
-  <title>Git Crash Course | x1aoke's Blog</title>
+  <title>标准正态分布的方差 | x1aoke's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/Git Crash Course/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/标准正态分布的方差/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aoke">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git Crash Course</h1>
+          <h1 class="post-title" itemprop="name headline">标准正态分布的方差</h1>
         
 
         <div class="post-meta">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T13:56:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T13:50:00+08:00">
                 2019-04-29
               </time>
             
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -367,89 +367,31 @@
       
 
       
-        <p>Author: @x1aokeHuang</p>
-<p>Date: Apr. 28th 2019</p>
-<h2 id="Introduction-to-Git"><a href="#Introduction-to-Git" class="headerlink" title="Introduction to Git"></a>Introduction to Git</h2><ul>
-<li>Git is a fast, simple and popular distributed version control system (VCS).</li>
-<li>This is how it was born, somehow sounds very chivalrous:<ol>
-<li>Linus build the open-source <strong>Linux</strong>, but its version control is so bad that Linus had to receive all the source code via e-mails from volunteers all over the world! </li>
-<li>Then in 2002 a commercial company called BitMover offered their VCS software BitKeeper to Linux community.</li>
-<li>For some members in the community wanted to crack the protocol of BitKeepers, BitMover had to get back the free license.</li>
-<li>Linus spent <strong>2 weeks</strong> writing a CVS from nothing using C programming language. After a month, the source code of Linux was managed by the newly created Git. Git ends up with a huge success in VCS software.</li>
-</ol>
-</li>
-</ul>
-<h2 id="Centralization-vs-Distribution"><a href="#Centralization-vs-Distribution" class="headerlink" title="Centralization vs. Distribution"></a>Centralization vs. Distribution</h2><ul>
-<li><p>Centralization: </p>
-<p>version repository is in the <strong>central server</strong>. Users has to fetch files from the server, and commit to it after modifying the files.</p>
-</li>
-<li><p>Distribution:</p>
-<p>Each users own a full copy of the files. In reality, we commit files to a so called “central server” to make file-exchanging convenient. </p>
-</li>
-</ul>
-<h2 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h2><ul>
-<li>Depends on the platform you use</li>
-</ul>
-<h2 id="Build-Repository"><a href="#Build-Repository" class="headerlink" title="Build Repository"></a>Build Repository</h2><ul>
-<li><p>Initialize a repo:</p>
-<p>Open git bash!</p>
-<p>Firstly, build a empty directory:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir learngit</span><br><span class="line">$ <span class="built_in">cd</span> learngit</span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/Users/michael/learngit</span><br></pre></td></tr></table></figure>
-<p>Then use <code>git init</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> /Users/michael/learngit/.git/</span><br></pre></td></tr></table></figure>
-<p>PS: <strong>Don’t</strong> modify the files in <code>.git</code></p>
-</li>
-<li><p>Add files to repo:</p>
-<p>make a file under current path like “readme.txt”.</p>
-<ol>
-<li><p>Use <code>git add</code> to add file(s):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use <code>git commit</code> commit file(s) to repo:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"wrote a readme file"</span></span><br><span class="line">[master (root-commit) eaadf4e] wrote a readme file</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>PS:</p>
-<ol>
-<li>You can <code>add</code> several files at a time before you <code>commit</code>.</li>
-<li>Encoding setting: <strong>UTF-8 without BOM.</strong></li>
-</ol>
-</li>
-</ul>
-<h2 id="Git-A-Time-Travel-Machine"><a href="#Git-A-Time-Travel-Machine" class="headerlink" title="Git: A Time Travel Machine"></a>Git: A Time Travel Machine</h2><h3 id="Modify-Files"><a href="#Modify-Files" class="headerlink" title="Modify Files:"></a>Modify Files:</h3><ul>
-<li><p>Change <code>readme.txt</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Run <code>git status</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
-<p>It shows current status of the repo, telling us that <code>readme.txt</code> has been modified but not been commit yet.</p>
-</li>
-<li><p>Run <code>git diff</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git diff readme.txt </span><br><span class="line">diff --git a/readme.txt b/readme.txt</span><br><span class="line">index 46d49bf..9247db6 100644</span><br><span class="line">--- a/readme.txt</span><br><span class="line">+++ b/readme.txt</span><br><span class="line">@@ -1,2 +1,2 @@</span><br><span class="line">-Git is a version control system.</span><br><span class="line">+Git is a distributed version control system.</span><br><span class="line"> Git is free software.</span><br></pre></td></tr></table></figure>
-<p><code>git diff</code> means difference, and its format is from Unix <code>diff</code>.</p>
-<p>After knowing what has been changed, we can commit file at ease.</p>
-</li>
-<li><p>Then we add file, <code>git status</code> to make sure the file we want to commit, finally we commit and final check:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">"add distributed"</span></span><br><span class="line">[master e475afc] add distributed</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h4><ol>
-<li><code>git status</code> shows current status of the repo.</li>
-<li>if <code>git status</code> shows there is a change in files, use <code>git diff</code> to see what’s going on.</li>
-</ol>
-</li>
-</ul>
-<h3 id="Version-Rolling-Back"><a href="#Version-Rolling-Back" class="headerlink" title="Version Rolling Back:"></a>Version Rolling Back:</h3><waiting...>
+        <hr>
+<p>背景：求标准正态分布的方差：</p>
+<p>原问题为：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t</script><p>通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t</script><hr>
+<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$</p>
+<script type="math/tex; mode=display">
+Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}</script><script type="math/tex; mode=display">
+then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y</script><script type="math/tex; mode=display">
+then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y</script><script type="math/tex; mode=display">
+then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y</script><hr>
+<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:</p>
+<script type="math/tex; mode=display">
+so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
+where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta \end{vmatrix}</script><script type="math/tex; mode=display">
+so,abs(jacobian) = r</script><script type="math/tex; mode=display">
+so,dxdy = r\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
+so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}</script><script type="math/tex; mode=display">
+then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r</script><script type="math/tex; mode=display">
+then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1</script><script type="math/tex; mode=display">
+so, I = 1</script><hr>
+<p>总结：反常积分。通过极坐标变化为二重积分求解。</p>
 
-
-
-
-
-
-
-
-
-
-
-</waiting...>
       
     </div>
     
@@ -490,9 +432,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
+            <a href="/tags/数学/" rel="tag"># 数学</a>
           
-            <a href="/tags/Crash-Course/" rel="tag"># Crash Course</a>
+            <a href="/tags/概率/" rel="tag"># 概率</a>
+          
+            <a href="/tags/正态分布/" rel="tag"># 正态分布</a>
+          
+            <a href="/tags/方差/" rel="tag"># 方差</a>
+          
+            <a href="/tags/积分/" rel="tag"># 积分</a>
           
         </div>
       
@@ -505,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/29/标准正态分布的方差/" rel="next" title="标准正态分布的方差">
-                <i class="fa fa-chevron-left"></i> 标准正态分布的方差
+              <a href="/2019/04/29/Hexo+Yilia建站踩坑实录/" rel="next" title="Hexo+Next(Yilia)建站踩坑实录">
+                <i class="fa fa-chevron-left"></i> Hexo+Next(Yilia)建站踩坑实录
               </a>
             
           </div>
@@ -515,8 +463,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/03/XMind基本使用方法/" rel="prev" title="XMind基本使用方法">
-                XMind基本使用方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/29/Git Crash Course/" rel="prev" title="Git Crash Course">
+                Git Crash Course <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,17 +517,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -641,22 +580,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction-to-Git"><span class="nav-number">1.</span> <span class="nav-text">Introduction to Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Centralization-vs-Distribution"><span class="nav-number">2.</span> <span class="nav-text">Centralization vs. Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Git"><span class="nav-number">3.</span> <span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-Repository"><span class="nav-number">4.</span> <span class="nav-text">Build Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-A-Time-Travel-Machine"><span class="nav-number">5.</span> <span class="nav-text">Git: A Time Travel Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Modify-Files"><span class="nav-number">5.1.</span> <span class="nav-text">Modify Files:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">5.1.1.</span> <span class="nav-text">Summary:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Version-Rolling-Back"><span class="nav-number">5.2.</span> <span class="nav-text">Version Rolling Back:</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
