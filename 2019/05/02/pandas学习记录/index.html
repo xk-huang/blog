@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Git,Crash Course,">
+  <meta name="keywords" content="pandas,学习,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Author: @x1aokeHuang Date: Apr. 28th 2019 Introduction to Git Git is a fast, simple and popular distributed version control system (VCS). This is how it was born, somehow sounds very chivalrous: Linus">
-<meta name="keywords" content="Git,Crash Course">
+<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
+<meta name="keywords" content="pandas,学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Crash Course">
-<meta property="og:url" content="http://yoursite.com/2019/04/29/Git Crash Course/index.html">
+<meta property="og:title" content="pandas学习记录">
+<meta property="og:url" content="http://yoursite.com/2019/05/02/pandas学习记录/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="Author: @x1aokeHuang Date: Apr. 28th 2019 Introduction to Git Git is a fast, simple and popular distributed version control system (VCS). This is how it was born, somehow sounds very chivalrous: Linus">
+<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-29T08:35:52.607Z">
+<meta property="og:updated_time" content="2019-05-11T07:52:44.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Crash Course">
-<meta name="twitter:description" content="Author: @x1aokeHuang Date: Apr. 28th 2019 Introduction to Git Git is a fast, simple and popular distributed version control system (VCS). This is how it was born, somehow sounds very chivalrous: Linus">
+<meta name="twitter:title" content="pandas学习记录">
+<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/29/Git Crash Course/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/02/pandas学习记录/">
 
 
 
 
 
-  <title>Git Crash Course | x1aoke's Blog</title>
+  <title>pandas学习记录 | x1aoke's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/Git Crash Course/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/02/pandas学习记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aoke">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git Crash Course</h1>
+          <h1 class="post-title" itemprop="name headline">pandas学习记录</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T13:56:00+08:00">
-                2019-04-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-02T21:00:18+08:00">
+                2019-05-02
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/pandas/" itemprop="url" rel="index">
+                    <span itemprop="name">pandas</span>
                   </a>
                 </span>
 
@@ -367,89 +367,36 @@
       
 
       
-        <p>Author: @x1aokeHuang</p>
-<p>Date: Apr. 28th 2019</p>
-<h2 id="Introduction-to-Git"><a href="#Introduction-to-Git" class="headerlink" title="Introduction to Git"></a>Introduction to Git</h2><ul>
-<li>Git is a fast, simple and popular distributed version control system (VCS).</li>
-<li>This is how it was born, somehow sounds very chivalrous:<ol>
-<li>Linus build the open-source <strong>Linux</strong>, but its version control is so bad that Linus had to receive all the source code via e-mails from volunteers all over the world! </li>
-<li>Then in 2002 a commercial company called BitMover offered their VCS software BitKeeper to Linux community.</li>
-<li>For some members in the community wanted to crack the protocol of BitKeepers, BitMover had to get back the free license.</li>
-<li>Linus spent <strong>2 weeks</strong> writing a CVS from nothing using C programming language. After a month, the source code of Linux was managed by the newly created Git. Git ends up with a huge success in VCS software.</li>
-</ol>
+        <p>五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于<strong>numpy</strong>开发的数据分析软件。以下内容是对学习过程中要点的记录。</p>
+<h1 id="1-按列更改值时"><a href="#1-按列更改值时" class="headerlink" title="1. 按列更改值时"></a>1. 按列更改值时</h1><p>按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用<code>df.B[statement] = pandas.core.series.Series</code>。</p>
+<p>注意修改某列时，左值一定要包含被修改的列名(列标)。</p>
+<h1 id="2-对字符类型的处理"><a href="#2-对字符类型的处理" class="headerlink" title="2. 对字符类型的处理"></a>2. 对字符类型的处理</h1><p>对于object对象，我们可以使用<code>df.B.str.*</code>类方法完成对字符数据的处理。</p>
+<p>包括<code>cat</code>连接，<code>contains</code>是否包含，<code>match</code>正则表达式等。</p>
+<h1 id="3-对NaN值（缺失值）的处理"><a href="#3-对NaN值（缺失值）的处理" class="headerlink" title="3. 对NaN值（缺失值）的处理"></a>3. 对NaN值（缺失值）的处理</h1><p>由布尔矩阵<code>df.B.isnull()</code>得出的布尔表达式筛选即可；</p>
+<p>或使用<code>dropnull()</code>方法。</p>
+<h1 id="4-快速加一行"><a href="#4-快速加一行" class="headerlink" title="4. 快速加一行"></a>4. 快速加一行</h1><p><code>df.loc[df.shape[0]] = [the same length list]</code></p>
+<p>或</p>
+<p><code>df.loc[df.shape[0]] = {the same length dictionary}</code></p>
+<p>注意，此方法仅适用于数字列标。非数字列标需要调用<code>df.loc[other type index]</code>。</p>
+<h1 id="5-快速加一列"><a href="#5-快速加一列" class="headerlink" title="5.快速加一列"></a>5.快速加一列</h1><p>优雅的行尾添加方法，下方法适用于行标是index；行标是标签同理。</p>
+<p><code>df[&#39;new column name&#39;] = [the same length list]</code></p>
+<h1 id="6-对行-列索引"><a href="#6-对行-列索引" class="headerlink" title="6. 对行\列索引"></a>6. 对行\列索引</h1><p>pandas的列索引十分方便，<code>df[&#39;B&#39;]</code>或<code>df.B</code>即可取出一列，type为<code>pandas.core.series.Series</code>；</p>
+<p>列索引则使用基于索引的<code>df.iloc[]</code>或基于标签的<code>df.loc[]</code>：</p>
+<ul>
+<li><p><code>df.iloc[0:3,&#39;a&#39;:&#39;b&#39;]</code>(pandas.core.frame.DataFrame)</p>
+</li>
+<li><p><code>df.loc[2]</code>(pandas.core.series.Series)</p>
 </li>
 </ul>
-<h2 id="Centralization-vs-Distribution"><a href="#Centralization-vs-Distribution" class="headerlink" title="Centralization vs. Distribution"></a>Centralization vs. Distribution</h2><ul>
-<li><p>Centralization: </p>
-<p>version repository is in the <strong>central server</strong>. Users has to fetch files from the server, and commit to it after modifying the files.</p>
-</li>
-<li><p>Distribution:</p>
-<p>Each users own a full copy of the files. In reality, we commit files to a so called “central server” to make file-exchanging convenient. </p>
-</li>
+<p><strong>注意</strong><code>df.loc[]</code>的区间范围是左闭右闭，而<code>df.iloc[]</code>的区间范围是左闭右开。</p>
+<h1 id="5-保存为CSV格式时的编码问题"><a href="#5-保存为CSV格式时的编码问题" class="headerlink" title="5. 保存为CSV格式时的编码问题"></a>5. 保存为CSV格式时的编码问题</h1><p>如果希望使用Excel打开CSV格式文件，且不出现编码问题，则保存文件时需要调用<code>df.to_csv(&quot;name&quot;,encoding = &#39;ansi&#39;)</code>，即使用ansi编码文件。</p>
+<p><code>encoding</code>的可选参数还包括<code>utf-8</code>。</p>
+<p><code>to_csv</code>的类方法的常用参数还包括：</p>
+<ul>
+<li><code>header = Boolean</code>，表示是否保存表头。</li>
+<li><code>index = Boolean</code>，表示是否保存数字列标。</li>
 </ul>
-<h2 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h2><ul>
-<li>Depends on the platform you use</li>
-</ul>
-<h2 id="Build-Repository"><a href="#Build-Repository" class="headerlink" title="Build Repository"></a>Build Repository</h2><ul>
-<li><p>Initialize a repo:</p>
-<p>Open git bash!</p>
-<p>Firstly, build a empty directory:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir learngit</span><br><span class="line">$ <span class="built_in">cd</span> learngit</span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/Users/michael/learngit</span><br></pre></td></tr></table></figure>
-<p>Then use <code>git init</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> /Users/michael/learngit/.git/</span><br></pre></td></tr></table></figure>
-<p>PS: <strong>Don’t</strong> modify the files in <code>.git</code></p>
-</li>
-<li><p>Add files to repo:</p>
-<p>make a file under current path like “readme.txt”.</p>
-<ol>
-<li><p>Use <code>git add</code> to add file(s):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Use <code>git commit</code> commit file(s) to repo:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"wrote a readme file"</span></span><br><span class="line">[master (root-commit) eaadf4e] wrote a readme file</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>PS:</p>
-<ol>
-<li>You can <code>add</code> several files at a time before you <code>commit</code>.</li>
-<li>Encoding setting: <strong>UTF-8 without BOM.</strong></li>
-</ol>
-</li>
-</ul>
-<h2 id="Git-A-Time-Travel-Machine"><a href="#Git-A-Time-Travel-Machine" class="headerlink" title="Git: A Time Travel Machine"></a>Git: A Time Travel Machine</h2><h3 id="Modify-Files"><a href="#Modify-Files" class="headerlink" title="Modify Files:"></a>Modify Files:</h3><ul>
-<li><p>Change <code>readme.txt</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Run <code>git status</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
-<p>It shows current status of the repo, telling us that <code>readme.txt</code> has been modified but not been commit yet.</p>
-</li>
-<li><p>Run <code>git diff</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git diff readme.txt </span><br><span class="line">diff --git a/readme.txt b/readme.txt</span><br><span class="line">index 46d49bf..9247db6 100644</span><br><span class="line">--- a/readme.txt</span><br><span class="line">+++ b/readme.txt</span><br><span class="line">@@ -1,2 +1,2 @@</span><br><span class="line">-Git is a version control system.</span><br><span class="line">+Git is a distributed version control system.</span><br><span class="line"> Git is free software.</span><br></pre></td></tr></table></figure>
-<p><code>git diff</code> means difference, and its format is from Unix <code>diff</code>.</p>
-<p>After knowing what has been changed, we can commit file at ease.</p>
-</li>
-<li><p>Then we add file, <code>git status</code> to make sure the file we want to commit, finally we commit and final check:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">"add distributed"</span></span><br><span class="line">[master e475afc] add distributed</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary:"></a>Summary:</h4><ol>
-<li><code>git status</code> shows current status of the repo.</li>
-<li>if <code>git status</code> shows there is a change in files, use <code>git diff</code> to see what’s going on.</li>
-</ol>
-</li>
-</ul>
-<h3 id="Version-Rolling-Back"><a href="#Version-Rolling-Back" class="headerlink" title="Version Rolling Back:"></a>Version Rolling Back:</h3><waiting...>
 
-
-
-
-
-
-
-
-
-
-
-</waiting...>
       
     </div>
     
@@ -490,9 +437,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
+            <a href="/tags/pandas/" rel="tag"># pandas</a>
           
-            <a href="/tags/Crash-Course/" rel="tag"># Crash Course</a>
+            <a href="/tags/学习/" rel="tag"># 学习</a>
           
         </div>
       
@@ -505,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/29/标准正态分布的方差/" rel="next" title="标准正态分布的方差">
-                <i class="fa fa-chevron-left"></i> 标准正态分布的方差
+              <a href="/2019/04/29/Git Crash Course/" rel="next" title="Git Crash Course">
+                <i class="fa fa-chevron-left"></i> Git Crash Course
               </a>
             
           </div>
@@ -515,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/02/pandas学习记录/" rel="prev" title="pandas学习记录">
-                pandas学习记录 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/03/XMind基本使用方法/" rel="prev" title="XMind基本使用方法">
+                XMind基本使用方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -651,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction-to-Git"><span class="nav-number">1.</span> <span class="nav-text">Introduction to Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Centralization-vs-Distribution"><span class="nav-number">2.</span> <span class="nav-text">Centralization vs. Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Git"><span class="nav-number">3.</span> <span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-Repository"><span class="nav-number">4.</span> <span class="nav-text">Build Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-A-Time-Travel-Machine"><span class="nav-number">5.</span> <span class="nav-text">Git: A Time Travel Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Modify-Files"><span class="nav-number">5.1.</span> <span class="nav-text">Modify Files:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">5.1.1.</span> <span class="nav-text">Summary:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Version-Rolling-Back"><span class="nav-number">5.2.</span> <span class="nav-text">Version Rolling Back:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-按列更改值时"><span class="nav-number">1.</span> <span class="nav-text">1. 按列更改值时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-对字符类型的处理"><span class="nav-number">2.</span> <span class="nav-text">2. 对字符类型的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-对NaN值（缺失值）的处理"><span class="nav-number">3.</span> <span class="nav-text">3. 对NaN值（缺失值）的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-快速加一行"><span class="nav-number">4.</span> <span class="nav-text">4. 快速加一行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-快速加一列"><span class="nav-number">5.</span> <span class="nav-text">5.快速加一列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-对行-列索引"><span class="nav-number">6.</span> <span class="nav-text">6. 对行\列索引</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-保存为CSV格式时的编码问题"><span class="nav-number">7.</span> <span class="nav-text">5. 保存为CSV格式时的编码问题</span></a></li></ol></div>
             
 
           </div>

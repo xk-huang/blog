@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pandas,学习,">
+  <meta name="keywords" content="bat脚本,cmd,快速入门,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
-<meta name="keywords" content="pandas,学习">
+<meta name="description" content="简介 Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上，使用cmd.exe即可打开。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 学习的bat另一个原因，是为了能在实验室的windows server上批量训练神经网络。  学习资源汇总 How To Write A Simpl">
+<meta name="keywords" content="bat脚本,cmd,快速入门">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas学习记录">
-<meta property="og:url" content="http://yoursite.com/2019/05/21/pandas学习记录/index.html">
+<meta property="og:title" content="bat crash course | bat脚本快速入门">
+<meta property="og:url" content="http://yoursite.com/2019/05/11/bat脚本快速入门/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
+<meta property="og:description" content="简介 Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上，使用cmd.exe即可打开。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 学习的bat另一个原因，是为了能在实验室的windows server上批量训练神经网络。  学习资源汇总 How To Write A Simpl">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-02T01:56:25.571Z">
+<meta property="og:updated_time" content="2019-05-11T07:59:58.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pandas学习记录">
-<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
+<meta name="twitter:title" content="bat crash course | bat脚本快速入门">
+<meta name="twitter:description" content="简介 Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上，使用cmd.exe即可打开。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 学习的bat另一个原因，是为了能在实验室的windows server上批量训练神经网络。  学习资源汇总 How To Write A Simpl">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/21/pandas学习记录/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/11/bat脚本快速入门/">
 
 
 
 
 
-  <title>pandas学习记录 | x1aoke's Blog</title>
+  <title>bat crash course | bat脚本快速入门 | x1aoke's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/21/pandas学习记录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/11/bat脚本快速入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aoke">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pandas学习记录</h1>
+          <h1 class="post-title" itemprop="name headline">bat crash course | bat脚本快速入门</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-21T21:00:18+08:00">
-                2019-05-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-11T15:00:01+08:00">
+                2019-05-11
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/pandas/" itemprop="url" rel="index">
-                    <span itemprop="name">pandas</span>
+                  <a href="/categories/bat脚本/" itemprop="url" rel="index">
+                    <span itemprop="name">bat脚本</span>
                   </a>
                 </span>
 
@@ -367,35 +367,62 @@
       
 
       
-        <p>五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于<strong>numpy</strong>开发的数据分析软件。以下内容是对学习过程中要点的记录。</p>
-<h1 id="1-按列更改值时"><a href="#1-按列更改值时" class="headerlink" title="1. 按列更改值时"></a>1. 按列更改值时</h1><p>按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用<code>df.B[statement] = pandas.core.series.Series</code>。</p>
-<p>注意修改某列时，左值一定要包含被修改的列名(列标)。</p>
-<h1 id="2-对字符类型的处理"><a href="#2-对字符类型的处理" class="headerlink" title="2. 对字符类型的处理"></a>2. 对字符类型的处理</h1><p>对于object对象，我们可以使用<code>df.B.str.*</code>类方法完成对字符数据的处理。</p>
-<p>包括<code>cat</code>连接，<code>contains</code>是否包含，<code>match</code>正则表达式等。</p>
-<h1 id="3-对NaN值（缺失值）的处理"><a href="#3-对NaN值（缺失值）的处理" class="headerlink" title="3. 对NaN值（缺失值）的处理"></a>3. 对NaN值（缺失值）的处理</h1><p>由布尔矩阵<code>df.B.isnull()</code>得出的布尔表达式筛选即可；</p>
-<p>或使用<code>dropnull()</code>方法。</p>
-<h1 id="4-快速加一行"><a href="#4-快速加一行" class="headerlink" title="4. 快速加一行"></a>4. 快速加一行</h1><p><code>df.loc[df.shape[0]] = [the same length list]</code></p>
-<p>或</p>
-<p><code>df.loc[df.shape[0]] = {the same length dictionary}</code></p>
-<p>注意，此方法仅适用于数字列标。非数字列标需要调用<code>df.loc[other type index]</code>。</p>
-<h1 id="5-快速加一列"><a href="#5-快速加一列" class="headerlink" title="5.快速加一列"></a>5.快速加一列</h1><p>优雅的行尾添加方法，下方法适用于行标是index；行标是标签同理。</p>
-<p><code>df[&#39;new column name&#39;] = [the same length list]</code></p>
-<h1 id="6-对行-列索引"><a href="#6-对行-列索引" class="headerlink" title="6. 对行\列索引"></a>6. 对行\列索引</h1><p>pandas的列索引十分方便，<code>df[&#39;B&#39;]</code>或<code>df.B</code>即可取出一列，type为<code>pandas.core.series.Series</code>；</p>
-<p>列索引则使用基于索引的<code>df.iloc[]</code>或基于标签的<code>df.loc[]</code>：</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ul>
+<li>Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上，使用cmd.exe即可打开。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。</li>
+<li>学习的bat另一个原因，是为了能在实验室的windows server上批量训练神经网络。</li>
+</ul>
+<h1 id="学习资源汇总"><a href="#学习资源汇总" class="headerlink" title="学习资源汇总"></a>学习资源汇总</h1><ul>
+<li><a href="http://www.makeuseof.com/tag/write-simple-batch-bat-file/" target="_blank" rel="noopener">How To Write A Simple Batch (.bat) File</a> bat入门</li>
+<li><a href="http://www.ericphelps.com/batch/" target="_blank" rel="noopener">Batch Script Samples</a> bat进阶</li>
+<li><a href="http://www.tutorialspoint.com/batch_script/index.htm" target="_blank" rel="noopener">Batch Script Tutorial</a>  bat入门</li>
+<li><a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" target="_blank" rel="noopener">Windows Batch Scripting</a> wikibooks，权威精简且全面</li>
+<li><a href="http://steve-jansen.github.io/guides/windows-batch-scripting/" target="_blank" rel="noopener">Guide to Windows Batch Scripting</a>  github博客</li>
+</ul>
+<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><ol>
+<li><p>掌握常用命令：</p>
 <ul>
-<li><p><code>df.iloc[0:3,&#39;a&#39;:&#39;b&#39;]</code>(pandas.core.frame.DataFrame)</p>
+<li><p><code>echo</code></p>
+<p><code>echo [sentence]</code>可以直接输出sentence的内容</p>
+<p><code>echo</code> 显示此后命令</p>
+<p><code>echo off</code> 不显示此后命令</p>
 </li>
-<li><p><code>df.loc[2]</code>(pandas.core.series.Series)</p>
+<li><p><code>@</code></p>
+<p>添加至每条命令之前，表示不显示此行命令</p>
+</li>
+<li><p><code>call</code></p>
+<p>调用其他文件(.bat、python脚本等) ，被调用文件执行结束后，<strong>返回</strong>当前执行文件</p>
+<p>注意，如果不使用<code>call</code>，被调用文件执行结束后，<strong>不会</strong>返回当前执行文件</p>
+</li>
+<li><p><code>pause</code></p>
+<p>在此行暂停批处理文件，并在屏幕上显示”Press any key to continue…”，按下<code>press</code>则批处理文件继续执行。</p>
+</li>
+<li><p><code>REM</code></p>
+<p>不执行此行，即此行为注释</p>
 </li>
 </ul>
-<p><strong>注意</strong><code>df.loc[]</code>的区间范围是左闭右闭，而<code>df.iloc[]</code>的区间范围是左闭右开。</p>
-<h1 id="5-保存为CSV格式时的编码问题"><a href="#5-保存为CSV格式时的编码问题" class="headerlink" title="5. 保存为CSV格式时的编码问题"></a>5. 保存为CSV格式时的编码问题</h1><p>如果希望使用Excel打开CSV格式文件，且不出现编码问题，则保存文件时需要调用<code>df.to_csv(&quot;name&quot;,encoding = &#39;ansi&#39;)</code>，即使用ansi编码文件。</p>
-<p><code>encoding</code>的可选参数还包括<code>utf-8</code>。</p>
-<p><code>to_csv</code>的类方法的常用参数还包括：</p>
+</li>
+<li><p><code>goto</code> 转跳指令</p>
 <ul>
-<li><code>header = Boolean</code>，表示是否保存表头。</li>
-<li><code>index = Boolean</code>，表示是否保存数字列标。</li>
+<li><p>调用<code>goto</code>，批处理文件将转跳至指定的标号处， 可以与if配合。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:start</span><br><span class="line">REM <span class="keyword">do</span> something...</span><br><span class="line">goto start</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+</li>
+</ol>
+<h1 id="几个小例子"><a href="#几个小例子" class="headerlink" title="几个小例子"></a>几个小例子</h1><ol>
+<li><p>实验室的服务器配置不完善，导致每次只能连接两个用户。我需要实时查询是否有其他用户在线（在线的话就用teamviewer）：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">:start</span><br><span class="line">query user</span><br><span class="line">choice /t <span class="number">5</span> /d y /n &gt;nul</span><br><span class="line">goto start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实时监控显卡的使用情况</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">:start</span><br><span class="line">nvidia-smi --format=csv --query-gpu=utilization.gpu,fan.speed,temperature.gpu,memory.used,power.draw -l -s</span><br><span class="line">choice /t <span class="number">5</span> /d y /n &gt;nul</span><br><span class="line">goto start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>神经网络训练脚本。由于服务器管理员的水平问题，他的配置被添加到了系统路径，导致我每次使用conda的activate文件都需要传入绝对路径</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">call D:\user_name\Anaconda3\Scripts\activate gluon</span><br><span class="line"></span><br><span class="line">call python test1.py</span><br><span class="line">call python test2.py</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>批处理文件bat拥有很久远的历史。当比尔盖茨开发MS-DOS时，就在它的Command.com命令解释器中，纳入了批处理功能：把命令保存在.bat扩展名的文本文件中，命令解释器会运行它里面的每一个命令。</p>
+<p>现在，微软开发了Powershell来代替cmd，并将PowerShell定位为Windows操作系统和微软企业应用程序的默认管理工具。</p>
+<p>PowerShell比cmd要简单地多。许多时候，一行PowerShell命令行，能够替代成百上千的批处理代码。</p>
 
       
     </div>
@@ -437,9 +464,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pandas/" rel="tag"># pandas</a>
+            <a href="/tags/bat脚本/" rel="tag"># bat脚本</a>
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/cmd/" rel="tag"># cmd</a>
+          
+            <a href="/tags/快速入门/" rel="tag"># 快速入门</a>
           
         </div>
       
@@ -539,7 +568,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -550,7 +579,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -561,7 +590,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -594,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-按列更改值时"><span class="nav-number">1.</span> <span class="nav-text">1. 按列更改值时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-对字符类型的处理"><span class="nav-number">2.</span> <span class="nav-text">2. 对字符类型的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-对NaN值（缺失值）的处理"><span class="nav-number">3.</span> <span class="nav-text">3. 对NaN值（缺失值）的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-快速加一行"><span class="nav-number">4.</span> <span class="nav-text">4. 快速加一行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-快速加一列"><span class="nav-number">5.</span> <span class="nav-text">5.快速加一列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-对行-列索引"><span class="nav-number">6.</span> <span class="nav-text">6. 对行\列索引</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-保存为CSV格式时的编码问题"><span class="nav-number">7.</span> <span class="nav-text">5. 保存为CSV格式时的编码问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源汇总"><span class="nav-number">2.</span> <span class="nav-text">学习资源汇总</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速入门"><span class="nav-number">3.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几个小例子"><span class="nav-number">4.</span> <span class="nav-text">几个小例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
@@ -768,7 +797,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -821,26 +850,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
