@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数学,概率,正态分布,方差,积分,">
+  <meta name="keywords" content="反思,ACM-ICPC,编程,想法,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
-<meta name="keywords" content="数学,概率,正态分布,方差,积分">
+<meta name="description" content="这次南昌的邀请赛，我们学校的结果非常糟糕，我写这篇总结，是为了记录这次比赛的反思。如果日后哪天我懈怠迷茫了，这篇反思还可以提醒我继续前进。 赛前 赛前虽然进行了几场模拟训练，在复现的榜上达到了银的水平，但这几次的训练过题都非常流畅，心态相比真正比赛时候还是差很多，这直接导致了本次邀请赛的卡题时的心态失衡。主要原因还是长时间没有过题时候，心态的调整这方面没有训练到；同时，把训练时的不出题当做对于我们">
+<meta name="keywords" content="反思,ACM-ICPC,编程,想法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标准正态分布的方差(对标准正态分布的PDF的验证)">
-<meta property="og:url" content="http://yoursite.com/2019/06/03/标准正态分布的方差/index.html">
+<meta property="og:title" content="2019ICPC南昌邀请赛总结">
+<meta property="og:url" content="http://yoursite.com/2019/06/04/2019ICPC南昌邀请赛总结/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
+<meta property="og:description" content="这次南昌的邀请赛，我们学校的结果非常糟糕，我写这篇总结，是为了记录这次比赛的反思。如果日后哪天我懈怠迷茫了，这篇反思还可以提醒我继续前进。 赛前 赛前虽然进行了几场模拟训练，在复现的榜上达到了银的水平，但这几次的训练过题都非常流畅，心态相比真正比赛时候还是差很多，这直接导致了本次邀请赛的卡题时的心态失衡。主要原因还是长时间没有过题时候，心态的调整这方面没有训练到；同时，把训练时的不出题当做对于我们">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-03T09:24:32.732Z">
+<meta property="og:updated_time" content="2019-06-04T01:50:12.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标准正态分布的方差(对标准正态分布的PDF的验证)">
-<meta name="twitter:description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
+<meta name="twitter:title" content="2019ICPC南昌邀请赛总结">
+<meta name="twitter:description" content="这次南昌的邀请赛，我们学校的结果非常糟糕，我写这篇总结，是为了记录这次比赛的反思。如果日后哪天我懈怠迷茫了，这篇反思还可以提醒我继续前进。 赛前 赛前虽然进行了几场模拟训练，在复现的榜上达到了银的水平，但这几次的训练过题都非常流畅，心态相比真正比赛时候还是差很多，这直接导致了本次邀请赛的卡题时的心态失衡。主要原因还是长时间没有过题时候，心态的调整这方面没有训练到；同时，把训练时的不出题当做对于我们">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/03/标准正态分布的方差/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/04/2019ICPC南昌邀请赛总结/">
 
 
 
 
 
-  <title>标准正态分布的方差(对标准正态分布的PDF的验证) | x1aoke's Blog</title>
+  <title>2019ICPC南昌邀请赛总结 | x1aoke's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/03/标准正态分布的方差/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/04/2019ICPC南昌邀请赛总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aoke">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">标准正态分布的方差(对标准正态分布的PDF的验证)</h1>
+          <h1 class="post-title" itemprop="name headline">2019ICPC南昌邀请赛总结</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-03T17:22:00+08:00">
-                2019-06-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-04T00:21:00+08:00">
+                2019-06-04
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
+                  <a href="/categories/反思/" itemprop="url" rel="index">
+                    <span itemprop="name">反思</span>
                   </a>
                 </span>
 
@@ -367,32 +367,33 @@
       
 
       
-        <hr>
-<p>背景：求标准正态分布的方差：</p>
-<p>原问题为：</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t</script><p>通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t</script><p>实际上，被积函数为标准正态分布的概率密度函数(Probability Density Function, PDF)。</p>
-<p>这里侧面验证了标准正态分布的PDF的正确性(即从负无穷到正无穷的积分为1)。</p>
-<hr>
-<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$</p>
-<script type="math/tex; mode=display">
-Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}</script><script type="math/tex; mode=display">
-then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y</script><script type="math/tex; mode=display">
-then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y</script><script type="math/tex; mode=display">
-then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y</script><hr>
-<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:</p>
-<script type="math/tex; mode=display">
-so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
-where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta \end{vmatrix}</script><script type="math/tex; mode=display">
-so,abs(jacobian) = r</script><script type="math/tex; mode=display">
-so,dxdy = r\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
-so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}</script><script type="math/tex; mode=display">
-then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r</script><script type="math/tex; mode=display">
-then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1</script><script type="math/tex; mode=display">
-so, I = 1</script><hr>
-<p>总结：反常积分。通过极坐标变化为二重积分求解。</p>
+        <p>这次南昌的邀请赛，我们学校的结果非常糟糕，我写这篇总结，是为了记录这次比赛的反思。如果日后哪天我懈怠迷茫了，这篇反思还可以提醒我继续前进。</p>
+<h2 id="赛前"><a href="#赛前" class="headerlink" title="赛前"></a>赛前</h2><ol>
+<li>赛前虽然进行了几场模拟训练，在复现的榜上达到了银的水平，但这几次的训练过题都非常流畅，心态相比真正比赛时候还是差很多，这直接导致了本次邀请赛的卡题时的心态失衡。主要原因还是长时间没有过题时候，心态的调整这方面没有训练到；同时，把训练时的不出题当做对于我们队伍水平的”理所当然“。所以之后的训练应该加强心理方面的把控和训练；</li>
+<li>对于前几次的模拟训练之后，我们并没有补完全部的题目，而且思考题目的时间也不够，就匆匆看了题解。这种没有经过思考的补题只是单纯的记忆了<strong>这道</strong>题目，对日后解决<strong>这类</strong>题目并没有帮助。所以之后训练的赛后补题，对于<strong>不会的题目应该系统学习一类题目的解法和知识点，再辅以一定量的习题练习保持对解法的记忆</strong>。<h2 id="赛中"><a href="#赛中" class="headerlink" title="赛中"></a>赛中</h2></li>
+<li><p>签到题应该交给手快的队友。我们队的平均手速还是太慢，有时有人需要频繁的看键盘才能完成程序的输入。所以全队都应该练习打字，<strong>提高输入的速度以及精准度</strong>。</p>
+</li>
+<li><p>在交流过程中，如果没有完整（不一定成熟）的思路就尽量不要开口。这不仅没有建设性，而且还会打断他人的思考。</p>
+</li>
+<li><p>队里的每一个人都应该有基本的能力，比如敲题、读题。不能说是辅助就敲题慢或敲题不行。</p>
+</li>
+<li><p>这次邀请赛最开始康俊峰签了两道题，之后通过板子上的字典树再过一题；<br>之后我通过电脑验证了F题的题意，对两个数组建两棵线段树即可，但是写挂了，RE两发。之后换康俊峰写，同样思路，还是RE，改了20分钟，对一个数组建两棵线段树，AC。<br>G题的思路我在张书楷的启发下想出，使用DFS，封榜后AC。</p>
+<p>之后的B由于不会插值，遗憾没过，而H由于不会FWT，没过。</p>
+<h2 id="关于组队"><a href="#关于组队" class="headerlink" title="关于组队"></a>关于组队</h2></li>
+<li><p>团队里的三个人应该有相同的、可达到的目标，这样才有一起练题的动力；</p>
+</li>
+<li>学习的知识点应该及时整理，不能为了刷题而刷题，做题是为了<strong>巩固知识点和通用的解法</strong>；</li>
+<li>如果团队出现水平和个人目标的不平衡，就应该及时调整队伍止损，否则最终受损失的还是三个人；</li>
+</ol>
+<h2 id="后期计划"><a href="#后期计划" class="headerlink" title="后期计划"></a>后期计划</h2><ol>
+<li><p>算法题在日后的各种面试中还是非常的常见的。不是说学ACM就是为了拿牌云云，学ACM其实是为了提高了编程的基本功。所以还是要<strong>坚持日常写题目，把coding当做生活的一部分</strong>，可以从hihocoder等OJ按照顺序刷题，而且其知识点也很好补充，对于学习新知识点，这些题目难度非常适合，而且hihocoder也有很多高级应用的题目，如一些积性函数的题目，dancing links等高级数据结构。</p>
+</li>
+<li><p>系统的学习知识点，而不是看到一个题不会就盲目的去看，学之前想一想，学了这个对我之前或者正在学的有助益吗？能够产生叠加效应吗？</p>
+</li>
+<li><p>每周末练习codeforces的div2，见识新题型新思路，顺应比赛风格的变化。</p>
+<p>每周5参加牛客的练习赛，掌握基本的国内比赛题型，尝试AK题目。</p>
+</li>
+</ol>
 
       
     </div>
@@ -434,15 +435,13 @@ so, I = 1</script><hr>
       
         <div class="post-tags">
           
-            <a href="/tags/数学/" rel="tag"># 数学</a>
+            <a href="/tags/反思/" rel="tag"># 反思</a>
           
-            <a href="/tags/概率/" rel="tag"># 概率</a>
+            <a href="/tags/ACM-ICPC/" rel="tag"># ACM-ICPC</a>
           
-            <a href="/tags/正态分布/" rel="tag"># 正态分布</a>
+            <a href="/tags/编程/" rel="tag"># 编程</a>
           
-            <a href="/tags/方差/" rel="tag"># 方差</a>
-          
-            <a href="/tags/积分/" rel="tag"># 积分</a>
+            <a href="/tags/想法/" rel="tag"># 想法</a>
           
         </div>
       
@@ -455,8 +454,8 @@ so, I = 1</script><hr>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/11/bat脚本快速入门/" rel="next" title="bat crash course | bat脚本快速入门">
-                <i class="fa fa-chevron-left"></i> bat crash course | bat脚本快速入门
+              <a href="/2019/06/03/标准正态分布的方差/" rel="next" title="标准正态分布的方差(对标准正态分布的PDF的验证)">
+                <i class="fa fa-chevron-left"></i> 标准正态分布的方差(对标准正态分布的PDF的验证)
               </a>
             
           </div>
@@ -464,10 +463,6 @@ so, I = 1</script><hr>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/04/2019ICPC南昌邀请赛总结/" rel="prev" title="2019ICPC南昌邀请赛总结">
-                2019ICPC南昌邀请赛总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,8 +514,17 @@ so, I = 1</script><hr>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +586,22 @@ so, I = 1</script><hr>
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#赛前"><span class="nav-number">1.</span> <span class="nav-text">赛前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赛中"><span class="nav-number">2.</span> <span class="nav-text">赛中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于组队"><span class="nav-number">3.</span> <span class="nav-text">关于组队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后期计划"><span class="nav-number">4.</span> <span class="nav-text">后期计划</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -750,7 +770,7 @@ so, I = 1</script><hr>
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -803,26 +823,6 @@ so, I = 1</script><hr>
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
