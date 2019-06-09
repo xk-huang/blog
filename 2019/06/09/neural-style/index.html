@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="neural style,mxnet,gluon,风格迁移,">
 
 
 
@@ -79,17 +79,31 @@
 
 
 
-<meta name="description" content="BNU CS undergraduateDeep Learning newbieFace Recognition newbie">
-<meta name="keywords" content="deep learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="x1aoke&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Python3/index.html">
+<meta name="description" content="You can see more details in my github repository  This demo is based on Gatys, L. A., Ecker, A. S., &amp;amp; Bethge, M. (2016). Image style transfer using convolutional neural networks. In Proceedings o">
+<meta name="keywords" content="neural style,mxnet,gluon,风格迁移">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单图像风格迁移——MXNet&#x2F;gluon实现">
+<meta property="og:url" content="http://yoursite.com/2019/06/09/neural-style/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="BNU CS undergraduateDeep Learning newbieFace Recognition newbie">
+<meta property="og:description" content="You can see more details in my github repository  This demo is based on Gatys, L. A., Ecker, A. S., &amp;amp; Bethge, M. (2016). Image style transfer using convolutional neural networks. In Proceedings o">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/Forest.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/style_0.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/out_3.png">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/Forest.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/style_1.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/out_4.png">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/BNU.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/style_0.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/out_1.png">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/BNU.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/style_1.jpg">
+<meta property="og:image" content="https://x1aokehuang.github.io/images/neural_style/out_2.png">
+<meta property="og:updated_time" content="2019-06-09T15:47:25.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="x1aoke&#39;s Blog">
-<meta name="twitter:description" content="BNU CS undergraduateDeep Learning newbieFace Recognition newbie">
+<meta name="twitter:title" content="简单图像风格迁移——MXNet&#x2F;gluon实现">
+<meta name="twitter:description" content="You can see more details in my github repository  This demo is based on Gatys, L. A., Ecker, A. S., &amp;amp; Bethge, M. (2016). Image style transfer using convolutional neural networks. In Proceedings o">
+<meta name="twitter:image" content="https://x1aokehuang.github.io/images/neural_style/Forest.jpg">
 
 
 
@@ -119,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Python3/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/09/neural-style/">
 
 
 
 
 
-  <title>Tag: Python3 | x1aoke's Blog</title>
+  <title>简单图像风格迁移——MXNet/gluon实现 | x1aoke's Blog</title>
   
 
 
@@ -154,7 +168,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,52 +272,217 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Python3<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/09/neural-style/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="x1aoke">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x1aoke's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/06/07/Python3-argparse模块——命令行解析/" itemprop="url">
-              
-                <span itemprop="name">Python3 argparse模块——命令行解析</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">简单图像风格迁移——MXNet/gluon实现</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-07T14:49:36+08:00" content="2019-06-07">
-          06-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-09T23:39:40+08:00">
+                2019-06-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li><p>You can see more details in my <a href="https://github.com/x1aokeHuang/Neural-style-MXNet" target="_blank" rel="noopener">github repository</a></p>
+</li>
+<li><p>This demo is based on <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Gatys, L. A., Ecker, A. S., &amp; Bethge, M. (2016). Image style transfer using convolutional neural networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2414-2423).</a></p>
+</li>
+<li><p>This simple demo is implemented with MXNet/gluon.</p>
+</li>
+<li><p>Here are some samples:</p>
+<div align="center">
+ <img src="https://x1aokehuang.github.io/images/neural_style/Forest.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/style_0.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/out_3.png" width="670px">
+</div>
+
+<div align="center">
+ <img src="https://x1aokehuang.github.io/images/neural_style/Forest.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/style_1.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/out_4.png" width="670px">
+</div>
+
+<div align="center">
+ <img src="https://x1aokehuang.github.io/images/neural_style/BNU.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/style_0.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/out_1.png" width="633px">
+</div>
+
+<div align="center">
+ <img src="https://x1aokehuang.github.io/images/neural_style/BNU.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/style_1.jpg" height="223px">
+ <img src="https://x1aokehuang.github.io/images/neural_style/out_2.png" width="633px">
+</div>
+</li>
+<li><p>Training on:</p>
+<p>| GPU             | OS                           |<br>| ———————- | —————————————— |<br>| NVIDIA TITAN Xp | Windows Server 2016 Standard |</p>
+</li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/money.jpg" alt="x1aoke WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/neural-style/" rel="tag"># neural style</a>
+          
+            <a href="/tags/mxnet/" rel="tag"># mxnet</a>
+          
+            <a href="/tags/gluon/" rel="tag"># gluon</a>
+          
+            <a href="/tags/风格迁移/" rel="tag"># 风格迁移</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/07/Python3-argparse模块——命令行解析/" rel="next" title="Python3 argparse模块——命令行解析">
+                <i class="fa fa-chevron-left"></i> Python3 argparse模块——命令行解析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -311,6 +490,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -554,11 +737,15 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -611,26 +798,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
