@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection 1. Redirecting input/output 1command &amp;gt; file redirect stan">
+<meta name="description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect sta">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 申时拾遗">
 <meta property="og:url" content="http://yoursite.com/2019/07/07/Linux拾遗/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection 1. Redirecting input/output 1command &amp;gt; file redirect stan">
+<meta property="og:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect sta">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-07-07T08:45:33.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 申时拾遗">
-<meta name="twitter:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection 1. Redirecting input/output 1command &amp;gt; file redirect stan">
+<meta name="twitter:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect sta">
 
 
 
@@ -380,24 +380,24 @@
 </li>
 </ol>
 <h1>重定向 Redirection</h1>
-<h2>1. Redirecting input/output</h2>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> > file</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="1-redirecting-input-output"><a class="header-anchor" href="#1-redirecting-input-output">¶</a>1. Redirecting input/output</h2>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> > file</span><br></pre></td></tr></tbody></table></figure>
 <p>redirect standard output to a file.</p>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> >> file</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> >> file</span><br></pre></td></tr></tbody></table></figure>
 <p>append standard output to a file.</p>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> < file</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> < file</span><br></pre></td></tr></tbody></table></figure>
 <p>redirect standard input from a file.</p>
-<h2>2. Pipes</h2>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command1 | command2</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="2-pipes"><a class="header-anchor" href="#2-pipes">¶</a>2. Pipes</h2>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command1 | command2</span><br></pre></td></tr></tbody></table></figure>
 <p>pipe the output of command1 to the input of command2.</p>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat file1 file2 > file0</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat file1 file2 > file0</span><br></pre></td></tr></tbody></table></figure>
 <p>concatenate file1 and file2 to file0.</p>
 <h1>Wildcards</h1>
-<h2>1. The * (asterisk) wildcard</h2>
+<h2 id="1-the-asterisk-wildcard"><a class="header-anchor" href="#1-the-asterisk-wildcard">¶</a>1. The * (asterisk) wildcard</h2>
 <ul>
 <li><code>*</code> match any number of characters.</li>
 </ul>
-<h2>2. The ? (question mark) wildcard</h2>
+<h2 id="2-the-question-mark-wildcard"><a class="header-anchor" href="#2-the-question-mark-wildcard">¶</a>2. The ? (question mark) wildcard</h2>
 <ul>
 <li><code>?</code> match one character.</li>
 </ul>
@@ -451,13 +451,13 @@
 <td>compares the contents of two files and displays the differences</td>
 </tr>
 <tr>
-<td>find;  find . -name "*.txt" -print; find . -size +1M -ls</td>
+<td>find;  find . -name “*.txt” -print; find . -size +1M -ls</td>
 <td>searches through the directories for files and directories with a given name, date, size, or any other attribute you care to specify</td>
 </tr>
 </tbody>
 </table>
 <h1>UNIX Variables</h1>
-<h2>1. Intro</h2>
+<h2 id="1-intro"><a class="header-anchor" href="#1-intro">¶</a>1. Intro</h2>
 <ul>
 <li>
 <p>Variables are a way of passing information from the shell to programs when you run them.</p>
@@ -471,11 +471,11 @@
 </ul>
 <ol start="2">
 <li>Environment variables have a farther reaching significance, and those set at login are valid for the duration of the session. Environment variables have <strong>UPPER CASE</strong>.</li>
-<li>Variables all start with a "$" mark.</li>
+<li>Variables all start with a “$” mark.</li>
 </ol>
-<h2>2. Environment Variables</h2>
-<h3>Show environment variables</h3>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$OSTYPE</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="2-environment-variables"><a class="header-anchor" href="#2-environment-variables">¶</a>2. Environment Variables</h2>
+<h3 id="show-environment-variables"><a class="header-anchor" href="#show-environment-variables">¶</a>Show environment variables</h3>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$OSTYPE</span></span><br></pre></td></tr></tbody></table></figure>
 <p>More e.g.:</p>
 <ul>
 <li>USER (your login name)</li>
@@ -486,7 +486,7 @@
 <li>PRINTER (the default printer to send print jobs)</li>
 <li><strong>PATH</strong> (the directories the shell should search to find a command)</li>
 </ul>
-<h3>Check values of the variables</h3>
+<h3 id="check-values-of-the-variables"><a class="header-anchor" href="#check-values-of-the-variables">¶</a>Check values of the variables</h3>
 <ul>
 <li>
 <p><code>setenv</code> set environment variables.</p>
@@ -496,12 +496,12 @@
 </li>
 <li>
 <p><code>printenv</code> & <code>env</code> display:</p>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% printenv | less</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% printenv | less</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ul>
-<h2>3. Shell Variables</h2>
-<h3>Show</h3>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$history</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="3-shell-variables"><a class="header-anchor" href="#3-shell-variables">¶</a>3. Shell Variables</h2>
+<h3 id="show"><a class="header-anchor" href="#show">¶</a>Show</h3>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$history</span></span><br></pre></td></tr></tbody></table></figure>
 <p>More e.g.:</p>
 <ul>
 <li>cwd (your current working directory)</li>
@@ -509,7 +509,7 @@
 <li>prompt (the text string used to prompt for interactive commands shell your login shell)</li>
 <li><strong>path</strong> (the directories the shell should search to find a command)</li>
 </ul>
-<h3>Check values of the variables</h3>
+<h3 id="check-values-of-the-variables-v2"><a class="header-anchor" href="#check-values-of-the-variables-v2">¶</a>Check values of the variables</h3>
 <ul>
 <li>
 <p><code>set</code></p>
@@ -518,10 +518,10 @@
 <p><code>unset</code></p>
 </li>
 <li>
-<p></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">set</span> | less</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">set</span> | less</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ul>
-<h2>4. Setting shell variables in <code>.cshrc</code></h2>
+<h2 id="4-setting-shell-variables-in-cshrc"><a class="header-anchor" href="#4-setting-shell-variables-in-cshrc">¶</a>4. Setting shell variables in <code>.cshrc</code></h2>
 <ul>
 <li>
 <p><code>set history=200</code> only works in current shell, so it works for only once.</p>
@@ -535,7 +535,7 @@
 <p><code>source ~/.cshrc</code></p>
 <p>Check whether it works or not:</p>
 <p><code>echo $history</code></p>
-<h2>5. Setting the path</h2>
+<h2 id="5-setting-the-path"><a class="header-anchor" href="#5-setting-the-path">¶</a>5. Setting the path</h2>
 <ul>
 <li>
 <p>path/PATH variable defines in which directories the shell will look to find the cmommand you typed.</p>
@@ -762,7 +762,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">重定向 Redirection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">1. Redirecting input/output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">2. Pipes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Wildcards</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">1. The * (asterisk) wildcard</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">2. The ? (question mark) wildcard</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Some Uesful Commands</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">UNIX Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.</span> <span class="nav-text">1. Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.</span> <span class="nav-text">2. Environment Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.1.</span> <span class="nav-text">Show environment variables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.2.</span> <span class="nav-text">Check values of the variables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.3.</span> <span class="nav-text">3. Shell Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.3.1.</span> <span class="nav-text">Show</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.3.2.</span> <span class="nav-text">Check values of the variables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.4.</span> <span class="nav-text">4. Setting shell variables in .cshrc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.5.</span> <span class="nav-text">5. Setting the path</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">重定向 Redirection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-redirecting-input-output"><span class="nav-number">2.1.</span> <span class="nav-text">¶1. Redirecting input/output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pipes"><span class="nav-number">2.2.</span> <span class="nav-text">¶2. Pipes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Wildcards</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-the-asterisk-wildcard"><span class="nav-number">3.1.</span> <span class="nav-text">¶1. The * (asterisk) wildcard</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-the-question-mark-wildcard"><span class="nav-number">3.2.</span> <span class="nav-text">¶2. The ? (question mark) wildcard</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Some Uesful Commands</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">UNIX Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-intro"><span class="nav-number">5.1.</span> <span class="nav-text">¶1. Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-environment-variables"><span class="nav-number">5.2.</span> <span class="nav-text">¶2. Environment Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#show-environment-variables"><span class="nav-number">5.2.1.</span> <span class="nav-text">¶Show environment variables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-values-of-the-variables"><span class="nav-number">5.2.2.</span> <span class="nav-text">¶Check values of the variables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-shell-variables"><span class="nav-number">5.3.</span> <span class="nav-text">¶3. Shell Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#show"><span class="nav-number">5.3.1.</span> <span class="nav-text">¶Show</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-values-of-the-variables-v2"><span class="nav-number">5.3.2.</span> <span class="nav-text">¶Check values of the variables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-setting-shell-variables-in-cshrc"><span class="nav-number">5.4.</span> <span class="nav-text">¶4. Setting shell variables in .cshrc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-setting-the-path"><span class="nav-number">5.5.</span> <span class="nav-text">¶5. Setting the path</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\f">
+<meta name="description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t2e{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\fra">
 <meta name="keywords" content="数学,概率,正态分布,方差,积分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="标准正态分布的方差(对标准正态分布的PDF的验证)">
 <meta property="og:url" content="http://yoursite.com/2019/06/03/标准正态分布的方差/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\f">
+<meta property="og:description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t2e{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\fra">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-06-03T09:24:32.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标准正态分布的方差(对标准正态分布的PDF的验证)">
-<meta name="twitter:description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\f">
+<meta name="twitter:description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t2e{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\fra">
 
 
 
@@ -369,55 +369,55 @@
       
         <hr>
 <p>背景：求标准正态分布的方差：</p>
-<p>原问题为：
-$$
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t
-$$
-通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：
-$$
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t
+<p>原问题为：<br>
+$$<br>
+\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t<sup>2e</sup>{\frac {-t^2} 2} \mathrm{d}t<br>
+$$<br>
+通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：<br>
+$$<br>
+\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t<br>
 $$</p>
 <p>实际上，被积函数为标准正态分布的概率密度函数(Probability Density Function, PDF)。</p>
 <p>这里侧面验证了标准正态分布的PDF的正确性(即从负无穷到正无穷的积分为1)。</p>
 <hr>
-<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$
-$$
-Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}
+<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$<br>
+$$<br>
+Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}<br>
 $$</p>
-<p>$$
-then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y
+<p>$$<br>
+then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y<br>
 $$</p>
-<p>$$
-then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y
+<p>$$<br>
+then,I^2 = \int_{-\infty}<sup>{\infty}\int_{-\infty}</sup>{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y<br>
 $$</p>
-<p>$$
-then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y
+<p>$$<br>
+then, I^2 = \int_{-\infty}<sup>{\infty}\int_{-\infty}</sup>{\infty}{\frac 1  {2\pi}}e^{\frac {-(x<sup>2+y</sup>2)} 2} \mathrm{d}x \mathrm{d}y<br>
 $$</p>
 <hr>
-<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:
-$$
-so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta
+<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:<br>
+$$<br>
+so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta<br>
 $$</p>
-<p>$$
-where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \ -r\sin\theta & r\cos\theta \end{vmatrix}
+<p>$$<br>
+where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \ -r\sin\theta & r\cos\theta \end{vmatrix}<br>
 $$</p>
-<p>$$
-so,abs(jacobian) = r
+<p>$$<br>
+so,abs(jacobian) = r<br>
 $$</p>
-<p>$$
-so,dxdy = r\mathrm{d}r\mathrm{d}\theta
+<p>$$<br>
+so,dxdy = r\mathrm{d}r\mathrm{d}\theta<br>
 $$</p>
-<p>$$
-so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}
+<p>$$<br>
+so, I^2 = {\frac 1 {2\pi}} {\int_0<sup>{2\pi}\int_0</sup>\infty e<sup>{-r</sup>2/2}r\mathrm{d}r\mathrm{d}\theta}<br>
 $$</p>
-<p>$$
-then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r
+<p>$$<br>
+then, I^2 =\int_0^\infty e<sup>{-r</sup>2/2}r\mathrm{d}r<br>
 $$</p>
-<p>$$
-then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1
+<p>$$<br>
+then,I^2= {\frac 1 2}\int_0^\infty e<sup>{-r</sup>2/2}\mathrm{d}r^2 = \int_0^\infty e<sup>{-t</sup>2/2}\mathrm{d}t = 1<br>
 $$</p>
-<p>$$
-so, I = 1
+<p>$$<br>
+so, I = 1<br>
 $$</p>
 <hr>
 <p>总结：反常积分。通过极坐标变化为二重积分求解。</p>
