@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8fbd82;
+  background: #5055da;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3242,12 +3242,9 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://x1aokehuang.github.io/images/background/bg01.jpg");
+  background: url("https://x1aokehuang.github.io/images/background/bg00.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
-}
-.main-inner {
-  opacity: 0.8;
 }
