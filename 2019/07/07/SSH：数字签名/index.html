@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="bat脚本,cmd,快速入门,">
+  <meta name="keywords" content="SSH,数字签名,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="简介  Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总  Ho">
-<meta name="keywords" content="bat脚本,cmd,快速入门">
+<meta name="description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice 向 Bob 发送信息  Alice使用从Bob处得">
+<meta name="keywords" content="SSH,数字签名">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bat crash course | bat脚本快速入门">
-<meta property="og:url" content="http://yoursite.com/2019/05/11/bat脚本快速入门/index.html">
+<meta property="og:title" content="SSH：公钥密码与数字签名">
+<meta property="og:url" content="http://yoursite.com/2019/07/07/SSH：数字签名/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="简介  Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总  Ho">
+<meta property="og:description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice 向 Bob 发送信息  Alice使用从Bob处得">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-17T04:14:48.882Z">
+<meta property="og:updated_time" content="2019-07-07T12:21:47.238Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bat crash course | bat脚本快速入门">
-<meta name="twitter:description" content="简介  Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总  Ho">
+<meta name="twitter:title" content="SSH：公钥密码与数字签名">
+<meta name="twitter:description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice 向 Bob 发送信息  Alice使用从Bob处得">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/11/bat脚本快速入门/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/07/SSH：数字签名/">
 
 
 
 
 
-  <title>bat crash course | bat脚本快速入门 | x1aoke's Blog</title>
+  <title>SSH：公钥密码与数字签名 | x1aoke's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/11/bat脚本快速入门/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/07/SSH：数字签名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aoke">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">bat crash course | bat脚本快速入门</h1>
+          <h1 class="post-title" itemprop="name headline">SSH：公钥密码与数字签名</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-11T15:00:01+08:00">
-                2019-05-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-07T19:47:00+08:00">
+                2019-07-07
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/bat脚本/" itemprop="url" rel="index">
-                    <span itemprop="name">bat脚本</span>
+                  <a href="/categories/SSH/" itemprop="url" rel="index">
+                    <span itemprop="name">SSH</span>
                   </a>
                 </span>
 
@@ -367,83 +367,67 @@
       
 
       
-        <h1>简介</h1>
-<ul>
-<li>Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。</li>
-<li>我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。</li>
-</ul>
-<h1>学习资源汇总</h1>
-<ul>
-<li><a href="http://www.makeuseof.com/tag/write-simple-batch-bat-file/" target="_blank" rel="noopener">How To Write A Simple Batch (.bat) File</a>  bat入门</li>
-<li><a href="http://www.ericphelps.com/batch/" target="_blank" rel="noopener">Batch Script Samples</a>  bat进阶</li>
-<li><a href="http://www.tutorialspoint.com/batch_script/index.htm" target="_blank" rel="noopener">Batch Script Tutorial</a>   bat入门</li>
-<li><a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" target="_blank" rel="noopener">Windows Batch Scripting</a>  wikibooks，权威精简且全面</li>
-<li><a href="http://steve-jansen.github.io/guides/windows-batch-scripting/" target="_blank" rel="noopener">Guide to Windows Batch Scripting</a>   github博客</li>
-</ul>
-<h1>快速入门</h1>
-<ol>
-<li>
-<p>掌握常用命令：</p>
+        <p>前一段时间复习了SSH的相关知识，这里整理给出。</p>
+<p>公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)也获得了图灵奖。</p>
+<h1>公钥密码学</h1>
 <ul>
 <li>
-<p><code>echo</code></p>
-<p><code>echo [sentence]</code>可以直接输出sentence的内容，不必在句子两旁加引号</p>
-<p><code>echo</code> 显示此行之后的命令</p>
-<p><code>echo off</code> 不显示此行之后的命令</p>
+<p>Bob有两把钥匙，一把<strong>公钥</strong>，可公开；另一把是<strong>私钥</strong>，一定不能公开。</p>
 </li>
 <li>
-<p><code>@</code></p>
-<p>添加至某行命令之前，表示不显示此行命令</p>
-</li>
-<li>
-<p><code>call</code></p>
-<p>调用其他文件(.bat、python脚本等) ，被调用文件执行结束后，<strong>返回</strong>当前执行文件</p>
-<p>注意，如果不使用<code>call</code>，被调用文件执行结束后，<strong>不会</strong>返回当前执行文件</p>
-</li>
-<li>
-<p><code>pause</code></p>
-<p>在此行暂停批处理文件，并在屏幕上显示"Press any key to continue…"，按下<code>press</code>则批处理文件继续执行。</p>
-</li>
-<li>
-<p><code>REM</code></p>
-<p>不执行此行，即此行为注释</p>
+<p>Bob把<strong>公钥</strong>给Alice。</p>
+<p>注：Alice 和 Bob 是密码学经典教材中的经典人物，参见<a href="https://en.wikipedia.org/wiki/Alice_and_Bob" target="_blank" rel="noopener">wiki</a>。</p>
 </li>
 </ul>
-</li>
-<li>
-<p><code>goto</code> 转跳指令</p>
+<h2 id="alice-向-bob-发送信息"><a class="header-anchor" href="#alice-向-bob-发送信息">¶</a>Alice 向 Bob 发送信息</h2>
+<ul>
+<li>Alice使用从Bob处得到的<strong>公钥</strong>，将报文加密后发送给Bob，Bob收到后使用<strong>私钥解码</strong>即可。</li>
+</ul>
+<h2 id="bob-向-alice-发送信息"><a class="header-anchor" href="#bob-向-alice-发送信息">¶</a>Bob 向 Alice 发送信息</h2>
+<ul>
+<li>Bob使用一种叫<strong>数字签名</strong>(Digital Signature)的技术：Bob使用<strong>Hash函数</strong>(得益于巧妙的数学设计，Hash函数把一段信息变成固定长度的信息且一般不会重复)，生成报文的<strong>摘要</strong>(Digest)。</li>
+<li>Bob使用私钥，对<strong>摘要加密</strong>，生成<strong>数字签名</strong>(Signature)。（摘要的长度较短且固定，如果报文太长，使用私钥直接加密的话，一是计算时间长，二是传送信息时出错数量也会增加）</li>
+<li>Bob将数字签名附在在报文下，发送给Alice。</li>
+<li>Alice收信后，可使用<strong>公钥对数字签名解密</strong>，即可检验信件：即如果解密的数字签名与收到报文的Hash结果一致，则可报文未被修改；否则不可信任，报文被修改。</li>
+</ul>
+<h1>数字证书</h1>
+<h2 id="中间人攻击"><a class="header-anchor" href="#中间人攻击">¶</a>中间人攻击</h2>
+<ul>
+<li>如果Carol想欺骗Alice，他可以通过一些不合法的手段把Alice手上的、来自Bob公钥<strong>替换为自己的公钥</strong>。这样当Carol使用自己的私钥生成数字签名时，由于Alice手上持有的是Carol的公钥，所以Alice是无法防备的，她会天真的以为收到的报文仍然是来自可信任的Bob。</li>
+</ul>
+<h2 id="数字证书"><a class="header-anchor" href="#数字证书">¶</a>数字证书</h2>
 <ul>
 <li>
-<p>调用<code>goto</code>，批处理文件将转跳至<strong>指定的标号处</strong>， 可以与if配合。</p>
-<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:start</span><br><span class="line">REM <span class="keyword">do</span> something...</span><br><span class="line">goto start</span><br></pre></td></tr></tbody></table></figure>
+<p>Bob为了保护Alice，他找到<strong>证书中心</strong>(Certificate authority, CA)，为自己的公钥做认证。</p>
+</li>
+<li>
+<p>证书中心使用自己的<strong>私钥</strong>，对Bob的公钥以及其他相关信息做加密，生成了数字证书(Digital Certificate)。</p>
+</li>
+<li>
+<p>Bob以后给Alice发信息时，报文附上签名的同时，也要附上数字证书。</p>
+</li>
+<li>
+<p>Alice收到信息后，用CA的公钥解开数字证书，就可以获得Bob的真实公钥，就能确定自己手上的公钥是否为Bob的。</p>
+<p>注：证书中心是可信任第三方(Trusted third party)。</p>
 </li>
 </ul>
-</li>
-</ol>
-<ol start="3">
-<li>重定向（待填坑）</li>
-</ol>
-<h1>几个小例子</h1>
-<ol>
+<h2 id="https协议"><a class="header-anchor" href="#https协议">¶</a>https协议</h2>
+<ul>
 <li>
-<p>实验室的服务器配置不完善，导致每次只能连接两个用户。我需要实时查询是否有其他用户在线（在线的话就用teamviewer）：</p>
-<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">:start</span><br><span class="line">query user</span><br><span class="line">choice /t <span class="number">5</span> /d y /n >nul</span><br><span class="line">goto start</span><br></pre></td></tr></tbody></table></figure>
+<p>https协议主要用于网页加密，毕竟你也不想让别人看到你浏览的内容和输入的密码(笑)。</p>
 </li>
 <li>
-<p>实时监控显卡的使用情况</p>
-<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">nvidia-smi --format=csv --query-gpu=utilization.gpu,fan.speed,temperature.gpu,memory.used,power.draw -l -s</span><br></pre></td></tr></tbody></table></figure>
+<p>客户端向服务器发送加密的请求；</p>
+<p>服务器使用私钥加密内容，连同数字签名、数字证书，发给客户端。</p>
 </li>
-</ol>
-<ol start="3">
 <li>
-<p>神经网络训练脚本。由于服务器管理员的水平问题，他的配置被添加到了系统路径，导致我每次使用conda的activate文件都需要传入绝对路径</p>
-<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">call D:\user_name\Anaconda3\Scripts\activate gluon</span><br><span class="line"></span><br><span class="line">call python test1.py</span><br><span class="line">call python test2.py</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></tbody></table></figure>
+<p>如果数字证书记录的网址，与你正在浏览的网址<strong>不同</strong>，说明这张证书可能被冒用，浏览器会发出<strong>警告</strong>。</p>
+<p>如果数字证书不是由可信任的机构(证书中心)发出，浏览器也会发出警告。</p>
 </li>
-</ol>
-<h1>小结</h1>
-<p>批处理文件bat拥有很久远的历史。当比尔盖茨开发MS-DOS时，就在它的Command.com命令解释器中，纳入了批处理功能：把命令保存在.bat扩展名的文本文件中，命令解释器会运行它里面的每一个命令。</p>
-<p>现在，微软开发了Powershell来代替cmd，并将PowerShell定位为Windows操作系统和微软企业应用程序的默认管理工具。</p>
-<p>PowerShell比cmd要简单地多。许多时候，一行PowerShell命令行，能够替代成百上千的批处理代码。</p>
+<li>
+<p>如果数字证书是可靠的，客户端就可以使用证书中的服务器公钥，对信息进行加密，然后与服务器交换加密信息。</p>
+</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -503,11 +487,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bat脚本/" rel="tag"># bat脚本</a>
+            <a href="/tags/SSH/" rel="tag"># SSH</a>
           
-            <a href="/tags/cmd/" rel="tag"># cmd</a>
-          
-            <a href="/tags/快速入门/" rel="tag"># 快速入门</a>
+            <a href="/tags/数字签名/" rel="tag"># 数字签名</a>
           
         </div>
       
@@ -520,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/03/XMind基本使用方法/" rel="next" title="XMind基本使用方法">
-                <i class="fa fa-chevron-left"></i> XMind基本使用方法
+              <a href="/2019/07/07/Linux拾遗/" rel="next" title="Linux 申时拾遗">
+                <i class="fa fa-chevron-left"></i> Linux 申时拾遗
               </a>
             
           </div>
@@ -529,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/03/标准正态分布的方差/" rel="prev" title="标准正态分布的方差(对标准正态分布的PDF的验证)">
-                标准正态分布的方差(对标准正态分布的PDF的验证) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -666,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">学习资源汇总</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">几个小例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">公钥密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#alice-向-bob-发送信息"><span class="nav-number">1.1.</span> <span class="nav-text">¶Alice 向 Bob 发送信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bob-向-alice-发送信息"><span class="nav-number">1.2.</span> <span class="nav-text">¶Bob 向 Alice 发送信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">数字证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中间人攻击"><span class="nav-number">2.1.</span> <span class="nav-text">¶中间人攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字证书"><span class="nav-number">2.2.</span> <span class="nav-text">¶数字证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#https协议"><span class="nav-number">2.3.</span> <span class="nav-text">¶https协议</span></a></li></ol></li></ol></div>
             
 
           </div>
