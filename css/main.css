@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #21f5ff;
+  background: #95ffc1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3240,4 +3240,17 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body::before {
+  background-image: url("https://https://x1aokehuang.github.io/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  content: " ";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
