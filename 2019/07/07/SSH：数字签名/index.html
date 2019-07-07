@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
 <meta property="og:description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)的三位发明人(他们三人的名字首字母就是R.S.A)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-07T12:25:07.606Z">
+<meta property="og:updated_time" content="2019-07-07T12:51:07.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH：公钥密码与数字签名">
 <meta name="twitter:description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)的三位发明人(他们三人的名字首字母就是R.S.A)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice">
@@ -391,7 +391,7 @@
 <li>Alice收信后，可使用<strong>公钥对数字签名解密</strong>，即可检验信件：即如果解密的数字签名与收到报文的Hash结果一致，则可报文未被修改；否则不可信任，报文被修改。</li>
 </ul>
 <h1>数字证书</h1>
-<h2 id="中间人攻击"><a class="header-anchor" href="#中间人攻击">¶</a>中间人攻击</h2>
+<h2 id="潜在风险"><a class="header-anchor" href="#潜在风险">¶</a>潜在风险</h2>
 <ul>
 <li>如果Carol想欺骗Alice，他可以通过一些不合法的手段把Alice手上的、来自Bob公钥<strong>替换为自己的公钥</strong>。这样当Carol使用自己的私钥生成数字签名时，由于Alice手上持有的是Carol的公钥，所以Alice是无法防备的，她会天真的以为收到的报文仍然是来自可信任的Bob。</li>
 </ul>
@@ -589,7 +589,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -600,7 +600,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -611,7 +611,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -644,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">公钥密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#alice-向-bob-发送信息"><span class="nav-number">1.1.</span> <span class="nav-text">¶Alice 向 Bob 发送信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bob-向-alice-发送信息"><span class="nav-number">1.2.</span> <span class="nav-text">¶Bob 向 Alice 发送信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">数字证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中间人攻击"><span class="nav-number">2.1.</span> <span class="nav-text">¶中间人攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字证书"><span class="nav-number">2.2.</span> <span class="nav-text">¶数字证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#https协议"><span class="nav-number">2.3.</span> <span class="nav-text">¶https协议</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">公钥密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#alice-向-bob-发送信息"><span class="nav-number">1.1.</span> <span class="nav-text">¶Alice 向 Bob 发送信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bob-向-alice-发送信息"><span class="nav-number">1.2.</span> <span class="nav-text">¶Bob 向 Alice 发送信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">数字证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#潜在风险"><span class="nav-number">2.1.</span> <span class="nav-text">¶潜在风险</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字证书"><span class="nav-number">2.2.</span> <span class="nav-text">¶数字证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#https协议"><span class="nav-number">2.3.</span> <span class="nav-text">¶https协议</span></a></li></ol></li></ol></div>
             
 
           </div>
