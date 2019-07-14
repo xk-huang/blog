@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="简介 Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总 How">
+<meta name="description" content="简介  Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总  Ho">
 <meta name="keywords" content="bat脚本,cmd,快速入门">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bat crash course | bat脚本快速入门">
 <meta property="og:url" content="http://yoursite.com/2019/05/11/bat脚本快速入门/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="简介 Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总 How">
+<meta property="og:description" content="简介  Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总  Ho">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-05-17T04:14:48.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bat crash course | bat脚本快速入门">
-<meta name="twitter:description" content="简介 Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总 How">
+<meta name="twitter:description" content="简介  Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。 我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。  学习资源汇总  Ho">
 
 
 
@@ -367,65 +367,81 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ul>
+        <h1>简介</h1>
+<ul>
 <li>Bat脚本，也就是大众熟知的批处理脚本，它运行在windows系统上。使用cmd.exe打开bat脚本，解释器会运行脚本里每一条命令。现在微软已经开发了功能更强的powershell。在Linux系统中也有对应的shell脚本。熟练掌握bat可以大大简化日常工作量，提高工作效率。</li>
 <li>我学习bat的另一个原因，是在实验室的windows server上批量训练神经网络。</li>
 </ul>
-<h1 id="学习资源汇总"><a href="#学习资源汇总" class="headerlink" title="学习资源汇总"></a>学习资源汇总</h1><ul>
+<h1>学习资源汇总</h1>
+<ul>
 <li><a href="http://www.makeuseof.com/tag/write-simple-batch-bat-file/" target="_blank" rel="noopener">How To Write A Simple Batch (.bat) File</a>  bat入门</li>
 <li><a href="http://www.ericphelps.com/batch/" target="_blank" rel="noopener">Batch Script Samples</a>  bat进阶</li>
 <li><a href="http://www.tutorialspoint.com/batch_script/index.htm" target="_blank" rel="noopener">Batch Script Tutorial</a>   bat入门</li>
 <li><a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" target="_blank" rel="noopener">Windows Batch Scripting</a>  wikibooks，权威精简且全面</li>
 <li><a href="http://steve-jansen.github.io/guides/windows-batch-scripting/" target="_blank" rel="noopener">Guide to Windows Batch Scripting</a>   github博客</li>
 </ul>
-<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><ol>
-<li><p>掌握常用命令：</p>
+<h1>快速入门</h1>
+<ol>
+<li>
+<p>掌握常用命令：</p>
 <ul>
-<li><p><code>echo</code></p>
+<li>
+<p><code>echo</code></p>
 <p><code>echo [sentence]</code>可以直接输出sentence的内容，不必在句子两旁加引号</p>
 <p><code>echo</code> 显示此行之后的命令</p>
 <p><code>echo off</code> 不显示此行之后的命令</p>
 </li>
-<li><p><code>@</code></p>
+<li>
+<p><code>@</code></p>
 <p>添加至某行命令之前，表示不显示此行命令</p>
 </li>
-<li><p><code>call</code></p>
+<li>
+<p><code>call</code></p>
 <p>调用其他文件(.bat、python脚本等) ，被调用文件执行结束后，<strong>返回</strong>当前执行文件</p>
 <p>注意，如果不使用<code>call</code>，被调用文件执行结束后，<strong>不会</strong>返回当前执行文件</p>
 </li>
-<li><p><code>pause</code></p>
-<p>在此行暂停批处理文件，并在屏幕上显示”Press any key to continue…”，按下<code>press</code>则批处理文件继续执行。</p>
+<li>
+<p><code>pause</code></p>
+<p>在此行暂停批处理文件，并在屏幕上显示"Press any key to continue…"，按下<code>press</code>则批处理文件继续执行。</p>
 </li>
-<li><p><code>REM</code></p>
+<li>
+<p><code>REM</code></p>
 <p>不执行此行，即此行为注释</p>
 </li>
 </ul>
 </li>
-<li><p><code>goto</code> 转跳指令</p>
+<li>
+<p><code>goto</code> 转跳指令</p>
 <ul>
-<li><p>调用<code>goto</code>，批处理文件将转跳至<strong>指定的标号处</strong>， 可以与if配合。</p>
+<li>
+<p>调用<code>goto</code>，批处理文件将转跳至<strong>指定的标号处</strong>， 可以与if配合。</p>
 <figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:start</span><br><span class="line">REM <span class="keyword">do</span> something...</span><br><span class="line">goto start</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ul>
 </li>
 </ol>
-<ol>
+<ol start="3">
 <li>重定向（待填坑）</li>
 </ol>
-<h1 id="几个小例子"><a href="#几个小例子" class="headerlink" title="几个小例子"></a>几个小例子</h1><ol>
-<li><p>实验室的服务器配置不完善，导致每次只能连接两个用户。我需要实时查询是否有其他用户在线（在线的话就用teamviewer）：</p>
+<h1>几个小例子</h1>
+<ol>
+<li>
+<p>实验室的服务器配置不完善，导致每次只能连接两个用户。我需要实时查询是否有其他用户在线（在线的话就用teamviewer）：</p>
 <figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">:start</span><br><span class="line">query user</span><br><span class="line">choice /t <span class="number">5</span> /d y /n >nul</span><br><span class="line">goto start</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p>实时监控显卡的使用情况</p>
+<li>
+<p>实时监控显卡的使用情况</p>
 <figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">nvidia-smi --format=csv --query-gpu=utilization.gpu,fan.speed,temperature.gpu,memory.used,power.draw -l -s</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ol>
-<ol>
-<li><p>神经网络训练脚本。由于服务器管理员的水平问题，他的配置被添加到了系统路径，导致我每次使用conda的activate文件都需要传入绝对路径</p>
+<ol start="3">
+<li>
+<p>神经网络训练脚本。由于服务器管理员的水平问题，他的配置被添加到了系统路径，导致我每次使用conda的activate文件都需要传入绝对路径</p>
 <figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">call D:\user_name\Anaconda3\Scripts\activate gluon</span><br><span class="line"></span><br><span class="line">call python test1.py</span><br><span class="line">call python test2.py</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ol>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>批处理文件bat拥有很久远的历史。当比尔盖茨开发MS-DOS时，就在它的Command.com命令解释器中，纳入了批处理功能：把命令保存在.bat扩展名的文本文件中，命令解释器会运行它里面的每一个命令。</p>
+<h1>小结</h1>
+<p>批处理文件bat拥有很久远的历史。当比尔盖茨开发MS-DOS时，就在它的Command.com命令解释器中，纳入了批处理功能：把命令保存在.bat扩展名的文本文件中，命令解释器会运行它里面的每一个命令。</p>
 <p>现在，微软开发了Powershell来代替cmd，并将PowerShell定位为Windows操作系统和微软企业应用程序的默认管理工具。</p>
 <p>PowerShell比cmd要简单地多。许多时候，一行PowerShell命令行，能够替代成百上千的批处理代码。</p>
 <script>
@@ -650,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资源汇总"><span class="nav-number">2.</span> <span class="nav-text">学习资源汇总</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速入门"><span class="nav-number">3.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几个小例子"><span class="nav-number">4.</span> <span class="nav-text">几个小例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">学习资源汇总</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">快速入门</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">几个小例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
