@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect sta">
+<meta name="description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 申时拾遗">
 <meta property="og:url" content="http://yoursite.com/2019/07/07/Linux拾遗/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect sta">
+<meta property="og:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-07-07T08:45:33.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 申时拾遗">
-<meta name="twitter:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect sta">
+<meta name="twitter:description" content="背景 这是一个很好的学习Linux的资源。 记录一些看教程时发现的自己还不了解的点。 注：   【申时】哺时，又名日铺、夕食等（15时至17时）。   【拾遗】采补缺漏遗佚。《南齐书．卷九．礼志上》：吴则太史令丁孚拾遗汉事，蜀则孟光、许慈草建众典。   重定向 Redirection ¶1. Redirecting input/output 1command &amp;gt; file redirect">
 
 
 
@@ -381,16 +381,16 @@
 </ol>
 <h1>重定向 Redirection</h1>
 <h2 id="1-redirecting-input-output"><a class="header-anchor" href="#1-redirecting-input-output">¶</a>1. Redirecting input/output</h2>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> > file</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> &gt; file</span><br></pre></td></tr></table></figure>
 <p>redirect standard output to a file.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> >> file</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> &gt;&gt; file</span><br></pre></td></tr></table></figure>
 <p>append standard output to a file.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> < file</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> &lt; file</span><br></pre></td></tr></table></figure>
 <p>redirect standard input from a file.</p>
 <h2 id="2-pipes"><a class="header-anchor" href="#2-pipes">¶</a>2. Pipes</h2>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command1 | command2</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command1 | command2</span><br></pre></td></tr></table></figure>
 <p>pipe the output of command1 to the input of command2.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat file1 file2 > file0</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat file1 file2 &gt; file0</span><br></pre></td></tr></table></figure>
 <p>concatenate file1 and file2 to file0.</p>
 <h1>Wildcards</h1>
 <h2 id="1-the-asterisk-wildcard"><a class="header-anchor" href="#1-the-asterisk-wildcard">¶</a>1. The * (asterisk) wildcard</h2>
@@ -475,7 +475,7 @@
 </ol>
 <h2 id="2-environment-variables"><a class="header-anchor" href="#2-environment-variables">¶</a>2. Environment Variables</h2>
 <h3 id="show-environment-variables"><a class="header-anchor" href="#show-environment-variables">¶</a>Show environment variables</h3>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$OSTYPE</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$OSTYPE</span></span><br></pre></td></tr></table></figure>
 <p>More e.g.:</p>
 <ul>
 <li>USER (your login name)</li>
@@ -495,13 +495,13 @@
 <p><code>unsetenv</code> unset environment variables.</p>
 </li>
 <li>
-<p><code>printenv</code> & <code>env</code> display:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% printenv | less</span><br></pre></td></tr></tbody></table></figure>
+<p><code>printenv</code> &amp; <code>env</code> display:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% printenv | less</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="3-shell-variables"><a class="header-anchor" href="#3-shell-variables">¶</a>3. Shell Variables</h2>
 <h3 id="show"><a class="header-anchor" href="#show">¶</a>Show</h3>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$history</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">echo</span> <span class="variable">$history</span></span><br></pre></td></tr></table></figure>
 <p>More e.g.:</p>
 <ul>
 <li>cwd (your current working directory)</li>
@@ -518,7 +518,7 @@
 <p><code>unset</code></p>
 </li>
 <li>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">set</span> | less</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% <span class="built_in">set</span> | less</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="4-setting-shell-variables-in-cshrc"><a class="header-anchor" href="#4-setting-shell-variables-in-cshrc">¶</a>4. Setting shell variables in <code>.cshrc</code></h2>
@@ -548,25 +548,7 @@
 <p><code>set path = ($path ~/units174/bin)</code></p>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
       
     </div>
     
@@ -711,7 +693,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -722,7 +704,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -733,7 +715,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.cor">
+<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&amp;quot;B&amp;quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] =">
 <meta name="keywords" content="pandas,学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pandas学习记录">
 <meta property="og:url" content="http://yoursite.com/2019/05/02/pandas学习记录/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.cor">
+<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&amp;quot;B&amp;quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] =">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-05-11T07:52:44.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pandas学习记录">
-<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.cor">
+<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&amp;quot;B&amp;quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] =">
 
 
 
@@ -369,7 +369,7 @@
       
         <p>五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于<strong>numpy</strong>开发的数据分析软件。以下内容是对学习过程中要点的记录。</p>
 <h1>1. 按列更改值时</h1>
-<p>按列更改值时，如对定义的df，尝试修改"B"标签（后文将延续这种假设和表达），则需要调用<code>df.B[statement] = pandas.core.series.Series</code>。</p>
+<p>按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用<code>df.B[statement] = pandas.core.series.Series</code>。</p>
 <p>注意修改某列时，左值一定要包含被修改的列名(列标)。</p>
 <h1>2. 对字符类型的处理</h1>
 <p>对于object对象，我们可以使用<code>df.B.str.*</code>类方法完成对字符数据的处理。</p>
@@ -398,32 +398,14 @@
 </ul>
 <p><strong>注意</strong><code>df.loc[]</code>的区间范围是左闭右闭，而<code>df.iloc[]</code>的区间范围是左闭右开。</p>
 <h1>5. 保存为CSV格式时的编码问题</h1>
-<p>如果希望使用Excel打开CSV格式文件，且不出现编码问题，则保存文件时需要调用<code>df.to_csv("name",encoding = 'ansi')</code>，即使用ansi编码文件。</p>
+<p>如果希望使用Excel打开CSV格式文件，且不出现编码问题，则保存文件时需要调用<code>df.to_csv(&quot;name&quot;,encoding = 'ansi')</code>，即使用ansi编码文件。</p>
 <p><code>encoding</code>的可选参数还包括<code>utf-8</code>。</p>
 <p><code>to_csv</code>的类方法的常用参数还包括：</p>
 <ul>
 <li><code>header = Boolean</code>，表示是否保存表头。</li>
 <li><code>index = Boolean</code>，表示是否保存数字列标。</li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
       
     </div>
     
@@ -570,7 +552,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -581,7 +563,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -592,7 +574,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

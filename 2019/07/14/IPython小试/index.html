@@ -387,7 +387,7 @@
 </ul>
 <ol start="2">
 <li>调用系统Shell命令。只需要在命令前加!即可：</li>
-<li>Tab自动补全：IPython可以自动检查对象的属性，通过<code>object_name.<tab></tab></code>列出全部的子属性，再使用Tab切换到对应的属性上，然后回车就可以了。</li>
+<li>Tab自动补全：IPython可以自动检查对象的属性，通过<code>object_name.&lt;TAB&gt;</code>列出全部的子属性，再使用Tab切换到对应的属性上，然后回车就可以了。</li>
 <li>历史记录。IPython把输入的历史记录存放在个人配置目录下的<code>history.sqlite</code>文件中，并且可结合%rerun、%recall、%macro、%save等Magic函数使用。尤为有意义的是，它把最近的三次执行记录绑定在_、__和___这三个变量上。搜索历史记录时，还支持Ctrl-r、 Ctrl-n和Ctrl-p等快捷键。</li>
 </ol>
 <h2 id="magic函数"><a class="header-anchor" href="#magic函数">¶</a>Magic函数</h2>
@@ -408,7 +408,7 @@
 </ol>
 <h1>在程序中使用ipdb交互式debug</h1>
 <p>``</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> IPython.core.debugger <span class="keyword">import</span> set_trace</span><br><span class="line"></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">set_trace()</span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> IPython.core.debugger <span class="keyword">import</span> set_trace</span><br><span class="line"></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">set_trace()</span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
 <p>在<code>set_trace()</code>处设置断点，使用IPython进行ipdb</p>
 <h2 id="一些基本指令"><a class="header-anchor" href="#一些基本指令">¶</a>一些基本指令</h2>
 <ul>
@@ -417,25 +417,7 @@
 <li>q(uit) / exit 离开ipdb</li>
 <li>locals() 查看变量</li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
       
     </div>
     
@@ -580,7 +562,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -591,7 +573,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -602,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
