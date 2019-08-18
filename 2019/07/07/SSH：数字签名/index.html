@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="SSH,数字签名,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)的三位发明人(他们三人的名字首字母就是R.S.A)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice">
+<meta name="keywords" content="SSH,数字签名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSH：公钥密码与数字签名(1)">
+<meta property="og:url" content="http://yoursite.com/2019/07/07/SSH：数字签名/index.html">
+<meta property="og:site_name" content="x1aoke&#39;s Blog">
+<meta property="og:description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)的三位发明人(他们三人的名字首字母就是R.S.A)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-16T15:50:33.681Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSH：公钥密码与数字签名(1)">
+<meta name="twitter:description" content="前一段时间复习了SSH的相关知识，这里整理给出。 公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)的三位发明人(他们三人的名字首字母就是R.S.A)也获得了图灵奖。 公钥密码学   Bob有两把钥匙，一把公钥，可公开；另一把是私钥，一定不能公开。   Bob把公钥给Alice。 注：Alice 和 Bob 是密码学经典教材中的经典人物，参见wiki。   ¶Alice">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/07/SSH：数字签名/">
+
+
+
+
+
+  <title>SSH：公钥密码与数字签名(1) | x1aoke's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?dc8f1d66ddc8bcbd5e820df975ac258c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">x1aoke's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">scientia potentia est</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/07/SSH：数字签名/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="x1aoke">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x1aoke's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SSH：公钥密码与数字签名(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-07T19:47:00+08:00">
+                2019-07-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SSH/" itemprop="url" rel="index">
+                    <span itemprop="name">SSH</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前一段时间复习了SSH的相关知识，这里整理给出。</p>
+<p>公钥密码学可以说是现代互联网的根基之一，而且RSA(一种公钥加密技术的实现)的三位发明人(他们三人的名字首字母就是R.S.A)也获得了图灵奖。</p>
+<h1>公钥密码学</h1>
+<ul>
+<li>
+<p>Bob有两把钥匙，一把<strong>公钥</strong>，可公开；另一把是<strong>私钥</strong>，一定不能公开。</p>
+</li>
+<li>
+<p>Bob把<strong>公钥</strong>给Alice。</p>
+<p>注：Alice 和 Bob 是密码学经典教材中的经典人物，参见<a href="https://en.wikipedia.org/wiki/Alice_and_Bob" target="_blank" rel="noopener">wiki</a>。</p>
+</li>
+</ul>
+<h2 id="alice-向-bob-发送信息"><a class="header-anchor" href="#alice-向-bob-发送信息">¶</a>Alice 向 Bob 发送信息</h2>
+<ul>
+<li>Alice使用从Bob处得到的<strong>公钥</strong>，将报文加密后发送给Bob，Bob收到后使用<strong>私钥解码</strong>即可。</li>
+</ul>
+<h2 id="bob-向-alice-发送信息"><a class="header-anchor" href="#bob-向-alice-发送信息">¶</a>Bob 向 Alice 发送信息</h2>
+<ul>
+<li>Bob使用一种叫<strong>数字签名</strong>(Digital Signature)的技术：Bob使用<strong>Hash函数</strong>(得益于巧妙的数学设计，Hash函数把一段信息变成固定长度的信息且一般不会重复)，生成报文的<strong>摘要</strong>(Digest)。</li>
+<li>Bob使用私钥，对<strong>摘要加密</strong>，生成<strong>数字签名</strong>(Signature)。（摘要的长度较短且固定，如果报文太长，使用私钥直接加密的话，一是计算时间长，二是传送信息时出错数量也会增加）</li>
+<li>Bob将数字签名附在在报文下，发送给Alice。</li>
+<li>Alice收信后，可使用<strong>公钥对数字签名解密</strong>，即可检验信件：即如果解密的数字签名与收到报文的Hash结果一致，则可报文未被修改；否则不可信任，报文被修改。</li>
+</ul>
+<h1>数字证书</h1>
+<h2 id="潜在风险"><a class="header-anchor" href="#潜在风险">¶</a>潜在风险</h2>
+<ul>
+<li>如果Carol想欺骗Alice，他可以通过一些不合法的手段把Alice手上的、来自Bob公钥<strong>替换为自己的公钥</strong>。这样当Carol使用自己的私钥生成数字签名时，由于Alice手上持有的是Carol的公钥，所以Alice是无法防备的，她会天真的以为收到的报文仍然是来自可信任的Bob。</li>
+</ul>
+<h2 id="数字证书"><a class="header-anchor" href="#数字证书">¶</a>数字证书</h2>
+<ul>
+<li>
+<p>Bob为了保护Alice，他找到<strong>证书中心</strong>(Certificate authority, CA)，为自己的公钥做认证。</p>
+</li>
+<li>
+<p>证书中心使用自己的<strong>私钥</strong>，对Bob的公钥以及其他相关信息做加密，生成了数字证书(Digital Certificate)。</p>
+</li>
+<li>
+<p>Bob以后给Alice发信息时，报文附上签名的同时，也要附上数字证书。</p>
+</li>
+<li>
+<p>Alice收到信息后，用CA的公钥解开数字证书，就可以获得Bob的真实公钥，就能确定自己手上的公钥是否为Bob的。</p>
+<p>注：证书中心是可信任第三方(Trusted third party)。</p>
+</li>
+</ul>
+<h2 id="https协议"><a class="header-anchor" href="#https协议">¶</a>https协议</h2>
+<ul>
+<li>
+<p>https协议主要用于网页加密，毕竟你也不想让别人看到你浏览的内容和输入的密码(笑)。</p>
+</li>
+<li>
+<p>客户端向服务器发送加密的请求；</p>
+<p>服务器使用私钥加密内容，连同数字签名、数字证书，发给客户端。</p>
+</li>
+<li>
+<p>如果数字证书记录的网址，与你正在浏览的网址<strong>不同</strong>，说明这张证书可能被冒用，浏览器会发出<strong>警告</strong>。</p>
+<p>如果数字证书不是由可信任的机构(证书中心)发出，浏览器也会发出警告。</p>
+</li>
+<li>
+<p>如果数字证书是可靠的，客户端就可以使用证书中的服务器公钥，对信息进行加密，然后与服务器交换加密信息。</p>
+</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/money.jpg" alt="x1aoke WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SSH/" rel="tag"># SSH</a>
+          
+            <a href="/tags/数字签名/" rel="tag"># 数字签名</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/07/Linux拾遗/" rel="next" title="Linux 申时拾遗">
+                <i class="fa fa-chevron-left"></i> Linux 申时拾遗
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/07/SSH：远程登录/" rel="prev" title="SSH：远程登录与端口转发(2)">
+                SSH：远程登录与端口转发(2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="x1aoke">
+            
+              <p class="site-author-name" itemprop="name">x1aoke</p>
+              <p class="site-description motion-element" itemprop="description">BNU CS undergraduate<br>Deep Learning newbie<br>Face Recognition newbie</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">公钥密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#alice-向-bob-发送信息"><span class="nav-number">1.1.</span> <span class="nav-text">¶Alice 向 Bob 发送信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bob-向-alice-发送信息"><span class="nav-number">1.2.</span> <span class="nav-text">¶Bob 向 Alice 发送信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">数字证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#潜在风险"><span class="nav-number">2.1.</span> <span class="nav-text">¶潜在风险</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字证书"><span class="nav-number">2.2.</span> <span class="nav-text">¶数字证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#https协议"><span class="nav-number">2.3.</span> <span class="nav-text">¶https协议</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">x1aoke</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script>
+  $("body").backstretch("https://背景图.jpg");
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
