@@ -1,12 +1,13 @@
 ---
-title: TensorRT 原理解析
+title: 【paper reading note】8-bit Inference with TensorRT
 date: 2019/07/27 17:00:00
 categories:
-  - tensorrt
+  - paper reading note
   - quantization
 tags:
   - tensorrt
   - quantization
+  - paper reading note
 ---
 
 
