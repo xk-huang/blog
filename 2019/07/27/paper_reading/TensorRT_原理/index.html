@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="tensorrt,quantization,paper reading note,">
+  <meta name="keywords" content="paper reading note,quantization,tensorrt,">
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="1. 量化的背景尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。 接下来是对 NVIDIA 的 TensorRT 8-bit Inference with TensorRT  的总结。希望对 TensorRT 的总结可以启发未来的工作。 2. 算法流程">
-<meta name="keywords" content="tensorrt,quantization,paper reading note">
+<meta name="description" content="1. 量化的背景 尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。 接下来是对 NVIDIA 的 TensorRT 8-bit Inference with TensorRT  的总结。希望对 TensorRT 的总结可以启发未来的工作。 2. 算法流程">
+<meta name="keywords" content="paper reading note,quantization,tensorrt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【paper reading note】8-bit Inference with TensorRT">
 <meta property="og:url" content="http://yoursite.com/2019/07/27/paper_reading/TensorRT_原理/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="1. 量化的背景尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。 接下来是对 NVIDIA 的 TensorRT 8-bit Inference with TensorRT  的总结。希望对 TensorRT 的总结可以启发未来的工作。 2. 算法流程">
+<meta property="og:description" content="1. 量化的背景 尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。 接下来是对 NVIDIA 的 TensorRT 8-bit Inference with TensorRT  的总结。希望对 TensorRT 的总结可以启发未来的工作。 2. 算法流程">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://x1aokehuang.github.io/images/tensorrt/1564138349681.png">
 <meta property="og:image" content="https://x1aokehuang.github.io/images/tensorrt/1564138380427.png">
@@ -94,7 +94,7 @@
 <meta property="og:updated_time" content="2019-08-18T07:22:40.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【paper reading note】8-bit Inference with TensorRT">
-<meta name="twitter:description" content="1. 量化的背景尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。 接下来是对 NVIDIA 的 TensorRT 8-bit Inference with TensorRT  的总结。希望对 TensorRT 的总结可以启发未来的工作。 2. 算法流程">
+<meta name="twitter:description" content="1. 量化的背景 尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。 接下来是对 NVIDIA 的 TensorRT 8-bit Inference with TensorRT  的总结。希望对 TensorRT 的总结可以启发未来的工作。 2. 算法流程">
 <meta name="twitter:image" content="https://x1aokehuang.github.io/images/tensorrt/1564138349681.png">
 
 
@@ -383,47 +383,59 @@
       
 
       
-        <h1 id="1-量化的背景"><a href="#1-量化的背景" class="headerlink" title="1. 量化的背景"></a>1. 量化的背景</h1><p>尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。</p>
+        <h1>1. 量化的背景</h1>
+<p>尽管模型大小正在不断地被压缩，但其计算量通常在100M - 200M FLOPS，对于目前移动端CPU算力来说还是太大。因此，不论从提高推理速度还是减少能耗的方面考虑，对模型进行量化都是必要的。</p>
 <p>接下来是对 NVIDIA 的 TensorRT <a href="http://on-demand.gputechconf.com/gtc/2017/presentation/s7310-8-bit-inference-with-tensorrt.pdf" target="_blank" rel="noopener">8-bit Inference with TensorRT</a>  的总结。希望对 TensorRT 的总结可以启发未来的工作。</p>
-<h1 id="2-算法流程"><a href="#2-算法流程" class="headerlink" title="2. 算法流程"></a>2. 算法流程</h1><p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138349681.png" alt="1564138349681"></p>
+<h1>2. 算法流程</h1>
+<p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138349681.png" alt="1564138349681"></p>
 <p>TensorRT 对模型的每一层的 activations 做量化：</p>
 <ul>
 <li>获得该layer激活值的直方分布图。</li>
 </ul>
 <blockquote>
-<p>比如直方分布bins的个数设多少个？<br>直方分布bins的宽度设置多少？<br>激活值一般是指ReLU之后的值，但是收集这样的激活值对于我们得量化任务一定有效？</p>
+<p>比如直方分布bins的个数设多少个？<br>
+直方分布bins的宽度设置多少？<br>
+激活值一般是指ReLU之后的值，但是收集这样的激活值对于我们得量化任务一定有效？</p>
 </blockquote>
 <ul>
 <li>在不同的截断阀值下产生许多的量化分布。</li>
 </ul>
 <blockquote>
-<p>截断之后选择多少个bins压入一个bin，边界bin如何处理？<br>尾数(被截断的数据)如何处理？</p>
+<p>截断之后选择多少个bins压入一个bin，边界bin如何处理？<br>
+尾数(被截断的数据)如何处理？</p>
 </blockquote>
 <ul>
 <li>选择KL散度最小的阀值。</li>
 </ul>
 <blockquote>
-<p>为什么选择KL散度？<br>计算KL散度前对分布做 smooth 处理，其数学原因是什么？</p>
+<p>为什么选择KL散度？<br>
+计算KL散度前对分布做 smooth 处理，其数学原因是什么？</p>
 </blockquote>
-<h1 id="3-获得Activations的概率分布"><a href="#3-获得Activations的概率分布" class="headerlink" title="3. 获得Activations的概率分布"></a>3. 获得Activations的概率分布</h1><p>在代码中实现求得bins：寻找数据的最大值，直接调用numpy函数，histogram直接在0 ～ +max范围内求得2048个bins，那么每个bins对应的宽度为: +max / 2048;</p>
+<h1>3. 获得Activations的概率分布</h1>
+<p>在代码中实现求得bins：寻找数据的最大值，直接调用numpy函数，histogram直接在0 ～ +max范围内求得2048个bins，那么每个bins对应的宽度为: +max / 2048;</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">initial_histograms</span><span class="params">(self, blob_data)</span>:</span></span><br><span class="line">    <span class="comment"># collect histogram of every group channel blob</span></span><br><span class="line">    th = self.blob_max</span><br><span class="line">    hist, hist_edge = np.histogram(blob_data, bins=<span class="number">2048</span>, range=(<span class="number">0</span>, th))</span><br><span class="line">    self.blob_distubution += hist</span><br></pre></td></tr></tbody></table></figure>
 <p>注意bins数目的选取，导致精度和量化速度的权衡。</p>
-<h1 id="4-最大值映射导致显著精度损失"><a href="#4-最大值映射导致显著精度损失" class="headerlink" title="4. 最大值映射导致显著精度损失"></a>4. 最大值映射导致显著精度损失</h1><p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138380427.png" alt="1564138380427"></p>
+<h1>4. 最大值映射导致显著精度损失</h1>
+<p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138380427.png" alt="1564138380427"></p>
 <p>数据分布不均匀的时候，应该主动地选择丢掉一部分数据，保留信息的主体部分。</p>
-<h1 id="5-激活值的直方分布选取"><a href="#5-激活值的直方分布选取" class="headerlink" title="5. 激活值的直方分布选取"></a>5. 激活值的直方分布选取</h1><p>TensorRT选取激活值的正半区，原因是模型的激活函数使用ReLU，每层conv的输出为正数。</p>
+<h1>5. 激活值的直方分布选取</h1>
+<p>TensorRT选取激活值的正半区，原因是模型的激活函数使用ReLU，每层conv的输出为正数。</p>
 <p>注意如果使用其他激活函数，可能需要考虑负半区的激活值。</p>
-<h1 id="6-依据饱和截断的直方图分布计算量化分布"><a href="#6-依据饱和截断的直方图分布计算量化分布" class="headerlink" title="6. 依据饱和截断的直方图分布计算量化分布"></a>6. 依据饱和截断的直方图分布计算量化分布</h1><p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138433970.png" alt="1564138433970"></p>
+<h1>6. 依据饱和截断的直方图分布计算量化分布</h1>
+<p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138433970.png" alt="1564138433970"></p>
 <p>首先利用 Activations 的最大值 把 Activations 分配到2048个bins中，得到改率分布：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hist, hist_edge = np.histogram(blob_data, bins=<span class="number">2048</span>, range=(<span class="number">0</span>, max))</span><br></pre></td></tr></tbody></table></figure>
 <p>第二步，对伪代码中的尾数(截断数据)求和，保证两个分布具有相同的采样空间：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">threshold_sum = sum(distribution[i:])</span><br></pre></td></tr></tbody></table></figure>
 <p>最后把量化后的 128 bins 反展开为 i 个 bins，具体细节参考 NCNN 的实现：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">threshold_distribution</span><span class="params">(distribution, target_bin=<span class="number">128</span>)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Return the best threshold value.</span></span><br><span class="line"><span class="string">    Ref: https://github.com//apache/incubator-mxnet/blob/master</span></span><br><span class="line"><span class="string">                    /python/mxnet/contrib/quantization.py</span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        distribution: list, activations has been processed by </span></span><br><span class="line"><span class="string">        histogram and normalize,size is 2048</span></span><br><span class="line"><span class="string">        target_bin: int, the num of bin that is used by quantize,</span></span><br><span class="line"><span class="string">        Int8 default value is 128</span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        target_threshold: int, num of bin with the minimum KL</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    distribution = distribution[<span class="number">1</span>:]</span><br><span class="line">    length = distribution.size</span><br><span class="line">    threshold_sum = sum(distribution[target_bin:])</span><br><span class="line">    kl_divergence = np.zeros(length - target_bin)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> threshold <span class="keyword">in</span> range(target_bin, length):</span><br><span class="line">        sliced_nd_hist = copy.deepcopy(distribution[:threshold])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># generate reference distribution p</span></span><br><span class="line">        p = sliced_nd_hist.copy()</span><br><span class="line">        p[threshold - <span class="number">1</span>] += threshold_sum</span><br><span class="line">        threshold_sum = threshold_sum - distribution[threshold]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># is_nonzeros[k] indicates whether hist[k] is nonzero</span></span><br><span class="line">        is_nonzeros = (p != <span class="number">0</span>).astype(np.int64)</span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        quantized_bins = np.zeros(target_bin, dtype=np.int64)</span><br><span class="line">        <span class="comment"># calculate how many bins should be merged to generate </span></span><br><span class="line">        <span class="comment"># quantized distribution q</span></span><br><span class="line">        num_merged_bins = sliced_nd_hist.size // target_bin</span><br><span class="line"></span><br><span class="line">        <span class="comment"># merge hist into num_quantized_bins bins</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(target_bin):</span><br><span class="line">            start = j * num_merged_bins</span><br><span class="line">            stop = start + num_merged_bins</span><br><span class="line">            quantized_bins[j] = sliced_nd_hist[start:stop].sum()</span><br><span class="line">        quantized_bins[<span class="number">-1</span>] += sliced_nd_hist[target_bin * num_merged_bins:].sum()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># expand quantized_bins into p.size bins</span></span><br><span class="line">        q = np.zeros(sliced_nd_hist.size, dtype=np.float64)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(target_bin):</span><br><span class="line">            start = j * num_merged_bins</span><br><span class="line">            <span class="keyword">if</span> j == target_bin - <span class="number">1</span>:</span><br><span class="line">                stop = <span class="number">-1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stop = start + num_merged_bins</span><br><span class="line">            norm = is_nonzeros[start:stop].sum()</span><br><span class="line">            <span class="keyword">if</span> norm != <span class="number">0</span>:</span><br><span class="line">                q[start:stop] = float(quantized_bins[j]) / float(norm)</span><br><span class="line">        <span class="comment"># q[p == 0] = 0</span></span><br><span class="line">        p = _smooth_distribution(p) </span><br><span class="line">        q = _smooth_distribution(q)</span><br><span class="line">        <span class="comment"># p[p == 0] = 0.0001</span></span><br><span class="line">        <span class="comment"># q[q == 0] = 0.0001</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># calculate kl_divergence between q and p</span></span><br><span class="line">        kl_divergence[threshold - target_bin] = stats.entropy(p, q)</span><br><span class="line"></span><br><span class="line">    min_kl_divergence = np.argmin(kl_divergence)</span><br><span class="line">    threshold_value = min_kl_divergence + target_bin</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> threshold_value</span><br></pre></td></tr></tbody></table></figure>
-<h1 id="7-对分布做-Smooth-处理"><a href="#7-对分布做-Smooth-处理" class="headerlink" title="7. 对分布做 Smooth 处理"></a>7. 对分布做 Smooth 处理</h1><p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138478050.png" alt="1564138478050"></p>
+<h1>7. 对分布做 Smooth 处理</h1>
+<p><img src="https://x1aokehuang.github.io/images/tensorrt/1564138478050.png" alt="1564138478050"></p>
 <p>防止 q 的某个 bin 统计值为 0，导致 KL 散度为无穷。具体方法是对值为 0 的 bins 赋一个很小的 eps 。</p>
 <p>参考 MxNet 的实现：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_smooth_distribution</span><span class="params">(p, eps=<span class="number">0.0001</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Given a discrete distribution (may have not been normalized to 1),</span></span><br><span class="line"><span class="string">    smooth it by replacing zeros with eps multiplied by a scaling factor </span></span><br><span class="line"><span class="string">    and taking the corresponding amount off the non-zero values.</span></span><br><span class="line"><span class="string">    Ref: http://web.engr.illinois.edu/~hanj/cs412/bk3/KL-divergence.pdf</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    is_zeros = (p == <span class="number">0</span>).astype(np.float32)</span><br><span class="line">    is_nonzeros = (p != <span class="number">0</span>).astype(np.float32)</span><br><span class="line">    n_zeros = is_zeros.sum()</span><br><span class="line">    n_nonzeros = p.size - n_zeros</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> n_nonzeros:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'The discrete probability distribution is malformed. All entries are 0.'</span>)</span><br><span class="line">    eps1 = eps * float(n_zeros) / float(n_nonzeros)</span><br><span class="line">    <span class="keyword">assert</span> eps1 < <span class="number">1.0</span>, <span class="string">'n_zeros=%d, n_nonzeros=%d, eps1=%f'</span> % (n_zeros, n_nonzeros, eps1)</span><br><span class="line">    hist = p.astype(np.float32)</span><br><span class="line">    hist += eps * is_zeros + (-eps1) * is_nonzeros</span><br><span class="line">    <span class="keyword">assert</span> (hist <= <span class="number">0</=></span>).sum() == <span class="number">0</span><br><span class="line">    <span class="keyword">return</span> hist</span><br></pre></td></tr></tbody></table></figure>
-<h1 id="8-思考"><a href="#8-思考" class="headerlink" title="8. 思考"></a>8. 思考</h1><p>NVIDIA 并没有给出具体的校准算法，留下了很多坑，个中细节还需要不断实验才能确定，才能最终达到加速模型且少掉精度的目的。</p>
+<h1>8. 思考</h1>
+<p>NVIDIA 并没有给出具体的校准算法，留下了很多坑，个中细节还需要不断实验才能确定，才能最终达到加速模型且少掉精度的目的。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -483,11 +495,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tensorrt/" rel="tag"># tensorrt</a>
+            <a href="/tags/paper-reading-note/" rel="tag"># paper reading note</a>
           
             <a href="/tags/quantization/" rel="tag"># quantization</a>
           
-            <a href="/tags/paper-reading-note/" rel="tag"># paper reading note</a>
+            <a href="/tags/tensorrt/" rel="tag"># tensorrt</a>
           
         </div>
       
@@ -602,7 +614,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -646,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-量化的背景"><span class="nav-number">1.</span> <span class="nav-text">1. 量化的背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-算法流程"><span class="nav-number">2.</span> <span class="nav-text">2. 算法流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-获得Activations的概率分布"><span class="nav-number">3.</span> <span class="nav-text">3. 获得Activations的概率分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-最大值映射导致显著精度损失"><span class="nav-number">4.</span> <span class="nav-text">4. 最大值映射导致显著精度损失</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-激活值的直方分布选取"><span class="nav-number">5.</span> <span class="nav-text">5. 激活值的直方分布选取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-依据饱和截断的直方图分布计算量化分布"><span class="nav-number">6.</span> <span class="nav-text">6. 依据饱和截断的直方图分布计算量化分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-对分布做-Smooth-处理"><span class="nav-number">7.</span> <span class="nav-text">7. 对分布做 Smooth 处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-思考"><span class="nav-number">8.</span> <span class="nav-text">8. 思考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1. 量化的背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2. 算法流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">3. 获得Activations的概率分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">4. 最大值映射导致显著精度损失</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">5. 激活值的直方分布选取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">6. 依据饱和截断的直方图分布计算量化分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">7. 对分布做 Smooth 处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">8.</span> <span class="nav-text">8. 思考</span></a></li></ol></div>
             
 
           </div>
@@ -666,7 +678,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
