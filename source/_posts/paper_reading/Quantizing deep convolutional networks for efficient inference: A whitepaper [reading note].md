@@ -1,5 +1,5 @@
 ---
-title: 【paper reading note】Quantizing deep convolutional networks for efficient inference A whitepaper
+title: 【Paper Reading Note】Quantizing deep convolutional networks for efficient inference A whitepaper
 date: 2019/08/16 18:00:00
 categories:
   - paper reading note
@@ -27,7 +27,7 @@ URL: https://arxiv.org/pdf/1806.08342.pdf
 -  Uniform symmetric quantize：对称量化，参数包括 scale，此时 zero-point 为 0。
 - Stochastic quantizer：对 fp32 加入 [-1, 1] 的随机扰动，对计算梯度有益。（私以为此方法包容了超出范围的数值，使其不被 clip，求出非零梯度）
 - Simulated quantizer：通过一对 quantizer 和 de-quantizer，模拟量化时的 effect，由于 quantizer 的梯度为 0 ，所以反向传播时将其梯度近似为 1 。
-![image](https://x1aokehuang.github.io/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png)
+![image](/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png)
 
 ### 量化参数
 - 作者对 weights 使用最大、最小值计算 scale。
@@ -43,12 +43,12 @@ URL: https://arxiv.org/pdf/1806.08342.pdf
 
 ### 量化训练
 - 对 weights 仍使用浮点数计算，若使用 int8，可能因为梯度过小而下溢，无法更新 weights。
-![image](https://x1aokehuang.github.io/images/quant-whitepaper/5d45469107790eea0eb91855d4451fbe5f8b6406.png)
+![image](/images/quant-whitepaper/5d45469107790eea0eb91855d4451fbe5f8b6406.png)
 - 对 Add、Concat 算子需要额外处理：需要输入的 scale range 相同。
-![image](https://x1aokehuang.github.io/images/quant-whitepaper/aee87d92901d698056fd0025d23937dcbe1bd19c.png)
+![image](/images/quant-whitepaper/aee87d92901d698056fd0025d23937dcbe1bd19c.png)
 - 对 BN 的处理。由于训练时每个 batch 数值扰动很大，单纯的 BN 效果不佳。
 解决方法：把训练分为三个阶段，在一阶段使用单纯的 BN，二阶段使用移动平均的 BN 统计值，三阶段 freeze 统计值。
-![image](https://x1aokehuang.github.io/images/quant-whitepaper/324a2dec0f8a8ad464b545bdc15bc75cbb8c9dd6.png)
+![image](/images/quant-whitepaper/324a2dec0f8a8ad464b545bdc15bc75cbb8c9dd6.png)
 作者观察到，相对于使用单纯的 BN或者使用移动平均的 BN 统计值，上述的改进不仅减少了训练时扰动，而且提高了精度。
 
 ### 实践经验

@@ -1,5 +1,5 @@
 ---
-title: 【paper reading note】8-bit Inference with TensorRT
+title: 【Paper Reading Note】8-bit Inference with TensorRT
 date: 2019/07/27 17:00:00
 categories:
   - paper reading note
@@ -20,7 +20,7 @@ tags:
 
 # 2. 算法流程
 
-![1564138349681](https://x1aokehuang.github.io/images/tensorrt/1564138349681.png)
+![1564138349681](/images/tensorrt/1564138349681.png)
 
 TensorRT 对模型的每一层的 activations 做量化：
 
@@ -56,7 +56,7 @@ def initial_histograms(self, blob_data):
 
 # 4. 最大值映射导致显著精度损失
 
-![1564138380427](https://x1aokehuang.github.io/images/tensorrt/1564138380427.png)
+![1564138380427](/images/tensorrt/1564138380427.png)
 
 数据分布不均匀的时候，应该主动地选择丢掉一部分数据，保留信息的主体部分。
 
@@ -68,7 +68,7 @@ TensorRT选取激活值的正半区，原因是模型的激活函数使用ReLU�
 
 # 6. 依据饱和截断的直方图分布计算量化分布
 
-![1564138433970](https://x1aokehuang.github.io/images/tensorrt/1564138433970.png)
+![1564138433970](/images/tensorrt/1564138433970.png)
 
 首先利用 Activations 的最大值 把 Activations 分配到2048个bins中，得到改率分布：
 
@@ -154,7 +154,7 @@ def threshold_distribution(distribution, target_bin=128):
 
 # 7. 对分布做 Smooth 处理
 
-![1564138478050](https://x1aokehuang.github.io/images/tensorrt/1564138478050.png)
+![1564138478050](/images/tensorrt/1564138478050.png)
 
 防止 q 的某个 bin 统计值为 0，导致 KL 散度为无穷。具体方法是对值为 0 的 bins 赋一个很小的 eps 。
 

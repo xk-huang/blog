@@ -1,5 +1,5 @@
 ---
-title: Reading Note 业余做研究的经验 By 田渊栋
+title: 【Reading Note】 业余做研究的经验 By 田渊栋
 date: 2019/08/09 20:00:00
 categories:
   - Reading Note
@@ -10,9 +10,9 @@ tags:
 
 # 背景
 
-接下来将介绍作者四个月“业余科研”的心得体会，这四个月的工作最终让作者获得了 ICCV-2013的[马尔荣誉奖](http://en.wikipedia.org/wiki/Marr_Prize)。
+最早了解到渊栋大神是在沐神的一篇回忆 [博士这5年](https://zhuanlan.zhihu.com/p/25099638) 中，里面有这么一段：“在CMU回到了去百度前的一周七天工作无休的节奏。每周至少80个小时花在学校。如果累了就去健身房，我一般晚上12点去。不仅是我一个人，大家都很努力，例如凌晨的健身房，早3点的办公室，四处都可以见到中国或者印度学生。我那时候的室友田渊栋花在学校的时候比我多很多。”
 
-注：此时作者正在 Google 的无人车项目组，之后因为工作不满意，离职之后任职 Facebook，开始从事自己满意的工作。
+果然是 Success requires hard work
 
 [作者知乎](https://www.zhihu.com/people/tian-yuan-dong/activities)
 
