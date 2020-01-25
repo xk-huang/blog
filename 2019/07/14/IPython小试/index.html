@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="与python shell的区别 当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：  不能在退出时保存历史记录以备未来查询。 不支持Tab自动补全。 不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。 不方便在交互环境下执行Shell命令。  IPython使用 IPython是一个基于Pyt">
+<meta name="description" content="与python shell的区别当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：  不能在退出时保存历史记录以备未来查询。 不支持Tab自动补全。 不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。 不方便在交互环境下执行Shell命令。  IPython使用IPython是一个基于Pytho">
 <meta name="keywords" content="IPython">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPython小试">
 <meta property="og:url" content="http://yoursite.com/2019/07/14/IPython小试/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="与python shell的区别 当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：  不能在退出时保存历史记录以备未来查询。 不支持Tab自动补全。 不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。 不方便在交互环境下执行Shell命令。  IPython使用 IPython是一个基于Pyt">
+<meta property="og:description" content="与python shell的区别当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：  不能在退出时保存历史记录以备未来查询。 不支持Tab自动补全。 不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。 不方便在交互环境下执行Shell命令。  IPython使用IPython是一个基于Pytho">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-08-16T15:50:33.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPython小试">
-<meta name="twitter:description" content="与python shell的区别 当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：  不能在退出时保存历史记录以备未来查询。 不支持Tab自动补全。 不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。 不方便在交互环境下执行Shell命令。  IPython使用 IPython是一个基于Pyt">
+<meta name="twitter:description" content="与python shell的区别当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：  不能在退出时保存历史记录以备未来查询。 不支持Tab自动补全。 不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。 不方便在交互环境下执行Shell命令。  IPython使用IPython是一个基于Pytho">
 
 
 
@@ -367,31 +367,25 @@
       
 
       
-        <h1>与python shell的区别</h1>
-<p>当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：</p>
+        <h1 id="与python-shell的区别"><a href="#与python-shell的区别" class="headerlink" title="与python shell的区别"></a>与python shell的区别</h1><p>当我们需要快速验证代码运行结果是否符合预期。最快捷方便的做法就是使用Python自带的交互模式，但是这个Python Shell有非常多的弊端：</p>
 <ul>
 <li>不能在退出时保存历史记录以备未来查询。</li>
 <li>不支持Tab自动补全。</li>
 <li>不能快速获得模块/函数/类的信息，如参数、文档、原始代码等。</li>
 <li>不方便在交互环境下执行Shell命令。</li>
 </ul>
-<h1>IPython使用</h1>
-<p>IPython是一个基于Python Shell的交互式解释器，但是有比默认Shell强大得多的编辑和交互功能。</p>
-<h2 id="编辑交互功能"><a class="header-anchor" href="#编辑交互功能">¶</a>编辑交互功能</h2>
-<ol>
-<li>获得对象信息：在想要查看的对象之前加上一个或者两个问号，就能获得多种对象信息。</li>
-</ol>
-<ul>
+<h1 id="IPython使用"><a href="#IPython使用" class="headerlink" title="IPython使用"></a>IPython使用</h1><p>IPython是一个基于Python Shell的交互式解释器，但是有比默认Shell强大得多的编辑和交互功能。</p>
+<h2 id="编辑交互功能"><a href="#编辑交互功能" class="headerlink" title="编辑交互功能"></a>编辑交互功能</h2><ol>
+<li>获得对象信息：在想要查看的对象之前加上一个或者两个问号，就能获得多种对象信息。<ul>
 <li>一个问号只是显示对象的签名，文档字符串以及代码文件的位置</li>
 <li>二个问号可以直接显示源代码，这样直接节省了用编辑器打开代码文件然后搜索对应代码的时间。</li>
 </ul>
-<ol start="2">
+</li>
 <li>调用系统Shell命令。只需要在命令前加!即可：</li>
 <li>Tab自动补全：IPython可以自动检查对象的属性，通过<code>object_name.<tab></tab></code>列出全部的子属性，再使用Tab切换到对应的属性上，然后回车就可以了。</li>
-<li>历史记录。IPython把输入的历史记录存放在个人配置目录下的<code>history.sqlite</code>文件中，并且可结合%rerun、%recall、%macro、%save等Magic函数使用。尤为有意义的是，它把最近的三次执行记录绑定在_、__和___这三个变量上。搜索历史记录时，还支持Ctrl-r、 Ctrl-n和Ctrl-p等快捷键。</li>
+<li>历史记录。IPython把输入的历史记录存放在个人配置目录下的<code>history.sqlite</code>文件中，并且可结合%rerun、%recall、%macro、%save等Magic函数使用。尤为有意义的是，它把最近的三次执行记录绑定在<em>、<strong>和</strong></em>这三个变量上。搜索历史记录时，还支持Ctrl-r、 Ctrl-n和Ctrl-p等快捷键。</li>
 </ol>
-<h2 id="magic函数"><a class="header-anchor" href="#magic函数">¶</a>Magic函数</h2>
-<p>第二类是IPython有很多Magic函数（可以使用%lsmagic获得全部可用的Magic函数）</p>
+<h2 id="Magic函数"><a href="#Magic函数" class="headerlink" title="Magic函数"></a>Magic函数</h2><p>第二类是IPython有很多Magic函数（可以使用%lsmagic获得全部可用的Magic函数）</p>
 <ol>
 <li><code>%run</code>：运行python脚本，并把变量保存在目前shell环境中</li>
 <li><code>%debug</code>：激活交互的调试器，可以直<strong>pdb</strong>或者<strong>ipdb</strong>去调试问题了。</li>
@@ -401,17 +395,13 @@
 <li><code>%timeit</code>：获得程序执行时间。<code>timeit</code>是Python内置的库，用来测量小代码片的执行时间。</li>
 <li><code>%save</code>：把某些历史记录保存到文件中。</li>
 <li><code>%logstart/logoff</code>：记录会话。退出IPython后还可以回到之前的状态。</li>
-<li><code>%edit</code>：使用编辑器打开，但需要设定EDITOR这个环境变量。假如写了一个很复杂的函数，代码<br>
-很长，执行后发现不符合预期，用历史记录找到这个函数，然后用鼠标移到对应的位置修改很不方<br>
-便。其实这时应该使用edit来编辑</li>
+<li><code>%edit</code>：使用编辑器打开，但需要设定EDITOR这个环境变量。假如写了一个很复杂的函数，代码<br> 很长，执行后发现不符合预期，用历史记录找到这个函数，然后用鼠标移到对应的位置修改很不方<br> 便。其实这时应该使用edit来编辑</li>
 <li><code>%macro</code>：把历史记录、文件等封装为宏，以便未来重新执行。</li>
 </ol>
-<h1>在程序中使用ipdb交互式debug</h1>
-<p>``</p>
+<h1 id="在程序中使用ipdb交互式debug"><a href="#在程序中使用ipdb交互式debug" class="headerlink" title="在程序中使用ipdb交互式debug"></a>在程序中使用ipdb交互式debug</h1><p>``</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> IPython.core.debugger <span class="keyword">import</span> set_trace</span><br><span class="line"></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">set_trace()</span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></tbody></table></figure>
 <p>在<code>set_trace()</code>处设置断点，使用IPython进行ipdb</p>
-<h2 id="一些基本指令"><a class="header-anchor" href="#一些基本指令">¶</a>一些基本指令</h2>
-<ul>
+<h2 id="一些基本指令"><a href="#一些基本指令" class="headerlink" title="一些基本指令"></a>一些基本指令</h2><ul>
 <li>h(elp) 帮助</li>
 <li>n(ext) 运行下一行</li>
 <li>q(uit) / exit 离开ipdb</li>
@@ -489,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/11/prg-101编程指南/" rel="next" title="Bootcamp 编程指南">
-                <i class="fa fa-chevron-left"></i> Bootcamp 编程指南
+              <a href="/2019/07/11/prg-101编程指南/" rel="next" title="【Bootcamp】 编程指南">
+                <i class="fa fa-chevron-left"></i> 【Bootcamp】 编程指南
               </a>
             
           </div>
@@ -651,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">与python shell的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">IPython使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑交互功能"><span class="nav-number">2.1.</span> <span class="nav-text">¶编辑交互功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#magic函数"><span class="nav-number">2.2.</span> <span class="nav-text">¶Magic函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">在程序中使用ipdb交互式debug</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基本指令"><span class="nav-number">3.1.</span> <span class="nav-text">¶一些基本指令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#与python-shell的区别"><span class="nav-number">1.</span> <span class="nav-text">与python shell的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPython使用"><span class="nav-number">2.</span> <span class="nav-text">IPython使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑交互功能"><span class="nav-number">2.1.</span> <span class="nav-text">编辑交互功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Magic函数"><span class="nav-number">2.2.</span> <span class="nav-text">Magic函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在程序中使用ipdb交互式debug"><span class="nav-number">3.</span> <span class="nav-text">在程序中使用ipdb交互式debug</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基本指令"><span class="nav-number">3.1.</span> <span class="nav-text">一些基本指令</span></a></li></ol></li></ol></div>
             
 
           </div>
