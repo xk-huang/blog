@@ -79,23 +79,23 @@
 
 
 
-<meta name="description" content="URL: https://arxiv.org/pdf/1806.08342.pdf TL;DR作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 (B. Jacob 2017)。此工具同时也支持了 B. Jacob 2017 的量化实验。 作者比较了不同量化颗粒度下，训练后量化 (po">
+<meta name="description" content="URL: https://arxiv.org/pdf/1806.08342.pdf ¶TL;DR 作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 (B. Jacob 2017)。 此工具同时也支持了 B. Jacob 2017 的量化实验。 作者比较了不同量化颗粒度下，训练后量化">
 <meta name="keywords" content="paper reading note,quantization">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【paper reading note】Quantizing deep convolutional networks for efficient inference A whitepaper">
 <meta property="og:url" content="http://yoursite.com/2019/08/16/paper_reading/Quantizing deep convolutional networks for efficient inference: A whitepaper [reading note]/index.html">
 <meta property="og:site_name" content="x1aoke&#39;s Blog">
-<meta property="og:description" content="URL: https://arxiv.org/pdf/1806.08342.pdf TL;DR作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 (B. Jacob 2017)。此工具同时也支持了 B. Jacob 2017 的量化实验。 作者比较了不同量化颗粒度下，训练后量化 (po">
+<meta property="og:description" content="URL: https://arxiv.org/pdf/1806.08342.pdf ¶TL;DR 作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 (B. Jacob 2017)。 此工具同时也支持了 B. Jacob 2017 的量化实验。 作者比较了不同量化颗粒度下，训练后量化">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://x1aokehuang.github.io/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png">
-<meta property="og:image" content="https://x1aokehuang.github.io/images/quant-whitepaper/5d45469107790eea0eb91855d4451fbe5f8b6406.png">
-<meta property="og:image" content="https://x1aokehuang.github.io/images/quant-whitepaper/aee87d92901d698056fd0025d23937dcbe1bd19c.png">
-<meta property="og:image" content="https://x1aokehuang.github.io/images/quant-whitepaper/324a2dec0f8a8ad464b545bdc15bc75cbb8c9dd6.png">
-<meta property="og:updated_time" content="2019-08-18T07:22:37.442Z">
+<meta property="og:image" content="http://yoursite.com/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png">
+<meta property="og:image" content="http://yoursite.com/images/quant-whitepaper/5d45469107790eea0eb91855d4451fbe5f8b6406.png">
+<meta property="og:image" content="http://yoursite.com/images/quant-whitepaper/aee87d92901d698056fd0025d23937dcbe1bd19c.png">
+<meta property="og:image" content="http://yoursite.com/images/quant-whitepaper/324a2dec0f8a8ad464b545bdc15bc75cbb8c9dd6.png">
+<meta property="og:updated_time" content="2020-01-25T11:52:01.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【paper reading note】Quantizing deep convolutional networks for efficient inference A whitepaper">
-<meta name="twitter:description" content="URL: https://arxiv.org/pdf/1806.08342.pdf TL;DR作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 (B. Jacob 2017)。此工具同时也支持了 B. Jacob 2017 的量化实验。 作者比较了不同量化颗粒度下，训练后量化 (po">
-<meta name="twitter:image" content="https://x1aokehuang.github.io/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png">
+<meta name="twitter:description" content="URL: https://arxiv.org/pdf/1806.08342.pdf ¶TL;DR 作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 (B. Jacob 2017)。 此工具同时也支持了 B. Jacob 2017 的量化实验。 作者比较了不同量化颗粒度下，训练后量化">
+<meta name="twitter:image" content="http://yoursite.com/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png">
 
 
 
@@ -384,43 +384,60 @@
 
       
         <p>URL: <a href="https://arxiv.org/pdf/1806.08342.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1806.08342.pdf</a></p>
-<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 <a href="https://arxiv.org/pdf/1712.05877.pdf" target="_blank" rel="noopener">(B. Jacob 2017)</a>。<br>此工具同时也支持了 <a href="https://arxiv.org/pdf/1712.05877.pdf" target="_blank" rel="noopener">B. Jacob 2017</a> 的量化实验。</p>
+<h2 id="tl-dr"><a class="header-anchor" href="#tl-dr">¶</a>TL;DR</h2>
+<p>作者介绍了 TensorFlow 最早的量化工具。工具提供了三种量化方式：只量化 weights 、同时量化 weights 和 activations 、量化训练 <a href="https://arxiv.org/pdf/1712.05877.pdf" target="_blank" rel="noopener">(B. Jacob 2017)</a>。<br>
+此工具同时也支持了 <a href="https://arxiv.org/pdf/1712.05877.pdf" target="_blank" rel="noopener">B. Jacob 2017</a> 的量化实验。</p>
 <p>作者比较了不同量化颗粒度下，训练后量化 (post-training quantization) 以及模拟训练量化 (quantization aware training) 的实验结果。</p>
 <p>作者推荐使用对 weights 做逐通道量化 (per-channel quant.)、对 activations 做逐层量化 (per-layer quant.)。如果观察到较大的精度损失，使用量化训练减少损失。</p>
-<h2 id="Dataset-Algorithm-Model-Experiment-Detail"><a href="#Dataset-Algorithm-Model-Experiment-Detail" class="headerlink" title="Dataset/Algorithm/Model/Experiment Detail"></a>Dataset/Algorithm/Model/Experiment Detail</h2><h3 id="量化算子"><a href="#量化算子" class="headerlink" title="量化算子"></a>量化算子</h3><p>使用 uniform quantizer：</p>
+<h2 id="dataset-algorithm-model-experiment-detail"><a class="header-anchor" href="#dataset-algorithm-model-experiment-detail">¶</a>Dataset/Algorithm/Model/Experiment Detail</h2>
+<h3 id="量化算子"><a class="header-anchor" href="#量化算子">¶</a>量化算子</h3>
+<p>使用 uniform quantizer：</p>
 <ul>
 <li>Uniform Affine Quantizer (asymmetry)：非对称量化，参数包括 scale 和 zero-point。</li>
 <li>Uniform symmetric quantize：对称量化，参数包括 scale，此时 zero-point 为 0。</li>
 <li>Stochastic quantizer：对 fp32 加入 [-1, 1] 的随机扰动，对计算梯度有益。（私以为此方法包容了超出范围的数值，使其不被 clip，求出非零梯度）</li>
-<li>Simulated quantizer：通过一对 quantizer 和 de-quantizer，模拟量化时的 effect，由于 quantizer 的梯度为 0 ，所以反向传播时将其梯度近似为 1 。<br><img src="https://x1aokehuang.github.io/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png" alt="image"></li>
+<li>Simulated quantizer：通过一对 quantizer 和 de-quantizer，模拟量化时的 effect，由于 quantizer 的梯度为 0 ，所以反向传播时将其梯度近似为 1 。<br>
+<img src="/images/quant-whitepaper/f7352a14f96e03c31e748aec5dec5fe1e198d82f.png" alt="image"></li>
 </ul>
-<h3 id="量化参数"><a href="#量化参数" class="headerlink" title="量化参数"></a>量化参数</h3><ul>
+<h3 id="量化参数"><a class="header-anchor" href="#量化参数">¶</a>量化参数</h3>
+<ul>
 <li>作者对 weights 使用最大、最小值计算 scale。</li>
 <li>对 activations 使用其最大、最小值的 EMA 计算 scale 。</li>
 </ul>
-<h3 id="量化颗粒度"><a href="#量化颗粒度" class="headerlink" title="量化颗粒度"></a>量化颗粒度</h3><ul>
+<h3 id="量化颗粒度"><a class="header-anchor" href="#量化颗粒度">¶</a>量化颗粒度</h3>
+<ul>
 <li>对 weights，可以使用 per-channel 量化或者 per-layer 量化。</li>
 <li>对 activations，使用 per-layer 量化（per-channel 量化导致复杂的点积、卷积运算）。</li>
 </ul>
-<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><ul>
+<h3 id="实验结果"><a class="header-anchor" href="#实验结果">¶</a>实验结果</h3>
+<ul>
 <li>参数多的模型 (ResNet) 即使不使用量化训练，精度的损失也很小。</li>
 <li>参数少的模型 (MobileNet) 如果不使用量化训练，精度损失大；使用量化训练后，精度损失小。</li>
 </ul>
-<h3 id="量化训练"><a href="#量化训练" class="headerlink" title="量化训练"></a>量化训练</h3><ul>
-<li>对 weights 仍使用浮点数计算，若使用 int8，可能因为梯度过小而下溢，无法更新 weights。<br><img src="https://x1aokehuang.github.io/images/quant-whitepaper/5d45469107790eea0eb91855d4451fbe5f8b6406.png" alt="image"></li>
-<li>对 Add、Concat 算子需要额外处理：需要输入的 scale range 相同。<br><img src="https://x1aokehuang.github.io/images/quant-whitepaper/aee87d92901d698056fd0025d23937dcbe1bd19c.png" alt="image"></li>
-<li>对 BN 的处理。由于训练时每个 batch 数值扰动很大，单纯的 BN 效果不佳。<br>解决方法：把训练分为三个阶段，在一阶段使用单纯的 BN，二阶段使用移动平均的 BN 统计值，三阶段 freeze 统计值。<br><img src="https://x1aokehuang.github.io/images/quant-whitepaper/324a2dec0f8a8ad464b545bdc15bc75cbb8c9dd6.png" alt="image"><br>作者观察到，相对于使用单纯的 BN或者使用移动平均的 BN 统计值，上述的改进不仅减少了训练时扰动，而且提高了精度。</li>
+<h3 id="量化训练"><a class="header-anchor" href="#量化训练">¶</a>量化训练</h3>
+<ul>
+<li>对 weights 仍使用浮点数计算，若使用 int8，可能因为梯度过小而下溢，无法更新 weights。<br>
+<img src="/images/quant-whitepaper/5d45469107790eea0eb91855d4451fbe5f8b6406.png" alt="image"></li>
+<li>对 Add、Concat 算子需要额外处理：需要输入的 scale range 相同。<br>
+<img src="/images/quant-whitepaper/aee87d92901d698056fd0025d23937dcbe1bd19c.png" alt="image"></li>
+<li>对 BN 的处理。由于训练时每个 batch 数值扰动很大，单纯的 BN 效果不佳。<br>
+解决方法：把训练分为三个阶段，在一阶段使用单纯的 BN，二阶段使用移动平均的 BN 统计值，三阶段 freeze 统计值。<br>
+<img src="/images/quant-whitepaper/324a2dec0f8a8ad464b545bdc15bc75cbb8c9dd6.png" alt="image"><br>
+作者观察到，相对于使用单纯的 BN或者使用移动平均的 BN 统计值，上述的改进不仅减少了训练时扰动，而且提高了精度。</li>
 </ul>
-<h3 id="实践经验"><a href="#实践经验" class="headerlink" title="实践经验"></a>实践经验</h3><ul>
+<h3 id="实践经验"><a class="header-anchor" href="#实践经验">¶</a>实践经验</h3>
+<ul>
 <li>在量化训练中，使用预训练模型比从头训练效果更好。</li>
 <li>不要截断 activations 的数值，实验观察到 ReLU 效果比 ReLU6 效果好。</li>
 <li>在 BN 中使用移动平均时要小心（作者推荐文章的方法）。</li>
 </ul>
-<h3 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h3><ul>
+<h3 id="展望"><a class="header-anchor" href="#展望">¶</a>展望</h3>
+<ul>
 <li>更多种类的算子的量化</li>
 <li>在线地解压模型中的 weights 和 activations 的数值以压缩访存。</li>
 </ul>
-<h2 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h2><ul>
+<h2 id="thoughts"><a class="header-anchor" href="#thoughts">¶</a>Thoughts</h2>
+<ul>
 <li>可以使用正则化提升量化精度。（暂时没有找到文章）</li>
 <li>知识蒸馏提升量化精度 <a href="https://arxiv.org/pdf/1711.05852.pdf" target="_blank" rel="noopener">(Asit Mishra & Debbie Marr, 2017)</a>。</li>
 <li>除了 uniform 量化算子，还有 non-uniform 量化技巧，比如 KNN <a href="https://arxiv.org/pdf/1510.00149.pdf" target="_blank" rel="noopener">(Song Han, 2015)</a>。</li>
@@ -624,6 +641,22 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/x1aokeHuang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xiaokehuang@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -646,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TL-DR"><span class="nav-number">1.</span> <span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dataset-Algorithm-Model-Experiment-Detail"><span class="nav-number">2.</span> <span class="nav-text">Dataset/Algorithm/Model/Experiment Detail</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量化算子"><span class="nav-number">2.1.</span> <span class="nav-text">量化算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量化参数"><span class="nav-number">2.2.</span> <span class="nav-text">量化参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量化颗粒度"><span class="nav-number">2.3.</span> <span class="nav-text">量化颗粒度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验结果"><span class="nav-number">2.4.</span> <span class="nav-text">实验结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量化训练"><span class="nav-number">2.5.</span> <span class="nav-text">量化训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实践经验"><span class="nav-number">2.6.</span> <span class="nav-text">实践经验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#展望"><span class="nav-number">2.7.</span> <span class="nav-text">展望</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tl-dr"><span class="nav-number">1.</span> <span class="nav-text">¶TL;DR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset-algorithm-model-experiment-detail"><span class="nav-number">2.</span> <span class="nav-text">¶Dataset/Algorithm/Model/Experiment Detail</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量化算子"><span class="nav-number">2.1.</span> <span class="nav-text">¶量化算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量化参数"><span class="nav-number">2.2.</span> <span class="nav-text">¶量化参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量化颗粒度"><span class="nav-number">2.3.</span> <span class="nav-text">¶量化颗粒度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验结果"><span class="nav-number">2.4.</span> <span class="nav-text">¶实验结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量化训练"><span class="nav-number">2.5.</span> <span class="nav-text">¶量化训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实践经验"><span class="nav-number">2.6.</span> <span class="nav-text">¶实践经验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#展望"><span class="nav-number">2.7.</span> <span class="nav-text">¶展望</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thoughts"><span class="nav-number">3.</span> <span class="nav-text">¶Thoughts</span></a></li></ol></div>
             
 
           </div>
