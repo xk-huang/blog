@@ -1,12 +1,11 @@
 ---
-title: bat crash course | bat脚本快速入门
+title: Bat 脚本快速入门
 date: 2019-05-11 15:00:01
 tags:
-  - bat脚本
+  - bat script
   - cmd
-  - 快速入门
 categories:
-  - bat脚本
+  - bat script
 ---
 
 # 简介

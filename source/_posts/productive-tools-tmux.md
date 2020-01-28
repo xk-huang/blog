@@ -1,11 +1,11 @@
 ---
-title: Tmux 极速入门
+title: 【生产力工具】Tmux 极速入门
 date: 2019/07/18 13:00:00
 categories: 
- - tmux
+ - [生产力工具, tmux]
 tags:
  - tmux
- - 入门
+ - 生产力工具
 ---
 
 

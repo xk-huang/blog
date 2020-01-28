@@ -1,9 +1,8 @@
 ---
-title: pandas学习记录
+title: pandas 学习记录
 date: 2019-05-02 21:00:18
 tags:
   - pandas
-  - 学习
 categories: 
   - pandas
 mathjax: true

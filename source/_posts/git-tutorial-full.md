@@ -5,7 +5,6 @@ categories:
   - git
 tags:
   - git
-  - 入门
 ---
 
 

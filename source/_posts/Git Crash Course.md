@@ -2,10 +2,9 @@
 title: Git Crash Course (deprecated)
 date: 2019-04-29 13:56:00
 tags:
-  - Git
-  - Crash Course
+  - git
 categories: 
-  - Git
+  - git
 mathjax: true
 ---
 

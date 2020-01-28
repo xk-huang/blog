@@ -1,10 +1,11 @@
 ---
-title: IPython小试
+title: IPython 快速上手
 date: 2019/07/14 13:40:00
 categories:
   - 生产力工具
 tags:
   - IPython
+  - 生产力工具
 ---
 
 # 与python shell的区别

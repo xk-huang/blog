@@ -1,11 +1,10 @@
 ---
-title: 2019ICPC南昌邀请赛总结
+title: 2019 ICPC 南昌邀请赛总结
 date: 2019-06-04 00:21:00
 tags:
   - 反思
   - ACM-ICPC
-  - 编程
-  - 想法
+  - 总结
 categories:
   - 反思
 ---

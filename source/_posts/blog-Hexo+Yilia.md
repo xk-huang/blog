@@ -1,13 +1,11 @@
 ---
-title: Hexo+Next(Yilia)建站踩坑实录
+title: Hexo+Next(Yilia) 建站踩坑实录
 date: 2019-04-29 11:15:11
 tags:
-  - Hexo
-  - Yilia
-  - Blog
-  - 踩坑
+  - hexo
+  - blog
 categories: 
-  - Blog
+  - blog
 ---
 
 按照网上的教程安装Git+Node.js+hexo，网上教程很多，没有过多踩坑，还顺手学了git。

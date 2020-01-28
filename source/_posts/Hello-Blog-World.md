@@ -4,7 +4,7 @@ date: 2019-04-28 21:36:20
 tags:
   - hello world
 categories: 
-  - new start
+  - hello world
 mathjax: true
 ---
 
@@ -63,5 +63,5 @@ $$
 
 # Intern
 
-- Join **MEGVII** at July.
+- **MEGVII** :sunglasses:
 

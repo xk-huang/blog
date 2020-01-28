@@ -2,8 +2,7 @@
 title: 【Paper Reading Note】Quantizing deep convolutional networks for efficient inference A whitepaper
 date: 2019/08/16 18:00:00
 categories:
-  - paper reading note
-  - quantization
+  - [paper reading note, quantization]
 tags:
   - paper reading note
   - quantization

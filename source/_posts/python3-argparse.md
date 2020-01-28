@@ -1,11 +1,11 @@
 ---
-title: Python3 argparse模块——命令行解析
+title: 【Python3】 argparse模块——命令行解析
 date: 2019-06-07 14:00:00
 tags:
-  - Python3
+  - python3
   - argparse
 categories:
-  - Python3
+  - python3
 ---
 
 # 简介

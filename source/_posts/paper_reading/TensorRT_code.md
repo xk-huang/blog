@@ -2,8 +2,7 @@
 title: 【Paper Reading Note】8-bit Inference with TensorRT
 date: 2019/07/27 17:00:00
 categories:
-  - paper reading note
-  - quantization
+  - [paper reading note, quantization]
 tags:
   - tensorrt
   - quantization

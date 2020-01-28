@@ -4,7 +4,6 @@ date: 2019-06-09 23:39:40
 tags:
   - neural style
   - mxnet
-  - gluon
   - 风格迁移
 categories:
   - deep learning

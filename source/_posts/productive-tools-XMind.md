@@ -1,12 +1,11 @@
 ---
-title: XMind基本使用方法
+title: 【生产力工具】XMind基本使用方法
 date: 2019-05-03 16:10:24
 tags:
+  - 生产力工具
   - xmind
-  - 入门
-  - 思维导图
 categories:
-  - xmind
+  - [生产力工具, xmind]
 mathjax: true
 ---
 

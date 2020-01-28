@@ -1,5 +1,5 @@
 ---
-title: Linux 申时拾遗
+title: Linux 学习记录
 date: 2019/07/07 15:05:00
 categories: 
 	- Linux
