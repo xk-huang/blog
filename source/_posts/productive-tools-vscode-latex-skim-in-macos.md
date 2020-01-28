@@ -11,9 +11,9 @@ tags:
 
 # 背景
 
-趁着超长寒假的空档，赶完自己在去年挖的 paper 坑。那么没有一个好的科研协作环境怎么行呢？:sunglasses: 
+打算趁着超长寒假的空档，赶完自己在去年挖的 paper 坑。欲善其事必先利其器，缺少一个好的科研写作环境怎么行呢？:sunglasses: 
 
-查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 的环境。
+查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。
 
 # 环境配置流程
 
@@ -37,7 +37,7 @@ tags:
 
 1. 使用 XeFLaTeX 编译中文
 
-    在 `setting.json` 文件中添加如下代码
+    在 `setting.json` 文件中添加如下代码：
 
     ```json
     {
@@ -131,7 +131,7 @@ tags:
     }
     ```
 
-2. 配置外部 pdf 预览工具
+2. 配置外部 pdf 预览工具：
 
     ```json
     {
@@ -159,7 +159,7 @@ tags:
 
 1. `displayfile` 可执行文件
 
-    创建 `displayfile` 文件，输入下列代码:
+    创建 `displayfile` 文件，输入下列代码：
 
     ```shell
     #!/bin/bash
@@ -220,7 +220,7 @@ tags:
     chmod 744 displayfile
     ```
 
-    放置此文件至某环境变量路径中:
+    放置此文件至某*环境变量路径*中:
 
     ```shell
     mv displayfile /usr/local/bin/
@@ -228,20 +228,20 @@ tags:
 
 2. 配置 Skim
 
-    在 设置 -> 同步中，勾选“检查文件更新” 和 “重新加载”；
+    在 设置 -> 同步 中，勾选 “检查文件更新” 和 “重新加载”；
 
-    同时更改 PDF-TeX 同步支持为 "Visual Studio Code"；
+    同时更改 “PDF-TeX 同步支持” 为 "Visual Studio Code"；
 
 # 使用指南
 
 1. 正反向查找快捷键
 
-    - 在 TeX 中：`command + option + j` 转跳到预览的 PDF 文件对应位置；
+    - 在 TeX 中：`command + option + j` 转跳至 PDF 预览文件的对应位置；
 
-    - 在预览的 PDF 文件中：`command + shift + mouse` 转跳 TeX 代码对应位置；
+    - 在 PDF 预览文件中：`command + shift + mouse` 转跳至 TeX 代码对应位置；
 
 2. 编译 TeX 代码
 
-    在编辑 TeX 文件时，点击右方边栏的 TeX 按钮 -> 点击 Build LaTeX project
+    在编辑 TeX 文件时，点击右方侧栏的 TeX 按钮 -> 点击 Build LaTeX project
 
     - 注：VSCode 在保存 TeX 文件时自动编译。如果希望关闭此功能，在 `setting.json` 中添加 `"latex-workshop.latex.autoBuild.run": "never"`

@@ -10,7 +10,7 @@ tags:
 ---
 # 背景
 
-为了配置以 vscode 为主的 LaTeX 写作环境，使用 `homebrew` 安装开源 pdf 浏览软件 `skim` —— `brew cask install skim`， 在安装失败的同时收到了来自 github 的邮件：
+在配置以 vscode 为主的 LaTeX 写作环境时，使用 `homebrew` 安装开源 PDF 浏览软件 `skim` —— `brew cask install skim`。在安装失败的同时收到了来自 github 的邮件：
 
 {% blockquote %}
 Hi @x1aokeHuang,
@@ -25,17 +25,17 @@ Thanks,
 The GitHub Team
 {% endblockquote %}
 
-最初认为问题是 `brew` 源配置出错，但是 `brew` 已经配置了国内源。抱着试一试的心态更新了 token。之后便成果安装了 `skim`。
+最初以为是 `brew` 源配置错误，结果发现 `brew` 已经被配置为国内源。抱着试一试的心态更新了 token。之后便成功安装了 `skim`。
 
 # 解决方法
 
 1. 在 https://github.com/settings/tokens/new 中创建新的 token。
 
-    注意通常情况下不要勾选任何一个 scopes，原因参见[此处](https://stackoverflow.com/questions/20130681/setting-github-api-token-for-homebrew)
+    注意通常情况下**不要**勾选任何一个 scopes，原因参见[此处](https://stackoverflow.com/questions/20130681/setting-github-api-token-for-homebrew)。
 
-2. 针对自己使用的 shell，在对应的 shellrc 中添加环境变量 `HOMEBREW_GITHUB_API_TOKEN`
+2. 针对具体使用的 shell，在对应的 shell 配置文件中添加环境变量 `HOMEBREW_GITHUB_API_TOKEN`：
 
-    例如使用 `zsh`, 则使用 `export` 命令在 `~/.zshrc` 中添加如下语句：
+    e.g. 对于 `zsh`, 使用 `export` 命令在 `~/.zshrc` 中添加如下语句：
 
     {% codeblock lang:shell line_number:false%}
     export HOMEBREW_GITHUB_API_TOKEN=[YOUR_TOKEN]
