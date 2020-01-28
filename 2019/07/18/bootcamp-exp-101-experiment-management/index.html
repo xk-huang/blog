@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="bootcamp,实验管理,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. 主体思想   实验科学： 避免难以复现; 验证idea   正确的实验： 必须可复现; 结果可解读、可比较; 良好 code style   协作 信息公开; 经常交流   2. 错误行为 ¶中途改动导致不可复现实验  实验启动后不要改动 如果想修改，重新复制，git 管理，做记录  ¶修改共用模块   实验依赖于公共模块   如megdl，neupeak，共用数据，benchmark-to">
+<meta name="keywords" content="bootcamp,实验管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Bootcamp】科学实验管理">
+<meta property="og:url" content="http://yoursite.com/2019/07/18/bootcamp-exp-101-experiment-management/index.html">
+<meta property="og:site_name" content="x1aoke&#39;s Blog">
+<meta property="og:description" content="1. 主体思想   实验科学： 避免难以复现; 验证idea   正确的实验： 必须可复现; 结果可解读、可比较; 良好 code style   协作 信息公开; 经常交流   2. 错误行为 ¶中途改动导致不可复现实验  实验启动后不要改动 如果想修改，重新复制，git 管理，做记录  ¶修改共用模块   实验依赖于公共模块   如megdl，neupeak，共用数据，benchmark-to">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-28T11:26:00.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Bootcamp】科学实验管理">
+<meta name="twitter:description" content="1. 主体思想   实验科学： 避免难以复现; 验证idea   正确的实验： 必须可复现; 结果可解读、可比较; 良好 code style   协作 信息公开; 经常交流   2. 错误行为 ¶中途改动导致不可复现实验  实验启动后不要改动 如果想修改，重新复制，git 管理，做记录  ¶修改共用模块   实验依赖于公共模块   如megdl，neupeak，共用数据，benchmark-to">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/18/bootcamp-exp-101-experiment-management/">
+
+
+
+
+
+  <title>【Bootcamp】科学实验管理 | x1aoke's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?dc8f1d66ddc8bcbd5e820df975ac258c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">x1aoke's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">scientia potentia est</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/18/bootcamp-exp-101-experiment-management/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="x1aoke">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x1aoke's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【Bootcamp】科学实验管理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-18T14:00:00+08:00">
+                2019-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/bootcamp/" itemprop="url" rel="index">
+                    <span itemprop="name">bootcamp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1>1. 主体思想</h1>
+<ul>
+<li>
+<p>实验科学：</p>
+<p>避免难以复现; 验证idea</p>
+</li>
+<li>
+<p>正确的实验：</p>
+<p>必须可复现; 结果可解读、可比较; 良好 code style</p>
+</li>
+<li>
+<p>协作</p>
+<p>信息公开; 经常交流</p>
+</li>
+</ul>
+<h1>2. 错误行为</h1>
+<h2 id="中途改动导致不可复现实验"><a class="header-anchor" href="#中途改动导致不可复现实验">¶</a>中途改动导致不可复现实验</h2>
+<ol>
+<li>实验启动后<strong>不要改动</strong></li>
+<li>如果想修改，重新复制，git 管理，做记录</li>
+</ol>
+<h2 id="修改共用模块"><a class="header-anchor" href="#修改共用模块">¶</a>修改共用模块</h2>
+<ol>
+<li>
+<p>实验依赖于公共模块</p>
+</li>
+<li>
+<p>如megdl，neupeak，共用数据，benchmark-tool</p>
+</li>
+<li>
+<p>谨慎修改共用模块，复制出来修改</p>
+</li>
+</ol>
+<h2 id="训练数据乱改乱放"><a class="header-anchor" href="#训练数据乱改乱放">¶</a>训练数据乱改乱放</h2>
+<ol>
+<li>
+<p>数据放好，</p>
+</li>
+<li>
+<p>起名时要起有意义的名字 <code>ToF.IR.india.180625</code></p>
+</li>
+<li>
+<p>数据一旦加入实验，<strong>不要轻易移动</strong>，宁可复制，不要移动</p>
+</li>
+</ol>
+<h2 id="train-log"><a class="header-anchor" href="#train-log">¶</a>train_log</h2>
+<ol>
+<li>使用 git</li>
+<li>问，明确 train_log 放在哪里</li>
+<li>用的什么 python 2 or 3? anaconda 的，conda 安装的，miniconda 的</li>
+<li>pip install？包在 local、home、usr、anaconda？</li>
+</ol>
+<h2 id="错误工程习惯"><a class="header-anchor" href="#错误工程习惯">¶</a>错误工程习惯</h2>
+<ul>
+<li>
+<p>代码数据混一起。</p>
+<p>代码数据严格分离，数据严格按规定放在共享目录下</p>
+</li>
+<li>
+<p>多个 Tmux 编辑同一个文件</p>
+</li>
+<li>
+<p>文件、代码随意命名</p>
+</li>
+</ul>
+<h2 id="随意修改实验"><a class="header-anchor" href="#随意修改实验">¶</a>随意修改实验</h2>
+<ul>
+<li>不要动已有实验</li>
+<li>复制一份创建新实验，在新地方改（git）</li>
+</ul>
+<h2 id="私藏"><a class="header-anchor" href="#私藏">¶</a>私藏</h2>
+<ul>
+<li>实验不共享，不 git push</li>
+<li>放在私有目录</li>
+</ul>
+<h2 id="报喜不报忧"><a class="header-anchor" href="#报喜不报忧">¶</a>报喜不报忧</h2>
+<p>自私、不负责的行为</p>
+<h1>3. 正确行为</h1>
+<h2 id="修改实验5步走"><a class="header-anchor" href="#修改实验5步走">¶</a>修改实验5步走</h2>
+<p>在一个大目录下git init，目录内包含多个实验。</p>
+<ol>
+<li>cp -r exp1 exp2</li>
+<li>git add exp2 && git commit -m “fork exp1 to exp2” 改完就提交，这样直接 git diff</li>
+<li>修改，改完就提交，直到 bug free</li>
+</ol>
+<h2 id="科学命名"><a class="header-anchor" href="#科学命名">¶</a>科学命名</h2>
+<ul>
+<li><code>xiangyu-aug-500.shufflenetv2.41Mops.SENet</code></li>
+</ul>
+<h2 id="work-log"><a class="header-anchor" href="#work-log">¶</a>Work Log</h2>
+<p>一天10-20组</p>
+<ul>
+<li>实验名，关键方法，关键数据，关键改动，关键结果</li>
+<li>搜参调模型，使用图表、思维导图 （work_log的记录方法）</li>
+</ul>
+<h2 id="一定要量化的定量对比"><a class="header-anchor" href="#一定要量化的定量对比">¶</a>一定要量化的定量对比</h2>
+<ul>
+<li>对比模型</li>
+<li>有榜可刷</li>
+<li><strong>benchmark</strong>，从不科学到科学：样本量大，样本全面，样本均衡，要比实际情况难（hard case）。</li>
+</ul>
+<h2 id="实验原则"><a class="header-anchor" href="#实验原则">¶</a>实验原则</h2>
+<ul>
+<li>每个对比实验，<strong>只修改一个参数</strong></li>
+<li>充分利用计算资源，验证多个 ideas</li>
+<li>不要看 train_log，容易犯困 😄</li>
+</ul>
+<h2 id="时间分配"><a class="header-anchor" href="#时间分配">¶</a>时间分配</h2>
+<p>上午：分析前一天的结果; 抓紧时间写代码，调参入炉</p>
+<p>下午：做碎片工作，看论文，与人交流</p>
+<p>傍晚：再下一波丹</p>
+<p><strong>！！！ 不要让丹炉闲着</strong></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/money.jpg" alt="x1aoke WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bootcamp/" rel="tag"># bootcamp</a>
+          
+            <a href="/tags/实验管理/" rel="tag"># 实验管理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/18/productive-tools-tmux/" rel="next" title="【生产力工具】Tmux 极速入门">
+                <i class="fa fa-chevron-left"></i> 【生产力工具】Tmux 极速入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/22/git-tutorial-full/" rel="prev" title="Git 入门 && 指令方法速查">
+                Git 入门 && 指令方法速查 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="x1aoke">
+            
+              <p class="site-author-name" itemprop="name">x1aoke</p>
+              <p class="site-description motion-element" itemprop="description">BNU CS undergraduate<br>DL/Face Rec/Model Quant newbie</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/x1aokeHuang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xiaokehuang@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1. 主体思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2. 错误行为</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中途改动导致不可复现实验"><span class="nav-number">2.1.</span> <span class="nav-text">¶中途改动导致不可复现实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改共用模块"><span class="nav-number">2.2.</span> <span class="nav-text">¶修改共用模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练数据乱改乱放"><span class="nav-number">2.3.</span> <span class="nav-text">¶训练数据乱改乱放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#train-log"><span class="nav-number">2.4.</span> <span class="nav-text">¶train_log</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误工程习惯"><span class="nav-number">2.5.</span> <span class="nav-text">¶错误工程习惯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随意修改实验"><span class="nav-number">2.6.</span> <span class="nav-text">¶随意修改实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#私藏"><span class="nav-number">2.7.</span> <span class="nav-text">¶私藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报喜不报忧"><span class="nav-number">2.8.</span> <span class="nav-text">¶报喜不报忧</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">3. 正确行为</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改实验5步走"><span class="nav-number">3.1.</span> <span class="nav-text">¶修改实验5步走</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#科学命名"><span class="nav-number">3.2.</span> <span class="nav-text">¶科学命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#work-log"><span class="nav-number">3.3.</span> <span class="nav-text">¶Work Log</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一定要量化的定量对比"><span class="nav-number">3.4.</span> <span class="nav-text">¶一定要量化的定量对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验原则"><span class="nav-number">3.5.</span> <span class="nav-text">¶实验原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间分配"><span class="nav-number">3.6.</span> <span class="nav-text">¶时间分配</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">x1aoke</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script>
+  $("body").backstretch("https://背景图.jpg");
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
