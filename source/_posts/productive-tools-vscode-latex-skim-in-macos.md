@@ -234,6 +234,8 @@ tags:
 
 # 使用指南
 
+基本操作：
+
 1. 正反向查找快捷键
 
     - 在 TeX 中：`command + option + j` 转跳至 PDF 预览文件的对应位置；
@@ -244,4 +246,6 @@ tags:
 
     在编辑 TeX 文件时，点击右方侧栏的 TeX 按钮 -> 点击 Build LaTeX project
 
+    如果存在参考文献，需要点击 xelatex -> bibtex -> xelatex*2
+    
     - 注：VSCode 在保存 TeX 文件时自动编译。如果希望关闭此功能，在 `setting.json` 中添加 `"latex-workshop.latex.autoBuild.run": "never"`
