@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="背景在配置以 vscode 为主的 LaTeX 写作环境时，使用 homebrew 安装开源 PDF 浏览软件 skim —— brew cask install skim。在安装失败的同时收到了来自 github 的邮件： Hi @x1aokeHuang, You recently used a password to access an endpoint through the GitHub">
+<meta name="description" content="背景 在配置以 vscode 为主的 LaTeX 写作环境时，使用 homebrew 安装开源 PDF 浏览软件 skim —— brew cask install skim。在安装失败的同时收到了来自 github 的邮件： Hi @x1aokeHuang, You recently used a password to access an endpoint through the GitHub">
 <meta name="keywords" content="生产力工具,homebrew,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【生产力工具】为 Homebrew 配置 Github API token">
 <meta property="og:url" content="http://yoursite.com/2020/01/28/productive-tools-Github-API-token-for-Homebrew/index.html">
 <meta property="og:site_name" content="Xiaoke Huang&#39;s Blog">
-<meta property="og:description" content="背景在配置以 vscode 为主的 LaTeX 写作环境时，使用 homebrew 安装开源 PDF 浏览软件 skim —— brew cask install skim。在安装失败的同时收到了来自 github 的邮件： Hi @x1aokeHuang, You recently used a password to access an endpoint through the GitHub">
+<meta property="og:description" content="背景 在配置以 vscode 为主的 LaTeX 写作环境时，使用 homebrew 安装开源 PDF 浏览软件 skim —— brew cask install skim。在安装失败的同时收到了来自 github 的邮件： Hi @x1aokeHuang, You recently used a password to access an endpoint through the GitHub">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2020-01-28T11:51:13.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【生产力工具】为 Homebrew 配置 Github API token">
-<meta name="twitter:description" content="背景在配置以 vscode 为主的 LaTeX 写作环境时，使用 homebrew 安装开源 PDF 浏览软件 skim —— brew cask install skim。在安装失败的同时收到了来自 github 的邮件： Hi @x1aokeHuang, You recently used a password to access an endpoint through the GitHub">
+<meta name="twitter:description" content="背景 在配置以 vscode 为主的 LaTeX 写作环境时，使用 homebrew 安装开源 PDF 浏览软件 skim —— brew cask install skim。在安装失败的同时收到了来自 github 的邮件： Hi @x1aokeHuang, You recently used a password to access an endpoint through the GitHub">
 
 
 
@@ -378,20 +378,25 @@
       
 
       
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在配置以 vscode 为主的 LaTeX 写作环境时，使用 <code>homebrew</code> 安装开源 PDF 浏览软件 <code>skim</code> —— <code>brew cask install skim</code>。在安装失败的同时收到了来自 github 的邮件：</p>
+        <h1>背景</h1>
+<p>在配置以 vscode 为主的 LaTeX 写作环境时，使用 <code>homebrew</code> 安装开源 PDF 浏览软件 <code>skim</code> —— <code>brew cask install skim</code>。在安装失败的同时收到了来自 github 的邮件：</p>
 <blockquote><p>Hi @x1aokeHuang,</p>
 <p>You recently used a password to access an endpoint through the GitHub API using Homebrew/2.2.2 (Macintosh; Intel Mac OS X 10.14.6) curl/7.54.0. We will deprecate basic authentication using password to this endpoint soon:</p>
 <p><a href="https://api.github.com/search/code?q=user%3AHomebrew+path%3AFormula+path%3ACasks+path%3A.+filename%3Askim+extension%3Arb&per_page=100" target="_blank" rel="noopener">https://api.github.com/search/code?q=user%3AHomebrew+path%3AFormula+path%3ACasks+path%3A.+filename%3Askim+extension%3Arb&per_page=100</a></p>
 <p>We recommend using a personal access token (PAT) with the appropriate scope to access this endpoint instead. Visit <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">https://github.com/settings/tokens</a> for more information.</p>
-<p>Thanks,<br>The GitHub Team</p>
+<p>Thanks,<br>
+The GitHub Team</p>
 </blockquote>
 <p>最初以为是 <code>brew</code> 源配置错误，结果发现 <code>brew</code> 已经被配置为国内源。抱着试一试的心态更新了 token。之后便成功安装了 <code>skim</code>。</p>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><ol>
-<li><p>在 <a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">https://github.com/settings/tokens/new</a> 中创建新的 token。</p>
-<p> 注意通常情况下<strong>不要</strong>勾选任何一个 scopes，原因参见<a href="https://stackoverflow.com/questions/20130681/setting-github-api-token-for-homebrew" target="_blank" rel="noopener">此处</a>。</p>
+<h1>解决方法</h1>
+<ol>
+<li>
+<p>在 <a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">https://github.com/settings/tokens/new</a> 中创建新的 token。</p>
+<p>注意通常情况下<strong>不要</strong>勾选任何一个 scopes，原因参见<a href="https://stackoverflow.com/questions/20130681/setting-github-api-token-for-homebrew" target="_blank" rel="noopener">此处</a>。</p>
 </li>
-<li><p>针对具体使用的 shell，在对应的 shell 配置文件中添加环境变量 <code>HOMEBREW_GITHUB_API_TOKEN</code>：</p>
-<p> e.g. 对于 <code>zsh</code>, 使用 <code>export</code> 命令在 <code>~/.zshrc</code> 中添加如下语句：</p>
+<li>
+<p>针对具体使用的 shell，在对应的 shell 配置文件中添加环境变量 <code>HOMEBREW_GITHUB_API_TOKEN</code>：</p>
+<p>e.g. 对于 <code>zsh</code>, 使用 <code>export</code> 命令在 <code>~/.zshrc</code> 中添加如下语句：</p>
  <figure class="highlight shell"><table><tbody><tr><td class="code"><pre><span class="line">export HOMEBREW_GITHUB_API_TOKEN=[YOUR_TOKEN]</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <script>
@@ -632,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
             
 
           </div>
