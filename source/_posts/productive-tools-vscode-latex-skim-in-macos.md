@@ -11,7 +11,7 @@ tags:
 
 # 背景
 
-打算趁着超长寒假的空档，赶完自己在去年挖的 paper 坑。工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？:sunglasses: 
+工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？:sunglasses: 
 
 查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。
 
