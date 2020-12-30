@@ -80,8 +80,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/x1aokeHuang/x1aokehuang.github.io
-  branch: master
+  repo: 
+    github: https://github.com/xk-huang/xk-huang.github.io,master
   
 githubEmojis:
   enable: true
