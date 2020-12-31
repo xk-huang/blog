@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
+<meta name="description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.cor">
 <meta name="keywords" content="pandas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pandas 学习记录">
 <meta property="og:url" content="http://yoursite.com/2019/05/02/pandas-tutorial/index.html">
 <meta property="og:site_name" content="Xiaoke Huang&#39;s Blog">
-<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
+<meta property="og:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.cor">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2020-01-28T11:31:01.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pandas 学习记录">
-<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.core">
+<meta name="twitter:description" content="五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于numpy开发的数据分析软件。以下内容是对学习过程中要点的记录。 1. 按列更改值时 按列更改值时，如对定义的df，尝试修改&quot;B&quot;标签（后文将延续这种假设和表达），则需要调用df.B[statement] = pandas.cor">
 
 
 
@@ -368,28 +368,37 @@
 
       
         <p>五一节参加学校的数学建模比赛，我们队伍选择了大数据题：通过社交网络（微博）数据，分析居民对“平安宜居”社会建设的满意度。为了处理数据，我们快速入门了pandas，一个基于<strong>numpy</strong>开发的数据分析软件。以下内容是对学习过程中要点的记录。</p>
-<h1 id="1-按列更改值时"><a href="#1-按列更改值时" class="headerlink" title="1. 按列更改值时"></a>1. 按列更改值时</h1><p>按列更改值时，如对定义的df，尝试修改”B”标签（后文将延续这种假设和表达），则需要调用<code>df.B[statement] = pandas.core.series.Series</code>。</p>
+<h1>1. 按列更改值时</h1>
+<p>按列更改值时，如对定义的df，尝试修改"B"标签（后文将延续这种假设和表达），则需要调用<code>df.B[statement] = pandas.core.series.Series</code>。</p>
 <p>注意修改某列时，左值一定要包含被修改的列名(列标)。</p>
-<h1 id="2-对字符类型的处理"><a href="#2-对字符类型的处理" class="headerlink" title="2. 对字符类型的处理"></a>2. 对字符类型的处理</h1><p>对于object对象，我们可以使用<code>df.B.str.*</code>类方法完成对字符数据的处理。</p>
+<h1>2. 对字符类型的处理</h1>
+<p>对于object对象，我们可以使用<code>df.B.str.*</code>类方法完成对字符数据的处理。</p>
 <p>包括<code>cat</code>连接，<code>contains</code>是否包含，<code>match</code>正则表达式等。</p>
-<h1 id="3-对NaN值（缺失值）的处理"><a href="#3-对NaN值（缺失值）的处理" class="headerlink" title="3. 对NaN值（缺失值）的处理"></a>3. 对NaN值（缺失值）的处理</h1><p>由布尔矩阵<code>df.B.isnull()</code>得出的布尔表达式筛选即可；</p>
+<h1>3. 对NaN值（缺失值）的处理</h1>
+<p>由布尔矩阵<code>df.B.isnull()</code>得出的布尔表达式筛选即可；</p>
 <p>或使用<code>dropnull()</code>方法。</p>
-<h1 id="4-快速加一行"><a href="#4-快速加一行" class="headerlink" title="4. 快速加一行"></a>4. 快速加一行</h1><p><code>df.loc[df.shape[0]] = [the same length list]</code></p>
+<h1>4. 快速加一行</h1>
+<p><code>df.loc[df.shape[0]] = [the same length list]</code></p>
 <p>或</p>
 <p><code>df.loc[df.shape[0]] = {the same length dictionary}</code></p>
 <p>注意，此方法仅适用于数字列标。非数字列标需要调用<code>df.loc[other type index]</code>。</p>
-<h1 id="5-快速加一列"><a href="#5-快速加一列" class="headerlink" title="5.快速加一列"></a>5.快速加一列</h1><p>优雅的行尾添加方法，下方法适用于行标是index；行标是标签同理。</p>
+<h1>5.快速加一列</h1>
+<p>优雅的行尾添加方法，下方法适用于行标是index；行标是标签同理。</p>
 <p><code>df['new column name'] = [the same length list]</code></p>
-<h1 id="6-对行-列索引"><a href="#6-对行-列索引" class="headerlink" title="6. 对行\列索引"></a>6. 对行\列索引</h1><p>pandas的列索引十分方便，<code>df['B']</code>或<code>df.B</code>即可取出一列，type为<code>pandas.core.series.Series</code>；</p>
+<h1>6. 对行\列索引</h1>
+<p>pandas的列索引十分方便，<code>df['B']</code>或<code>df.B</code>即可取出一列，type为<code>pandas.core.series.Series</code>；</p>
 <p>列索引则使用基于索引的<code>df.iloc[]</code>或基于标签的<code>df.loc[]</code>：</p>
 <ul>
-<li><p><code>df.iloc[0:3,'a':'b']</code>(pandas.core.frame.DataFrame)</p>
+<li>
+<p><code>df.iloc[0:3,'a':'b']</code>(pandas.core.frame.DataFrame)</p>
 </li>
-<li><p><code>df.loc[2]</code>(pandas.core.series.Series)</p>
+<li>
+<p><code>df.loc[2]</code>(pandas.core.series.Series)</p>
 </li>
 </ul>
 <p><strong>注意</strong><code>df.loc[]</code>的区间范围是左闭右闭，而<code>df.iloc[]</code>的区间范围是左闭右开。</p>
-<h1 id="5-保存为CSV格式时的编码问题"><a href="#5-保存为CSV格式时的编码问题" class="headerlink" title="5. 保存为CSV格式时的编码问题"></a>5. 保存为CSV格式时的编码问题</h1><p>如果希望使用Excel打开CSV格式文件，且不出现编码问题，则保存文件时需要调用<code>df.to_csv("name",encoding = 'ansi')</code>，即使用ansi编码文件。</p>
+<h1>5. 保存为CSV格式时的编码问题</h1>
+<p>如果希望使用Excel打开CSV格式文件，且不出现编码问题，则保存文件时需要调用<code>df.to_csv("name",encoding = 'ansi')</code>，即使用ansi编码文件。</p>
 <p><code>encoding</code>的可选参数还包括<code>utf-8</code>。</p>
 <p><code>to_csv</code>的类方法的常用参数还包括：</p>
 <ul>
@@ -630,7 +639,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-按列更改值时"><span class="nav-number">1.</span> <span class="nav-text">1. 按列更改值时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-对字符类型的处理"><span class="nav-number">2.</span> <span class="nav-text">2. 对字符类型的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-对NaN值（缺失值）的处理"><span class="nav-number">3.</span> <span class="nav-text">3. 对NaN值（缺失值）的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-快速加一行"><span class="nav-number">4.</span> <span class="nav-text">4. 快速加一行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-快速加一列"><span class="nav-number">5.</span> <span class="nav-text">5.快速加一列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-对行-列索引"><span class="nav-number">6.</span> <span class="nav-text">6. 对行\列索引</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-保存为CSV格式时的编码问题"><span class="nav-number">7.</span> <span class="nav-text">5. 保存为CSV格式时的编码问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1. 按列更改值时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2. 对字符类型的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">3. 对NaN值（缺失值）的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">4. 快速加一行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">5.快速加一列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">6. 对行\列索引</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">5. 保存为CSV格式时的编码问题</span></a></li></ol></div>
             
 
           </div>
