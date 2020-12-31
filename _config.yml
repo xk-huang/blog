@@ -82,6 +82,7 @@ deploy:
   type: git
   repo: 
     github: https://github.com/xk-huang/xk-huang.github.io,master
+    hexo: git@81.70.205.207:/home/git/hexo.git,master
   
 githubEmojis:
   enable: true
