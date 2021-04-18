@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,21 +48,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -79,25 +79,25 @@
 
 
 
-<meta name="description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t2e{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\fra">
+<meta name="description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
 <meta name="keywords" content="数学,概率,正态分布,方差,积分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="标准正态分布的方差 (对标准正态分布 PDF 验证)">
-<meta property="og:url" content="http://yoursite.com/2019/06/03/guassian-distribution/index.html">
+<meta property="og:url" content="http://xk-huang.github.io/blog/2019/06/03/guassian-distribution/index.html">
 <meta property="og:site_name" content="Xiaoke Huang&#39;s Blog">
-<meta property="og:description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t2e{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\fra">
+<meta property="og:description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2020-01-28T11:36:10.922Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标准正态分布的方差 (对标准正态分布 PDF 验证)">
-<meta name="twitter:description" content="背景：求标准正态分布的方差： 原问题为： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t2e{\frac {-t^2} 2} \mathrm{d}t $$ 通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求： $$ \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\fra">
+<meta name="twitter:description" content="背景：求标准正态分布的方差： 原问题为：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：  \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/03/guassian-distribution/">
+  <link rel="canonical" href="http://xk-huang.github.io/blog/2019/06/03/guassian-distribution/">
 
 
 
@@ -164,7 +164,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Xiaoke Huang's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -192,7 +192,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
@@ -202,7 +202,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/blog/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
@@ -212,7 +212,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/blog/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
@@ -222,7 +222,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/blog/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -232,7 +232,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/blog/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
@@ -273,12 +273,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/03/guassian-distribution/">
+    <link itemprop="mainEntityOfPage" href="http://xk-huang.github.io/blog/blog/2019/06/03/guassian-distribution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiaoke Huang">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="image" content="/blog/images/head.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -325,7 +325,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
+                  <a href="/blog/categories/数学/" itemprop="url" rel="index">
                     <span itemprop="name">数学</span>
                   </a>
                 </span>
@@ -369,57 +369,29 @@
       
         <hr>
 <p>背景：求标准正态分布的方差：</p>
-<p>原问题为：<br>
-$$<br>
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t<sup>2e</sup>{\frac {-t^2} 2} \mathrm{d}t<br>
-$$<br>
-通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：<br>
-$$<br>
-\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t<br>
-$$</p>
-<p>实际上，被积函数为标准正态分布的概率密度函数(Probability Density Function, PDF)。</p>
+<p>原问题为：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}t^2e^{\frac {-t^2} 2} \mathrm{d}t</script><p>通过对$e^{\frac {-t^2} 2}$的分部积分,问题变为求：</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-t^2} 2} \mathrm{d}t</script><p>实际上，被积函数为标准正态分布的概率密度函数(Probability Density Function, PDF)。</p>
 <p>这里侧面验证了标准正态分布的PDF的正确性(即从负无穷到正无穷的积分为1)。</p>
 <hr>
-<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$<br>
-$$<br>
-Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}<br>
-$$</p>
-<p>$$<br>
-then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y<br>
-$$</p>
-<p>$$<br>
-then,I^2 = \int_{-\infty}<sup>{\infty}\int_{-\infty}</sup>{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y<br>
-$$</p>
-<p>$$<br>
-then, I^2 = \int_{-\infty}<sup>{\infty}\int_{-\infty}</sup>{\infty}{\frac 1  {2\pi}}e^{\frac {-(x<sup>2+y</sup>2)} 2} \mathrm{d}x \mathrm{d}y<br>
-$$</p>
-<hr>
-<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:<br>
-$$<br>
-so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta<br>
-$$</p>
-<p>$$<br>
-where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \ -r\sin\theta & r\cos\theta \end{vmatrix}<br>
-$$</p>
-<p>$$<br>
-so,abs(jacobian) = r<br>
-$$</p>
-<p>$$<br>
-so,dxdy = r\mathrm{d}r\mathrm{d}\theta<br>
-$$</p>
-<p>$$<br>
-so, I^2 = {\frac 1 {2\pi}} {\int_0<sup>{2\pi}\int_0</sup>\infty e<sup>{-r</sup>2/2}r\mathrm{d}r\mathrm{d}\theta}<br>
-$$</p>
-<p>$$<br>
-then, I^2 =\int_0^\infty e<sup>{-r</sup>2/2}r\mathrm{d}r<br>
-$$</p>
-<p>$$<br>
-then,I^2= {\frac 1 2}\int_0^\infty e<sup>{-r</sup>2/2}\mathrm{d}r^2 = \int_0^\infty e<sup>{-t</sup>2/2}\mathrm{d}t = 1<br>
-$$</p>
-<p>$$<br>
-so, I = 1<br>
-$$</p>
-<hr>
+<p>Let, $f(x) = {\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2}$</p>
+<script type="math/tex; mode=display">
+Let, I = {\int_{-\infty}^{\infty} f(x)\mathrm{d}x}</script><script type="math/tex; mode=display">
+then, I =\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} \mathrm{d}x = \int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}y</script><script type="math/tex; mode=display">
+then,I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1 {\sqrt {2\pi}}}e^{\frac {-x^2} 2} {\frac 1 {\sqrt {2\pi}}}e^{\frac {-y^2} 2} \mathrm{d}x \mathrm{d}y</script><script type="math/tex; mode=display">
+then, I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{\frac 1  {2\pi}}e^{\frac {-(x^2+y^2)} 2} \mathrm{d}x \mathrm{d}y</script><hr>
+<p>Let, x = $r\cos\theta$, y = $r\sin\theta$:</p>
+<script type="math/tex; mode=display">
+so, dxdy = abs(jacobian)*\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
+where,jacobian = \begin{vmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta \end{vmatrix}</script><script type="math/tex; mode=display">
+so,abs(jacobian) = r</script><script type="math/tex; mode=display">
+so,dxdy = r\mathrm{d}r\mathrm{d}\theta</script><script type="math/tex; mode=display">
+so, I^2 = {\frac 1 {2\pi}} {\int_0^{2\pi}\int_0^\infty e^{-r^2/2}r\mathrm{d}r\mathrm{d}\theta}</script><script type="math/tex; mode=display">
+then, I^2 =\int_0^\infty e^{-r^2/2}r\mathrm{d}r</script><script type="math/tex; mode=display">
+then,I^2= {\frac 1 2}\int_0^\infty e^{-r^2/2}\mathrm{d}r^2 = \int_0^\infty e^{-t^2/2}\mathrm{d}t = 1</script><script type="math/tex; mode=display">
+so, I = 1</script><hr>
 <p>总结：反常积分。通过极坐标变化为二重积分求解。</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -480,15 +452,15 @@ $$</p>
       
         <div class="post-tags">
           
-            <a href="/tags/数学/" rel="tag"># 数学</a>
+            <a href="/blog/tags/数学/" rel="tag"># 数学</a>
           
-            <a href="/tags/概率/" rel="tag"># 概率</a>
+            <a href="/blog/tags/概率/" rel="tag"># 概率</a>
           
-            <a href="/tags/正态分布/" rel="tag"># 正态分布</a>
+            <a href="/blog/tags/正态分布/" rel="tag"># 正态分布</a>
           
-            <a href="/tags/方差/" rel="tag"># 方差</a>
+            <a href="/blog/tags/方差/" rel="tag"># 方差</a>
           
-            <a href="/tags/积分/" rel="tag"># 积分</a>
+            <a href="/blog/tags/积分/" rel="tag"># 积分</a>
           
         </div>
       
@@ -501,7 +473,7 @@ $$</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/11/bat-script/" rel="next" title="Bat 脚本快速入门">
+              <a href="/blog/2019/05/11/bat-script/" rel="next" title="Bat 脚本快速入门">
                 <i class="fa fa-chevron-left"></i> Bat 脚本快速入门
               </a>
             
@@ -511,7 +483,7 @@ $$</p>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/04/2019-ICPC-nanchang-invitation/" rel="prev" title="2019 ICPC 南昌邀请赛总结">
+              <a href="/blog/2019/06/04/2019-ICPC-nanchang-invitation/" rel="prev" title="2019 ICPC 南昌邀请赛总结">
                 2019 ICPC 南昌邀请赛总结 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -570,7 +542,7 @@ $$</p>
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Xiaoke Huang">
+              <img class="site-author-image" itemprop="image" src="/blog/images/head.jpg" alt="Xiaoke Huang">
             
               <p class="site-author-name" itemprop="name">Xiaoke Huang</p>
               <p class="site-description motion-element" itemprop="description">BNU CS Undergraduate<br>DL/Face Rec/Model Quant Newbie</p>
@@ -581,7 +553,7 @@ $$</p>
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/blog/archives/">
               
                   <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">posts</span>
@@ -593,7 +565,7 @@ $$</p>
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
+                <a href="/blog/categories/index.html">
                   <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
@@ -604,7 +576,7 @@ $$</p>
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
+                <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
@@ -658,7 +630,7 @@ $$</p>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -755,64 +727,64 @@ $$</p>
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 

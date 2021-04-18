@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,21 +48,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -79,25 +79,25 @@
 
 
 
-<meta name="description" content="背景 工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎 查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。 环境配置流程 主要包含软件安装、VSCode 配置以及正反向查找设置。 ¶安装   安装 MacTeX">
+<meta name="description" content="背景工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎  查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。 环境配置流程主要包含软件安装、VSCode 配置以及正反向查找设置。 安装 安装 MacTeX  在 VSC">
 <meta name="keywords" content="生产力工具,latex,vscode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【生产力工具】VScode + LaTeX + Skim：配置基于 macOS 的科研写作环境">
-<meta property="og:url" content="http://yoursite.com/2020/01/28/productive-tools-vscode-latex-skim-in-macos/index.html">
+<meta property="og:url" content="http://xk-huang.github.io/blog/2020/01/28/productive-tools-vscode-latex-skim-in-macos/index.html">
 <meta property="og:site_name" content="Xiaoke Huang&#39;s Blog">
-<meta property="og:description" content="背景 工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎 查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。 环境配置流程 主要包含软件安装、VSCode 配置以及正反向查找设置。 ¶安装   安装 MacTeX">
+<meta property="og:description" content="背景工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎  查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。 环境配置流程主要包含软件安装、VSCode 配置以及正反向查找设置。 安装 安装 MacTeX  在 VSC">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2020-04-19T14:51:43.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【生产力工具】VScode + LaTeX + Skim：配置基于 macOS 的科研写作环境">
-<meta name="twitter:description" content="背景 工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎 查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。 环境配置流程 主要包含软件安装、VSCode 配置以及正反向查找设置。 ¶安装   安装 MacTeX">
+<meta name="twitter:description" content="背景工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎  查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。 环境配置流程主要包含软件安装、VSCode 配置以及正反向查找设置。 安装 安装 MacTeX  在 VSC">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/28/productive-tools-vscode-latex-skim-in-macos/">
+  <link rel="canonical" href="http://xk-huang.github.io/blog/2020/01/28/productive-tools-vscode-latex-skim-in-macos/">
 
 
 
@@ -164,7 +164,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Xiaoke Huang's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -192,7 +192,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
@@ -202,7 +202,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/blog/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
@@ -212,7 +212,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/blog/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
@@ -222,7 +222,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/blog/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -232,7 +232,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/blog/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
@@ -273,12 +273,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/28/productive-tools-vscode-latex-skim-in-macos/">
+    <link itemprop="mainEntityOfPage" href="http://xk-huang.github.io/blog/blog/2020/01/28/productive-tools-vscode-latex-skim-in-macos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiaoke Huang">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="image" content="/blog/images/head.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -325,7 +325,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生产力工具/" itemprop="url" rel="index">
+                  <a href="/blog/categories/生产力工具/" itemprop="url" rel="index">
                     <span itemprop="name">生产力工具</span>
                   </a>
                 </span>
@@ -336,7 +336,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生产力工具/latex/" itemprop="url" rel="index">
+                  <a href="/blog/categories/生产力工具/latex/" itemprop="url" rel="index">
                     <span itemprop="name">latex</span>
                   </a>
                 </span>
@@ -378,72 +378,55 @@
       
 
       
-        <h1>背景</h1>
-<p>工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？😎</p>
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>工欲善其事，必先利其器。缺少一个好的科研写作环境怎么行呢？<span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span> </p>
 <p>查了查 LaTeX 写作的相关软件，发现大家主要推荐 TeXsudio 或者 VSCode+latex-workshop。作为一个忠实的 VSCode 粉，自然就选择了 VSCode+latex-workshop 环境。</p>
-<h1>环境配置流程</h1>
-<p>主要包含软件安装、VSCode 配置以及正反向查找设置。</p>
-<h2 id="安装"><a class="header-anchor" href="#安装">¶</a>安装</h2>
-<ol>
-<li>
-<p>安装 <a href="http://www.tug.org/mactex/mactex-download.html" target="_blank" rel="noopener">MacTeX</a></p>
+<h1 id="环境配置流程"><a href="#环境配置流程" class="headerlink" title="环境配置流程"></a>环境配置流程</h1><p>主要包含软件安装、VSCode 配置以及正反向查找设置。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li><p>安装 <a href="http://www.tug.org/mactex/mactex-download.html" target="_blank" rel="noopener">MacTeX</a></p>
 </li>
-<li>
-<p>在 VSCode 中安装 <code>LaTeX Workshop</code> 插件</p>
+<li><p>在 VSCode 中安装 <code>LaTeX Workshop</code> 插件</p>
 </li>
-<li>
-<p>安装 Skim</p>
+<li><p>安装 Skim </p>
  <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install skim</span><br></pre></td></tr></tbody></table></figure>
-<p>安装时遇到了 brew 连接 github 的问题 </p>
+<p> 安装时遇到了 brew 连接 github 的问题 </p>
 </li>
 </ol>
-<h2 id="vscode-设置"><a class="header-anchor" href="#vscode-设置">¶</a>VSCode 设置</h2>
-<ol>
-<li>
-<p>使用 XeFLaTeX 编译中文</p>
-<p>在 <code>setting.json</code> 文件中添加如下代码：</p>
+<h2 id="VSCode-设置"><a href="#VSCode-设置" class="headerlink" title="VSCode 设置"></a>VSCode 设置</h2><ol>
+<li><p>使用 XeFLaTeX 编译中文</p>
+<p> 在 <code>setting.json</code> 文件中添加如下代码：</p>
  <figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    // other rules...</span><br><span class="line"></span><br><span class="line">    // latex-workshop</span><br><span class="line">    "latex-workshop.latex.tools": [</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"xelatex"</span>,</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"xelatex"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">                <span class="string">"-synctex=1"</span>,</span><br><span class="line">                <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">                <span class="string">"-file-line-error"</span>,</span><br><span class="line">                <span class="string">"%DOC%"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"pdflatex"</span>,</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"pdflatex"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">                <span class="string">"-synctex=1"</span>,</span><br><span class="line">                <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">                <span class="string">"-file-line-error"</span>,</span><br><span class="line">                <span class="string">"%DOC%"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">                <span class="string">"-synctex=1"</span>,</span><br><span class="line">                <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">                <span class="string">"-file-line-error"</span>,</span><br><span class="line">                <span class="string">"-pdf"</span>,</span><br><span class="line">                <span class="string">"%DOC%"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"bibtex"</span>,</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"bibtex"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">                <span class="string">"%DOCFILE%"</span></span><br><span class="line">            ]</span><br><span class="line">        }</span><br><span class="line">    ],</span><br><span class="line">    "latex-workshop.latex.recipes": [</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"XeLaTeX"</span>,</span><br><span class="line">            <span class="attr">"tools"</span>: [</span><br><span class="line">                <span class="string">"xelatex"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"PDFLaTeX"</span>,</span><br><span class="line">            <span class="attr">"tools"</span>: [</span><br><span class="line">                <span class="string">"pdflatex"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">            <span class="attr">"tools"</span>: [</span><br><span class="line">                <span class="string">"latexmk"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"BibTeX"</span>,</span><br><span class="line">            <span class="attr">"tools"</span>: [</span><br><span class="line">                <span class="string">"bibtex"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"xelatex -> bibtex -> xelatex*2"</span>,</span><br><span class="line">            <span class="attr">"tools"</span>: [</span><br><span class="line">                <span class="string">"xelatex"</span>,</span><br><span class="line">                <span class="string">"bibtex"</span>,</span><br><span class="line">                <span class="string">"xelatex"</span>,</span><br><span class="line">                <span class="string">"xelatex"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"pdflatex -> bibtex -> pdflatex*2"</span>,</span><br><span class="line">            <span class="attr">"tools"</span>: [</span><br><span class="line">                <span class="string">"pdflatex"</span>,</span><br><span class="line">                <span class="string">"bibtex"</span>,</span><br><span class="line">                <span class="string">"pdflatex"</span>,</span><br><span class="line">                <span class="string">"pdflatex"</span></span><br><span class="line">            ]</span><br><span class="line">        },</span><br><span class="line">    ],</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li>
-<p>配置外部 pdf 预览工具：</p>
+<li><p>配置外部 pdf 预览工具：</p>
  <figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    // other rules...</span><br><span class="line"></span><br><span class="line">    // external pdf viewer</span><br><span class="line">    "latex-workshop.view.pdf.viewer": "external",</span><br><span class="line">    "latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",</span><br><span class="line">    "latex-workshop.view.pdf.external.synctex.args": [</span><br><span class="line">        "-r",</span><br><span class="line">        "%LINE%",</span><br><span class="line">        "%PDF%",</span><br><span class="line">        <span class="string">"%TEX%"</span></span><br><span class="line">    ],</span><br><span class="line">    "latex-workshop.view.pdf.external.viewer.command": "displayfile",</span><br><span class="line">    "latex-workshop.view.pdf.external.viewer.args": [</span><br><span class="line">        "-r",</span><br><span class="line">        <span class="string">"%PDF%"</span></span><br><span class="line">    ],</span><br><span class="line">    "editor.wordWrap": "on",</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ol>
-<h2 id="外部-pdf-预览与正反向跳转"><a class="header-anchor" href="#外部-pdf-预览与正反向跳转">¶</a>外部 pdf 预览与正反向跳转</h2>
-<ol>
-<li>
-<p><code>displayfile</code> 可执行文件</p>
-<p>创建 <code>displayfile</code> 文件，输入下列代码：</p>
+<h2 id="外部-pdf-预览与正反向跳转"><a href="#外部-pdf-预览与正反向跳转" class="headerlink" title="外部 pdf 预览与正反向跳转"></a>外部 pdf 预览与正反向跳转</h2><ol>
+<li><p><code>displayfile</code> 可执行文件</p>
+<p> 创建 <code>displayfile</code> 文件，输入下列代码：</p>
  <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> displayfile (Skim)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Usage: displayfile [-r] [-g] PDFFILE</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Modified from <span class="string">"displayline"</span> to only revert the file, not jump to a given line</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"></span><br><span class="line">if [ $# == 0 -o "$1" == "-h" -o "$1" == "-help" ]; then</span><br><span class="line">echo "Usage: displayfile [-r] [-g] PDFFILE</span><br><span class="line">Options:</span><br><span class="line">-r, -revert      Revert the file from disk if it was open</span><br><span class="line">-g, -background  Do not bring Skim to the foreground"</span><br><span class="line">exit 0</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> get arguments</span></span><br><span class="line">revert=false</span><br><span class="line">activate=true</span><br><span class="line">while [ "${1:0:1}" == "-" ]; do</span><br><span class="line">if [ "$1" == "-r" -o "$1" == "-revert" ]; then</span><br><span class="line">    revert=true</span><br><span class="line">elif [ "$1" == "-g" -o "$1" == "-background" ]; then</span><br><span class="line">    activate=false</span><br><span class="line">fi</span><br><span class="line">shift</span><br><span class="line">done</span><br><span class="line">file="$1"</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">shopt</span> -s extglob</span></span><br><span class="line"><span class="meta">#</span><span class="bash">[ <span class="variable">$#</span> -gt 2 ] && <span class="built_in">source</span>=<span class="string">"<span class="variable">$3</span>"</span> || <span class="built_in">source</span>=<span class="string">"<span class="variable">${file%.@(pdf|dvi|xdv)}</span>.tex"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> expand relative paths</span></span><br><span class="line">[ "${file:0:1}" == "/" ] || file="${PWD}/${file}"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> pass file arguments as NULL-separated string to osascript</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> pass through cat to get them as raw bytes to preserve non-ASCII characters</span></span><br><span class="line">/usr/bin/osascript \</span><br><span class="line">-e "set theFile to POSIX file \"$file\"" \</span><br><span class="line">-e "set thePath to POSIX path of (theFile as alias)" \</span><br><span class="line">-e "tell application \"Skim\"" \</span><br><span class="line">-e "  if $activate then activate" \</span><br><span class="line">-e "  if $revert then" \</span><br><span class="line">-e "    try" \</span><br><span class="line">-e "      set theDocs to get documents whose path is thePath" \</span><br><span class="line">-e "      if (count of theDocs) > 0 then revert theDocs" \</span><br><span class="line">-e "    end try" \</span><br><span class="line">-e "  end if" \</span><br><span class="line">-e "  open theFile" \</span><br><span class="line">-e "end tell"</span><br></pre></td></tr></tbody></table></figure>
-<p>更改为可执行文件：</p>
+<p> 更改为可执行文件：</p>
  <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 744 displayfile</span><br></pre></td></tr></tbody></table></figure>
-<p>放置此文件至某<em>环境变量路径</em>中:</p>
+<p> 放置此文件至某<em>环境变量路径</em>中:</p>
  <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv displayfile /usr/local/bin/</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li>
-<p>配置 Skim</p>
-<p>在 设置 -> 同步 中，勾选 “检查文件更新” 和 “重新加载”；</p>
-<p>同时更改 “PDF-TeX 同步支持” 为 “Visual Studio Code”；</p>
+<li><p>配置 Skim</p>
+<p> 在 设置 -> 同步 中，勾选 “检查文件更新” 和 “重新加载”；</p>
+<p> 同时更改 “PDF-TeX 同步支持” 为 “Visual Studio Code”；</p>
 </li>
 </ol>
-<h1>使用指南</h1>
-<p>基本操作：</p>
+<h1 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h1><p>基本操作：</p>
 <ol>
-<li>
-<p>正反向查找快捷键</p>
+<li><p>正反向查找快捷键</p>
 <ul>
-<li>
-<p>在 TeX 中：<code>command + option + j</code> 转跳至 PDF 预览文件的对应位置；</p>
+<li><p>在 TeX 中：<code>command + option + j</code> 转跳至 PDF 预览文件的对应位置；</p>
 </li>
-<li>
-<p>在 PDF 预览文件中：<code>command + shift + mouse</code> 转跳至 TeX 代码对应位置；</p>
+<li><p>在 PDF 预览文件中：<code>command + shift + mouse</code> 转跳至 TeX 代码对应位置；</p>
 </li>
 </ul>
 </li>
-<li>
-<p>编译 TeX 代码</p>
-<p>在编辑 TeX 文件时，点击右方侧栏的 TeX 按钮 -> 点击 Build LaTeX project</p>
-<p>如果存在参考文献，需要点击 xelatex -> bibtex -> xelatex*2</p>
+<li><p>编译 TeX 代码</p>
+<p> 在编辑 TeX 文件时，点击右方侧栏的 TeX 按钮 -> 点击 Build LaTeX project</p>
+<p> 如果存在参考文献，需要点击 xelatex -> bibtex -> xelatex*2</p>
 <ul>
 <li>注：VSCode 在保存 TeX 文件时自动编译。如果希望关闭此功能，在 <code>setting.json</code> 中添加 <code>"latex-workshop.latex.autoBuild.run": "never"</code></li>
 </ul>
@@ -508,11 +491,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生产力工具/" rel="tag"># 生产力工具</a>
+            <a href="/blog/tags/生产力工具/" rel="tag"># 生产力工具</a>
           
-            <a href="/tags/latex/" rel="tag"># latex</a>
+            <a href="/blog/tags/latex/" rel="tag"># latex</a>
           
-            <a href="/tags/vscode/" rel="tag"># vscode</a>
+            <a href="/blog/tags/vscode/" rel="tag"># vscode</a>
           
         </div>
       
@@ -525,7 +508,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/28/productive-tools-Github-API-token-for-Homebrew/" rel="next" title="【生产力工具】为 Homebrew 配置 Github API token">
+              <a href="/blog/2020/01/28/productive-tools-Github-API-token-for-Homebrew/" rel="next" title="【生产力工具】为 Homebrew 配置 Github API token">
                 <i class="fa fa-chevron-left"></i> 【生产力工具】为 Homebrew 配置 Github API token
               </a>
             
@@ -535,7 +518,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/12/2020-firefly/" rel="prev" title="【随笔】萤火虫">
+              <a href="/blog/2020/06/12/2020-firefly/" rel="prev" title="【随笔】萤火虫">
                 【随笔】萤火虫 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -603,7 +586,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Xiaoke Huang">
+              <img class="site-author-image" itemprop="image" src="/blog/images/head.jpg" alt="Xiaoke Huang">
             
               <p class="site-author-name" itemprop="name">Xiaoke Huang</p>
               <p class="site-description motion-element" itemprop="description">BNU CS Undergraduate<br>DL/Face Rec/Model Quant Newbie</p>
@@ -614,7 +597,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/blog/archives/">
               
                   <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">posts</span>
@@ -626,7 +609,7 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
+                <a href="/blog/categories/index.html">
                   <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
@@ -637,7 +620,7 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
+                <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
@@ -687,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">环境配置流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">¶安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode-设置"><span class="nav-number">2.2.</span> <span class="nav-text">¶VSCode 设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外部-pdf-预览与正反向跳转"><span class="nav-number">2.3.</span> <span class="nav-text">¶外部 pdf 预览与正反向跳转</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">使用指南</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境配置流程"><span class="nav-number">2.</span> <span class="nav-text">环境配置流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VSCode-设置"><span class="nav-number">2.2.</span> <span class="nav-text">VSCode 设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外部-pdf-预览与正反向跳转"><span class="nav-number">2.3.</span> <span class="nav-text">外部 pdf 预览与正反向跳转</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用指南"><span class="nav-number">3.</span> <span class="nav-text">使用指南</span></a></li></ol></div>
             
 
           </div>
@@ -707,7 +690,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -804,64 +787,64 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
