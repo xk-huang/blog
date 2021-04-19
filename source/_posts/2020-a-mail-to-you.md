@@ -44,8 +44,8 @@ tags:
 <p class="image-caption">我爱地球~</p>
 <table width="100%" border="0" cellspacing="0" cellpadding="">
   <tr>
-    <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7671.jpg" width="500" height="500" /> </td>
-    <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7670.jpg" width="500" height="500" /></td>
+    <td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7671.jpg" width="500" height="500" /> </td>
+    <td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7670.jpg" width="500" height="500" /></td>
   </tr>
 </table>
 <!-- <br> -->
@@ -55,8 +55,8 @@ tags:
 <p class="image-caption">画框里的你</p>
 <table width="100%" border="0" cellspacing="0" cellpadding="">
   <tr>
-    <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8114.jpg" width="500" height="500" /> </td>
-    <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8115.jpg" width="500" height="500" /> </td>
+    <td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8114.jpg" width="500" height="500" /> </td>
+    <td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8115.jpg" width="500" height="500" /> </td>
   </tr>
 </table>
 <!-- <br> -->
@@ -65,8 +65,8 @@ tags:
 <p class="image-caption">触摸色彩</p>
 <table width="100%" border="0" cellspacing="0" cellpadding="">
   <tr>
-    <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8519-9408323.jpg" width="500" height="500" /> </td>
-    <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8518.jpg" width="500" height="500" /> </td>
+    <td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8519-9408323.jpg" width="500" height="500" /> </td>
+    <td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8518.jpg" width="500" height="500" /> </td>
   </tr>
 </table>
 <!-- <br> -->
