@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Hello World！For the first time I build my own blog ! Let’s write something!  Add a hyper-link: MXNet: A Scalable Deep Learning Framework  Use a Block: My best function in C++ is lower_bound.  Try a pi">
+<meta name="description" content="¶Hello World！ For the first time I build my own blog ! Let’s write something!   Add a hyper-link: MXNet: A Scalable Deep Learning Framework   Use a Block: My best function in C++ is lower_bound.   Try">
 <meta name="keywords" content="hello world">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello Blog World">
 <meta property="og:url" content="http://xk-huang.github.io/blog/2019/04/28/Hello-Blog-World/index.html">
 <meta property="og:site_name" content="Xiaoke Huang&#39;s Blog">
-<meta property="og:description" content="Hello World！For the first time I build my own blog ! Let’s write something!  Add a hyper-link: MXNet: A Scalable Deep Learning Framework  Use a Block: My best function in C++ is lower_bound.  Try a pi">
+<meta property="og:description" content="¶Hello World！ For the first time I build my own blog ! Let’s write something!   Add a hyper-link: MXNet: A Scalable Deep Learning Framework   Use a Block: My best function in C++ is lower_bound.   Try">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2020-01-28T11:28:37.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Blog World">
-<meta name="twitter:description" content="Hello World！For the first time I build my own blog ! Let’s write something!  Add a hyper-link: MXNet: A Scalable Deep Learning Framework  Use a Block: My best function in C++ is lower_bound.  Try a pi">
+<meta name="twitter:description" content="¶Hello World！ For the first time I build my own blog ! Let’s write something!   Add a hyper-link: MXNet: A Scalable Deep Learning Framework   Use a Block: My best function in C++ is lower_bound.   Try">
 
 
 
@@ -367,42 +367,60 @@
       
 
       
-        <h2 id="Hello-World！"><a href="#Hello-World！" class="headerlink" title="Hello World！"></a>Hello World！</h2><p>For the first time I build my own blog !</p>
+        <h2 id="hello-world"><a class="header-anchor" href="#hello-world">¶</a>Hello World！</h2>
+<p>For the first time I build my own blog !</p>
 <p>Let’s <strong>write</strong> something!</p>
 <ul>
-<li><p>Add a hyper-link:</p>
+<li>
+<p>Add a hyper-link:</p>
 <p><a href="https://mxnet.apache.org/" target="_blank" rel="noopener">MXNet: A Scalable Deep Learning Framework</a></p>
 </li>
-<li><p>Use a Block:</p>
+<li>
+<p>Use a Block:</p>
 <p>My best function in C++ is <code>lower_bound</code>.</p>
 </li>
-<li><p>Try a piece of code:</p>
+<li>
+<p>Try a piece of code:</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World"</span>);</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p><strong>Tips on Typora:</strong>  行内公式属于LaTeX扩展语法，并非Markdown的通用标准，需要在Typora的“文件”-“偏好设置”中，勾选“内联公式”一项，Typora才会予以解析。</p>
+<li>
+<p><strong>Tips on Typora:</strong>  行内公式属于LaTeX扩展语法，并非Markdown的通用标准，需要在Typora的“文件”-“偏好设置”中，勾选“内联公式”一项，Typora才会予以解析。</p>
 </li>
 </ul>
-<h1 id="Optimizer-Momentum"><a href="#Optimizer-Momentum" class="headerlink" title="Optimizer: Momentum"></a>Optimizer: Momentum</h1><ul>
-<li><p><strong>EMA</strong> (Exponential-weighted moving average):</p>
-<script type="math/tex; mode=display">
-y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}</script><p>This is a way to “remember” a period-time of the arguments:</p>
+<h1>Optimizer: Momentum</h1>
+<ul>
+<li>
+<p><strong>EMA</strong> (Exponential-weighted moving average):<br>
+$$<br>
+y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}<br>
+$$<br>
+This is a way to “remember” a period-time of the arguments:</p>
 </li>
-<li><p><strong>Momentum</strong></p>
-<p>$\vec{v}$ is velocity:</p>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{\eta}*{\nabla}{f_\beta}{(\vec x)}</script><p>also can be written as :</p>
+<li>
+<p><strong>Momentum</strong></p>
+<p>$\vec{v}$ is velocity:<br>
+$$<br>
+{\vec{v}} := {\gamma}<em>{\vec{v}}+{\eta}</em>{\nabla}{f_\beta}{(\vec x)}<br>
+$$<br>
+also can be written as :</p>
 </li>
 </ul>
-<script type="math/tex; mode=display">
-{\vec{v}} := {\gamma}*{\vec{v}}+{(1-\gamma)}*{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}</script><p>​        then we update the arguments $\vec x$ :</p>
-<script type="math/tex; mode=display">
-\vec x := \vec x - \vec v</script><h1 id="To-Do-List"><a href="#To-Do-List" class="headerlink" title="To Do List"></a>To Do List</h1><ul>
+<p>$$<br>
+{\vec{v}} := {\gamma}<em>{\vec{v}}+{(1-\gamma)}</em>{\frac {\eta}{(1-\gamma)}}*{\nabla}{f_\beta}{(\vec x)}<br>
+$$</p>
+<p>​		then we update the arguments $\vec x$ :<br>
+$$<br>
+\vec x := \vec x - \vec v<br>
+$$</p>
+<h1>To Do List</h1>
+<ul>
 <li>Maybe get used to <strong>writing a post or report</strong> everyday.</li>
 <li>Now I have to learn to <strong>write  docs for my malaria project</strong>!</li>
-<li><del>Still don’t know what to do.</del></li>
+<li><s>Still don’t know what to do.</s></li>
 </ul>
-<h1 id="Intern"><a href="#Intern" class="headerlink" title="Intern"></a>Intern</h1><ul>
-<li><strong>MEGVII</strong> <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span></li>
+<h1>Intern</h1>
+<ul>
+<li><strong>MEGVII</strong> 😎</li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -634,7 +652,7 @@ y^{(t)}:= {\rho}*y^{(t-1)} + {(1-\rho)}*x^{t}</script><p>This is a way to “rem
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World！"><span class="nav-number">1.</span> <span class="nav-text">Hello World！</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Optimizer-Momentum"><span class="nav-number"></span> <span class="nav-text">Optimizer: Momentum</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#To-Do-List"><span class="nav-number"></span> <span class="nav-text">To Do List</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intern"><span class="nav-number"></span> <span class="nav-text">Intern</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hello-world"><span class="nav-number">1.</span> <span class="nav-text">¶Hello World！</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text">Optimizer: Momentum</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text">To Do List</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text">Intern</span></a></li></div>
             
 
           </div>
