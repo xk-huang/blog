@@ -50,7 +50,7 @@ tags:
     <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7670.jpg" width="500" height="500" /></td>
   </tr>
 </table>
-<br>
+<!-- <br> -->
 <p class="image-caption">“比心~~~” (愣)“噢噢噢！！！”</p>
 
 <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7702.jpg" width="600" height="600" />
@@ -62,7 +62,7 @@ tags:
     <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8115.jpg" width="500" height="500" /> </td>
   </tr>
 </table>
-<br>
+<!-- <br> -->
 <p class="image-caption">“嗨！加油呀！”</p>
 
 <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7697-35.jpg" width="600" height="600" />
@@ -74,7 +74,7 @@ tags:
     <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8518.jpg" width="500" height="500" /> </td>
   </tr>
 </table>
-<br>
+<!-- <br> -->
 <p class="image-caption">爱的子弹 biu biu biu~~~</p>
 
 <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8686.jpg" width="600" height="600" />
