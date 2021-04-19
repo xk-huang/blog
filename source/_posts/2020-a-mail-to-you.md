@@ -10,7 +10,7 @@ tags:
 
 亲爱的兔宝：
 
-​ 展信佳。
+ 展信佳。
 
 ​	近况如何？算来已有俩日未见你，甚是想念。
 
@@ -30,7 +30,7 @@ tags:
 
 
 
-​ 虎虎
+ 虎虎
 ​	庚子年岁末于棠城
 
 
@@ -38,12 +38,10 @@ tags:
 附：
 与兔宝游
 
-<img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7405.jpg" width="500" height="00" text="test"/>
+<img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7405.jpg" width="500" height="00" text="test"/>
 <p class="image-caption">飞呀飞</p>
-
-<td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7589.jpg" width="500" height="500" />
+<td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7589.jpg" width="500" height="500" />
 <p class="image-caption">我爱地球~</p>
-
 <table width="100%" border="0" cellspacing="0" cellpadding="">
   <tr>
     <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7671.jpg" width="500" height="500" /> </td>
@@ -52,10 +50,9 @@ tags:
 </table>
 <!-- <br> -->
 <p class="image-caption">“比心~~~” (愣)“噢噢噢！！！”</p>
+<td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7702.jpg" width="600" height="600" />
 
-<td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7702.jpg" width="600" height="600" />
 <p class="image-caption">画框里的你</p>
-
 <table width="100%" border="0" cellspacing="0" cellpadding="">
   <tr>
     <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8114.jpg" width="500" height="500" /> </td>
@@ -64,10 +61,8 @@ tags:
 </table>
 <!-- <br> -->
 <p class="image-caption">“嗨！加油呀！”</p>
-
-<td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7697-35.jpg" width="600" height="600" />
+<td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_7697-35.jpg" width="600" height="600" />
 <p class="image-caption">触摸色彩</p>
-
 <table width="100%" border="0" cellspacing="0" cellpadding="">
   <tr>
     <td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8519-9408323.jpg" width="500" height="500" /> </td>
@@ -76,9 +71,7 @@ tags:
 </table>
 <!-- <br> -->
 <p class="image-caption">爱的子弹 biu biu biu~~~</p>
-
-<td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8686.jpg" width="600" height="600" />
+<td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8686.jpg" width="600" height="600" />
 <p class="image-caption">“这位女明星，请扫码点单”</p>
-
-<td align="center"><img src="/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8573.jpg" width="600" height="600" />
+<td align="center"><img src="/blog/images/【展信佳】致兔宝——新年贺卡.assets/IMG_8573.jpg" width="600" height="600" />
 <p class="image-caption">新的一年，还是这样快乐哦！</p>
