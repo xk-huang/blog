@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="(A rough draft and a memo for myself. Least human-readable 🤔) Initialization DDP arguments and device torch.cuda.set_device(ddp_local_rank)   output directory: make dir logger file handler if you wan">
+<meta name="description" content="(A check list for myself. At least human-readable 🤔) ¶Initialization  DDP arguments and device  torch.cuda.set_device(ddp_local_rank)   output directory: make dir logger  file handler  if you want to">
 <meta name="keywords" content="Xiaoke Huang">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Writing a Pytorch Runner (Especially Distributed Training &amp; Evaluation)">
+<meta property="og:title" content="Check list for Pytorch Runner (Especially Distributed Training &amp; Evaluation)">
 <meta property="og:url" content="http://xk-huang.github.io/blog/2023/06/24/2023-my-dl-trainer/index.html">
 <meta property="og:site_name" content="Xiaoke Huang&#39;s Blog">
-<meta property="og:description" content="(A rough draft and a memo for myself. Least human-readable 🤔) Initialization DDP arguments and device torch.cuda.set_device(ddp_local_rank)   output directory: make dir logger file handler if you wan">
+<meta property="og:description" content="(A check list for myself. At least human-readable 🤔) ¶Initialization  DDP arguments and device  torch.cuda.set_device(ddp_local_rank)   output directory: make dir logger  file handler  if you want to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2023-06-24T12:28:21.436Z">
+<meta property="og:updated_time" content="2023-06-24T12:32:54.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Writing a Pytorch Runner (Especially Distributed Training &amp; Evaluation)">
-<meta name="twitter:description" content="(A rough draft and a memo for myself. Least human-readable 🤔) Initialization DDP arguments and device torch.cuda.set_device(ddp_local_rank)   output directory: make dir logger file handler if you wan">
+<meta name="twitter:title" content="Check list for Pytorch Runner (Especially Distributed Training &amp; Evaluation)">
+<meta name="twitter:description" content="(A check list for myself. At least human-readable 🤔) ¶Initialization  DDP arguments and device  torch.cuda.set_device(ddp_local_rank)   output directory: make dir logger  file handler  if you want to">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Writing a Pytorch Runner (Especially Distributed Training & Evaluation) | Xiaoke Huang's Blog</title>
+  <title>Check list for Pytorch Runner (Especially Distributed Training & Evaluation) | Xiaoke Huang's Blog</title>
   
 
 
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Writing a Pytorch Runner (Especially Distributed Training & Evaluation)</h1>
+          <h1 class="post-title" itemprop="name headline">Check list for Pytorch Runner (Especially Distributed Training & Evaluation)</h1>
         
 
         <div class="post-meta">
@@ -345,15 +345,19 @@
       
 
       
-        <p>(A rough draft and a memo for myself. Least human-readable <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f914.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f914.png?v8">🤔</span>)</p>
-<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><ol>
-<li>DDP arguments and device<ol>
+        <p>(A check list for myself. At least human-readable 🤔)</p>
+<h2 id="initialization"><a class="header-anchor" href="#initialization">¶</a>Initialization</h2>
+<ol>
+<li>DDP arguments and device
+<ol>
 <li><code>torch.cuda.set_device(ddp_local_rank)</code></li>
 </ol>
 </li>
 <li>output directory: make dir</li>
-<li>logger<ol>
-<li>file handler<ol>
+<li>logger
+<ol>
+<li>file handler
+<ol>
 <li>if you want to log w/ datetime, remember to <code>barrier</code></li>
 </ol>
 </li>
@@ -361,31 +365,40 @@
 </ol>
 </li>
 <li>save config files</li>
-<li>seed<ol>
+<li>seed
+<ol>
 <li>each process gets a different seed (<code>seed + ddp_rank</code>)</li>
 <li>NOTE: the seed should be the same during data split (maybe not exists) and model initialization.</li>
 <li>However, DDP forces the parameters to be the same across processes, so we do not need to</li>
 <li><a href="https://github.com/pytorch/pytorch/blob/1dba81f56dc33b44d7b0ecc92a039fe32ee80f8d/torch/nn/parallel/distributed.py#LL798C63-L798C63#" target="_blank" rel="noopener">https://github.com/pytorch/pytorch/blob/1dba81f56dc33b44d7b0ecc92a039fe32ee80f8d/torch/nn/parallel/distributed.py#LL798C63-L798C63#</a></li>
 </ol>
 </li>
-<li>initialize context for amp training<ol>
+<li>initialize context for amp training
+<ol>
 <li>depending on the chosen dtype</li>
 </ol>
 </li>
-<li>data loader<ol>
-<li>create dataset<ol>
+<li>data loader
+<ol>
+<li>create dataset
+<ol>
 <li>If there are data downloading action, remember to barrier other process,  We only need the master process of each node (<code>local_ddp_rank==0</code>) to download the dataset</li>
-<li>split dataset, if using Huggingface’s <code>datasets</code>. <ol>
+<li>split dataset, if using Huggingface’s <code>datasets</code>.
+<ol>
 <li>The split sub-dataset may have different length. This may be problematic for epoch-based trainer, while step-based trainer, it is fine.</li>
 </ol>
 </li>
 </ol>
 </li>
-<li>create dataloader (by default, <code>DataLoader</code> uses <code>RandomSampler</code>)<ol>
+<li>create dataloader (by default, <code>DataLoader</code> uses <code>RandomSampler</code>)
+<ol>
 <li>The yield of dataloader is a <strong>list</strong> of samples if <code>collate_fn=lambda x: x</code></li>
-<li>If you do not use Huggingface’s <code>dataset</code>, you need to use <code>DistributedSampler</code> in <code>Dataloader</code> <ol>
-<li>the difference between <code>DistributedSampler</code> and <code>RandomSampler</code><ol>
-<li>DistributedSampler(<a href="https://pytorch.org/docs/stable/_modules/torch/utils/data/distributed.html#DistributedSampler" target="_blank" rel="noopener">https://pytorch.org/docs/stable/_modules/torch/utils/data/distributed.html#DistributedSampler</a>) generate a <code>torch.Generator</code> every time it is iterated. Thus it needs <code>set_epoch</code> to change the seed value each time. <ol>
+<li>If you do not use Huggingface’s <code>dataset</code>, you need to use <code>DistributedSampler</code> in <code>Dataloader</code>
+<ol>
+<li>the difference between <code>DistributedSampler</code> and <code>RandomSampler</code>
+<ol>
+<li>DistributedSampler(<a href="https://pytorch.org/docs/stable/_modules/torch/utils/data/distributed.html#DistributedSampler" target="_blank" rel="noopener">https://pytorch.org/docs/stable/_modules/torch/utils/data/distributed.html#DistributedSampler</a>) generate a <code>torch.Generator</code> every time it is iterated. Thus it needs <code>set_epoch</code> to change the seed value each time.
+<ol>
 <li>it is a compromise to the design which split the data inside the sampler, then the index of all the data is shuffled globally.</li>
 <li>It needs a base seed which is same for all the processes.</li>
 </ol>
@@ -402,11 +415,14 @@
 <li>a helper function to <strong>move data from CPU to GPU</strong> form HuggingFace’s <code>transformers</code></li>
 </ol>
 </li>
-<li>model<ol>
-<li>initialization<ol>
+<li>model
+<ol>
+<li>initialization
+<ol>
 <li>from scratch</li>
-<li>from resume<ol>
-<li>note that in DDP, the <code>map_location</code> must specify or the tensors woule be loaded to the original device; </li>
+<li>from resume
+<ol>
+<li>note that in DDP, the <code>map_location</code> must specify or the tensors woule be loaded to the original device;</li>
 <li>set to <code>map_location=cpu</code> may crash the VRAM</li>
 </ol>
 </li>
@@ -417,9 +433,11 @@
 </ol>
 </li>
 <li>grad scaler for amp training <strong>if <code>dtype=float16</code></strong></li>
-<li>optimizer<ol>
+<li>optimizer
+<ol>
 <li>set <code>param.requires_grad={True,False</code>} to determine trainable parameters</li>
-<li>to gather <code>param_groups = List[param_dict]</code><ol>
+<li>to gather <code>param_groups = List[param_dict]</code>
+<ol>
 <li>get all parameters</li>
 <li>filter: keep <code>requires_grad == True</code></li>
 <li>decay: <code>p.dim() >= 2</code>  Any parameters that is 2D will be weight decayed</li>
@@ -429,24 +447,29 @@
 </ol>
 </li>
 <li>(optional) compile model</li>
-<li>wrap model in to DDP container<ol>
+<li>wrap model in to DDP container
+<ol>
 <li>get <code>raw_model</code> to save ckpt w/o <code>"module."</code></li>
 </ol>
 </li>
 </ol>
-<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><p>(note about global variable, if it is non-editable variable and is modified in a function, use <code>global</code> to claim it is global)</p>
+<h2 id="training"><a class="header-anchor" href="#training">¶</a>Training</h2>
+<p>(note about global variable, if it is non-editable variable and is modified in a function, use <code>global</code> to claim it is global)</p>
 <ol>
 <li><code>model.train()</code></li>
 <li>adjust lr based on step, change lr manually <code>for param_group in optimizer.param_groups: param_group["lr"] = lr</code></li>
-<li>eval model and save weight<ol>
+<li>eval model and save weight
+<ol>
 <li>eval: distributed eval (check below)?</li>
 <li>log: only the master process log?</li>
 <li>save weight: <strong>only</strong> the master process save</li>
 </ol>
 </li>
-<li>training step<ol>
+<li>training step
+<ol>
 <li>gradient_accumulation_steps</li>
-<li>in <strong>model forward and loss computation</strong>, <strong>use amp context</strong><ol>
+<li>in <strong>model forward and loss computation</strong>, <strong>use amp context</strong>
+<ol>
 <li><code>loss is float32 because ``mse_loss`` layers ``autocast`` to float32.</code>; <code>output is float16 because convertable layers ``autocast`` to float16.</code></li>
 <li>You don’t need to manually change inputs’ <code>dtype</code> when enabling mixed precision.</li>
 <li>if use <code>gradient_accumulation_steps</code>, the loss need to be <strong>divided</strong> by <code>gradient_accumulation_steps</code></li>
@@ -454,7 +477,8 @@
 </li>
 <li><strong>scale the loss</strong> then <strong>backward gradients</strong></li>
 <li>clip gradient: first <code>unscale_</code> optimizer, then <code>clip_grad_norm_</code></li>
-<li>update model w/ scaler<ol>
+<li>update model w/ scaler
+<ol>
 <li>to update model  <code>scaler.step(optimizer)</code></li>
 <li>update scaler: <code>scaler.update()</code></li>
 </ol>
@@ -464,12 +488,15 @@
 </ol>
 </li>
 </ol>
-<p>Evaluation: tips about distributed evaluation<br>The results of each card might be different (if use amp/float16)</p>
+<p>Evaluation: tips about distributed evaluation<br>
+The results of each card might be different (if use amp/float16)</p>
 <ol>
 <li><code>model.eval()</code></li>
-<li>in loss computation, we sum up all the loss per mini-batch<ol>
+<li>in loss computation, we sum up all the loss per mini-batch
+<ol>
 <li>if one average the loss for a batch, then the loss needs to multiply back the <strong>divided numbers</strong></li>
-<li>the <strong>divided numbers</strong> may not be the same as back size. <ol>
+<li>the <strong>divided numbers</strong> may not be the same as back size.
+<ol>
 <li>e.g., the number of masks per sample, the number of tokens per caption per sample</li>
 </ol>
 </li>
@@ -702,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization"><span class="nav-number">1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training"><span class="nav-number">2.</span> <span class="nav-text">Training</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#initialization"><span class="nav-number">1.</span> <span class="nav-text">¶Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training"><span class="nav-number">2.</span> <span class="nav-text">¶Training</span></a></li></ol></div>
             
 
           </div>
